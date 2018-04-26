@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4CD3029C-34A1-46B6-8928-D342D10D3F9C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>APPS.My.MyApplication</StartupObject>
+    <RootNamespace>APPS</RootNamespace>
+    <AssemblyName>APPS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>APPS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>APPS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.C1Pdf.4, Version=4.0.20151.38, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1Chart.4, Version=4.0.20151.38, Culture=neutral, PublicKeyToken=a22e16972c085838, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1Command.4, Version=4.0.20151.38, Culture=neutral, PublicKeyToken=e808566f358766d8, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1FlexGrid.4, Version=4.0.20151.38, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1InputPanel.4, Version=4.0.20151.38, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1Ribbon.4, Version=4.0.20151.38, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1SplitContainer.4, Version=4.0.20151.38, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1TrueDBGrid.4, Version=4.0.20151.38, Culture=neutral, PublicKeyToken=75ae3fb0e2b1e0da, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="simpi.Codeset">
+      <HintPath>..\DLL\simpi.Codeset.dll</HintPath>
+    </Reference>
+    <Reference Include="simpi.CoreCompliance">
+      <HintPath>..\DLL\simpi.CoreCompliance.dll</HintPath>
+    </Reference>
+    <Reference Include="simpi.CoreData">
+      <HintPath>..\DLL\simpi.CoreData.dll</HintPath>
+    </Reference>
+    <Reference Include="simpi.GlobalConnection">
+      <HintPath>..\DLL\simpi.GlobalConnection.dll</HintPath>
+    </Reference>
+    <Reference Include="simpi.GlobalUtilities">
+      <HintPath>..\DLL\simpi.GlobalUtilities.dll</HintPath>
+    </Reference>
+    <Reference Include="simpi.MarketCompany">
+      <HintPath>..\DLL\simpi.MarketCompany.dll</HintPath>
+    </Reference>
+    <Reference Include="simpi.MarketInstrument">
+      <HintPath>..\DLL\simpi.MarketInstrument.dll</HintPath>
+    </Reference>
+    <Reference Include="simpi.MasterClient">
+      <HintPath>..\DLL\simpi.MasterClient.dll</HintPath>
+    </Reference>
+    <Reference Include="simpi.MasterPortfolio">
+      <HintPath>..\DLL\simpi.MasterPortfolio.dll</HintPath>
+    </Reference>
+    <Reference Include="simpi.MasterSales">
+      <HintPath>..\DLL\simpi.MasterSales.dll</HintPath>
+    </Reference>
+    <Reference Include="simpi.MasterSecurities">
+      <HintPath>..\DLL\simpi.MasterSecurities.dll</HintPath>
+    </Reference>
+    <Reference Include="simpi.MasterSimpi">
+      <HintPath>..\DLL\simpi.MasterSimpi.dll</HintPath>
+    </Reference>
+    <Reference Include="simpi.ParameterBank">
+      <HintPath>..\DLL\simpi.ParameterBank.dll</HintPath>
+    </Reference>
+    <Reference Include="simpi.ParameterClient">
+      <HintPath>..\DLL\simpi.ParameterClient.dll</HintPath>
+    </Reference>
+    <Reference Include="simpi.ParameterFA">
+      <HintPath>..\DLL\simpi.ParameterFA.dll</HintPath>
+    </Reference>
+    <Reference Include="simpi.ParameterPortfolio">
+      <HintPath>..\DLL\simpi.ParameterPortfolio.dll</HintPath>
+    </Reference>
+    <Reference Include="simpi.ParameterSecurities">
+      <HintPath>..\DLL\simpi.ParameterSecurities.dll</HintPath>
+    </Reference>
+    <Reference Include="simpi.ParameterSimpi">
+      <HintPath>..\DLL\simpi.ParameterSimpi.dll</HintPath>
+    </Reference>
+    <Reference Include="simpi.ParameterTA">
+      <HintPath>..\DLL\simpi.ParameterTA.dll</HintPath>
+    </Reference>
+    <Reference Include="simpi.SimpiAccess">
+      <HintPath>..\DLL\simpi.SimpiAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="simpi.SimpiLogin">
+      <HintPath>..\DLL\simpi.SimpiLogin.dll</HintPath>
+    </Reference>
+    <Reference Include="simpi.SimpiMaster">
+      <HintPath>..\DLL\simpi.SimpiMaster.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.vb">
+      <DependentUpon>FormLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIMENU.Designer.vb">
+      <DependentUpon>MDIMENU.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MDIMENU.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModBank.vb" />
+    <Compile Include="ModCompliance.vb" />
+    <Compile Include="ModExport.vb" />
+    <Compile Include="ModMain.vb" />
+    <Compile Include="ModMasterClient.vb" />
+    <Compile Include="ModMasterPortfolio.vb" />
+    <Compile Include="ModMasterSales.vb" />
+    <Compile Include="ModMasterSecurities.vb" />
+    <Compile Include="ModParameter.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ReportFundSheetCPF.Designer.vb">
+      <DependentUpon>ReportFundSheetCPF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportFundSheetCPF.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportFundSheetDividend.Designer.vb">
+      <DependentUpon>ReportFundSheetDividend.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportFundSheetDividend.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportFundSheetEQ.Designer.vb">
+      <DependentUpon>ReportFundSheetEQ.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportFundSheetEQ.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportFundSheetEQEmail.Designer.vb">
+      <DependentUpon>ReportFundSheetEQEmail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportFundSheetEQEmail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportFundSheetEQGlobal.Designer.vb">
+      <DependentUpon>ReportFundSheetEQGlobal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportFundSheetEQGlobal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportFundSheetEQSetting.Designer.vb">
+      <DependentUpon>ReportFundSheetEQSetting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportFundSheetEQSetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportFundSheetEQSyariah.Designer.vb">
+      <DependentUpon>ReportFundSheetEQSyariah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportFundSheetEQSyariah.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportFundSheetKPD.Designer.vb">
+      <DependentUpon>ReportFundSheetKPD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportFundSheetKPD.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportFundSheetSectorEQ.Designer.vb">
+      <DependentUpon>ReportFundSheetSectorEQ.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportFundSheetSectorEQ.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportFundSheetSectorFI.Designer.vb">
+      <DependentUpon>ReportFundSheetSectorFI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportFundSheetSectorFI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportMarketReview.Designer.vb">
+      <DependentUpon>ReportMarketReview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportMarketReview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportProductFocusEQ.Designer.vb">
+      <DependentUpon>ReportProductFocusEQ.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportProductFocusEQ.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportProductFocusFI.Designer.vb">
+      <DependentUpon>ReportProductFocusFI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportProductFocusFI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportProductFocusMM.Designer.vb">
+      <DependentUpon>ReportProductFocusMM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportProductFocusMM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectMasterPortfolio.Designer.vb">
+      <DependentUpon>SelectMasterPortfolio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SelectMasterPortfolio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIMENU.resx">
+      <DependentUpon>MDIMENU.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportFundSheetCPF.resx">
+      <DependentUpon>ReportFundSheetCPF.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportFundSheetDividend.resx">
+      <DependentUpon>ReportFundSheetDividend.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportFundSheetEQ.resx">
+      <DependentUpon>ReportFundSheetEQ.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportFundSheetEQEmail.resx">
+      <DependentUpon>ReportFundSheetEQEmail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportFundSheetEQGlobal.resx">
+      <DependentUpon>ReportFundSheetEQGlobal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportFundSheetEQSetting.resx">
+      <DependentUpon>ReportFundSheetEQSetting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportFundSheetEQSyariah.resx">
+      <DependentUpon>ReportFundSheetEQSyariah.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportFundSheetKPD.resx">
+      <DependentUpon>ReportFundSheetKPD.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportFundSheetSectorEQ.resx">
+      <DependentUpon>ReportFundSheetSectorEQ.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportFundSheetSectorFI.resx">
+      <DependentUpon>ReportFundSheetSectorFI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportMarketReview.resx">
+      <DependentUpon>ReportMarketReview.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportProductFocusEQ.resx">
+      <DependentUpon>ReportProductFocusEQ.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportProductFocusFI.resx">
+      <DependentUpon>ReportProductFocusFI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportProductFocusMM.resx">
+      <DependentUpon>ReportProductFocusMM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectMasterPortfolio.resx">
+      <DependentUpon>SelectMasterPortfolio.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\simpi3.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
