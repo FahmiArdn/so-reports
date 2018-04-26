@@ -106,6 +106,7 @@ Partial Class ReportFundSheetCPF
         Me.InputLabel7 = New C1.Win.C1InputPanel.InputLabel()
         Me.InputTextBox3 = New C1.Win.C1InputPanel.InputTextBox()
         Me.chartNAV = New C1.Win.C1Chart.C1Chart()
+        Me.C1PdfDocument1 = New C1.C1Pdf.C1PdfDocument()
         CType(Me.C1InputPanel2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.C1SplitContainer1.SuspendLayout()
@@ -266,6 +267,7 @@ Partial Class ReportFundSheetCPF
         Me.txtInvestmentGoal.Height = 45
         Me.txtInvestmentGoal.Multiline = True
         Me.txtInvestmentGoal.Name = "txtInvestmentGoal"
+        Me.txtInvestmentGoal.Text = resources.GetString("txtInvestmentGoal.Text")
         Me.txtInvestmentGoal.VerticalAlign = C1.Win.C1InputPanel.InputContentAlignment.Spread
         Me.txtInvestmentGoal.Width = 921
         '
@@ -279,6 +281,7 @@ Partial Class ReportFundSheetCPF
         Me.txtAboutUs.Height = 75
         Me.txtAboutUs.Multiline = True
         Me.txtAboutUs.Name = "txtAboutUs"
+        Me.txtAboutUs.Text = resources.GetString("txtAboutUs.Text")
         Me.txtAboutUs.VerticalAlign = C1.Win.C1InputPanel.InputContentAlignment.Spread
         Me.txtAboutUs.Width = 920
         '
@@ -517,7 +520,6 @@ Partial Class ReportFundSheetCPF
         '
         Me.C1InputPanel6.BackColor = System.Drawing.Color.White
         Me.C1InputPanel6.BorderThickness = 1
-        Me.C1InputPanel6.Dock = System.Windows.Forms.DockStyle.Left
         Me.C1InputPanel6.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.C1InputPanel6.Items.Add(Me.InputGroupHeader8)
         Me.C1InputPanel6.Items.Add(Me.InputLabel19)
@@ -543,7 +545,7 @@ Partial Class ReportFundSheetCPF
         'InputGroupHeader8
         '
         Me.InputGroupHeader8.Name = "InputGroupHeader8"
-        Me.InputGroupHeader8.Text = "Portfolio Performance"
+        Me.InputGroupHeader8.Text = "Group"
         '
         'InputLabel19
         '
@@ -637,7 +639,6 @@ Partial Class ReportFundSheetCPF
         '
         Me.C1InputPanel5.BackColor = System.Drawing.Color.White
         Me.C1InputPanel5.BorderThickness = 1
-        Me.C1InputPanel5.Dock = System.Windows.Forms.DockStyle.Left
         Me.C1InputPanel5.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.C1InputPanel5.Items.Add(Me.InputGroupHeader7)
         Me.C1InputPanel5.Items.Add(Me.InputLabel8)
@@ -697,7 +698,6 @@ Partial Class ReportFundSheetCPF
         '
         Me.C1InputPanel4.BackColor = System.Drawing.Color.White
         Me.C1InputPanel4.BorderThickness = 1
-        Me.C1InputPanel4.Dock = System.Windows.Forms.DockStyle.Left
         Me.C1InputPanel4.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.C1InputPanel4.Items.Add(Me.InputGroupHeader6)
         Me.C1InputPanel4.Items.Add(Me.InputLabel2)
@@ -753,13 +753,19 @@ Partial Class ReportFundSheetCPF
         'chartNAV
         '
         Me.chartNAV.BackColor = System.Drawing.Color.White
-        Me.chartNAV.Dock = System.Windows.Forms.DockStyle.Top
         Me.chartNAV.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.chartNAV.Location = New System.Drawing.Point(0, 0)
         Me.chartNAV.Name = "chartNAV"
         Me.chartNAV.PropBag = resources.GetString("chartNAV.PropBag")
-        Me.chartNAV.Size = New System.Drawing.Size(643, 167)
+        Me.chartNAV.Size = New System.Drawing.Size(424, 167)
         Me.chartNAV.TabIndex = 7
+        '
+        'C1PdfDocument1
+        '
+        Me.C1PdfDocument1.RotateAngle = 0!
+        Me.C1PdfDocument1.UniqueFontsPerPage = False
+        Me.C1PdfDocument1.UseFastTextOut = False
+        Me.C1PdfDocument1.UseFileCaching = False
         '
         'ReportFundSheetCPF
         '
@@ -870,4 +876,5 @@ Partial Class ReportFundSheetCPF
     Friend WithEvents InputTextBox12 As C1.Win.C1InputPanel.InputTextBox
     Friend WithEvents InputLabel26 As C1.Win.C1InputPanel.InputLabel
     Friend WithEvents InputTextBox13 As C1.Win.C1InputPanel.InputTextBox
+    Friend WithEvents C1PdfDocument1 As C1.C1Pdf.C1PdfDocument
 End Class
