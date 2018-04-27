@@ -201,6 +201,12 @@
     <Compile Include="ReportFundSheetCPF.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ReportFundSheetCPFSetting.Designer.vb">
+      <DependentUpon>ReportFundSheetCPFSetting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportFundSheetCPFSetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ReportFundSheetDividend.Designer.vb">
       <DependentUpon>ReportFundSheetDividend.vb</DependentUpon>
     </Compile>
@@ -311,6 +317,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReportFundSheetCPF.resx">
       <DependentUpon>ReportFundSheetCPF.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportFundSheetCPFSetting.resx">
+      <DependentUpon>ReportFundSheetCPFSetting.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportFundSheetDividend.resx">
       <DependentUpon>ReportFundSheetDividend.vb</DependentUpon>

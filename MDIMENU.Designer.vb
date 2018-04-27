@@ -56,6 +56,7 @@ Partial Class MDIMENU
         Me.cmdSubmit = New C1.Win.C1InputPanel.InputButton()
         Me.cmdClose = New C1.Win.C1InputPanel.InputButton()
         Me.ReportFundSheetDividendToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CPFToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.msMenu.SuspendLayout()
         Me.tsUser.SuspendLayout()
         CType(Me.C1StatusBar1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -75,6 +76,7 @@ Partial Class MDIMENU
         'ReportToolStripMenuItem
         '
         Me.ReportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportFundSheetDividendToolStripMenuItem})
+        Me.ReportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CPFToolStripMenuItem})
         Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
         Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
         Me.ReportToolStripMenuItem.Text = "Report"
@@ -238,6 +240,7 @@ Partial Class MDIMENU
         'txtUserLogin
         '
         Me.txtUserLogin.Name = "txtUserLogin"
+        Me.txtUserLogin.Text = "dumairy@gmail.com"
         Me.txtUserLogin.Width = 205
         '
         'InputLabel2
@@ -250,6 +253,7 @@ Partial Class MDIMENU
         '
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtPassword.Text = "Ranwid94"
         Me.txtPassword.Width = 205
         '
         'cmdSubmit
@@ -272,6 +276,11 @@ Partial Class MDIMENU
         Me.ReportFundSheetDividendToolStripMenuItem.Name = "ReportFundSheetDividendToolStripMenuItem"
         Me.ReportFundSheetDividendToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
         Me.ReportFundSheetDividendToolStripMenuItem.Text = "Report Fund Sheet Dividend"
+        'CPFToolStripMenuItem
+        '
+        Me.CPFToolStripMenuItem.Name = "CPFToolStripMenuItem"
+        Me.CPFToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CPFToolStripMenuItem.Text = "CPF"
         '
         'MDIMENU
         '
@@ -329,4 +338,5 @@ Partial Class MDIMENU
     Friend WithEvents ToolStripSeparator9 As ToolStripSeparator
     Friend WithEvents ReportToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportFundSheetDividendToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CPFToolStripMenuItem As ToolStripMenuItem
 End Class
