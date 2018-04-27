@@ -638,8 +638,6 @@ Public Class ReportFundSheetCPF
             rc = New RectangleF(New PointF(koordX - 230, koordY + 140), New SizeF(chartNAV.Size.Width * 0.9, chartNAV.Size.Height))
             .DrawImage(imgPortfolio, rc, ContentAlignment.TopLeft, C1.C1Pdf.ImageSizeModeEnum.Scale)
 
-
-
             strFile = reportFileExists("Report CPF " & lblPortfolioCode.Text.Trim & dtAs.Value.ToString("yyyymmdd") & ".pdf")
             .Save(strFile)
 

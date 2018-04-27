@@ -417,7 +417,7 @@ Public Class ReportFundSheetDividend
         'Stuff
         Dim strFile As String = ""
         Dim strLayout As String = ""
-        Dim layout = Image.FromFile("D:\SIMPI\LAYOUT\template\FFS03.jpg")
+        Dim layout = Image.FromFile("..\..\Template\Report Fund Sheet Dividend - Portrait.jpg")
         Dim myBrush As New SolidBrush(Color.FromArgb(0, 61, 121))
         Dim detailBrush As New SolidBrush(Color.Black)
         Dim headerBrush As New SolidBrush(Color.White)
@@ -1027,10 +1027,12 @@ Public Class ReportFundSheetDividend
             '.DrawString("dan memanasnya suhu politik di US, bursa global kembali tertekan setelah US mengesahkan trade protectionism program yang menyeret mayoritas bursa global pada teritori", New Font("calibri", 7), Brushes.Black, New RectangleF(27, 562, pdf_width - 100, 7))
             '.DrawString("negatif.", New Font("calibri", 7), Brushes.Black, New RectangleF(27, 574, pdf_width - 100, 7))
 #End Region
-            c1pdf.Save("D:\Report Fund Sheet Dividend.pdf")
-            Process.Start("D:\Report Fund Sheet Dividend.pdf")
-        End With
+            strFile = reportFileExists("Report Fund Sheet Dividend " & lblPortfolioCode.Text.Trim & dtAs.Value.ToString("yyyymmdd") & ".pdf")
+            .Save(strFile)
 
+        End With
+        'If Not isAttachment Then Process.Start(strFile)
+        'Return strFile
     End Sub
 
     Private Sub ReportSetting()
