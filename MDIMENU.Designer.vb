@@ -26,6 +26,7 @@ Partial Class MDIMENU
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MDIMENU))
         Me.msMenu = New System.Windows.Forms.MenuStrip()
+        Me.ReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsUser = New System.Windows.Forms.ToolStrip()
         Me.tsbExit = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator10 = New System.Windows.Forms.ToolStripSeparator()
@@ -54,7 +55,7 @@ Partial Class MDIMENU
         Me.txtPassword = New C1.Win.C1InputPanel.InputTextBox()
         Me.cmdSubmit = New C1.Win.C1InputPanel.InputButton()
         Me.cmdClose = New C1.Win.C1InputPanel.InputButton()
-        Me.ReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CPFToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.msMenu.SuspendLayout()
         Me.tsUser.SuspendLayout()
         CType(Me.C1StatusBar1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -70,6 +71,13 @@ Partial Class MDIMENU
         Me.msMenu.Size = New System.Drawing.Size(1064, 24)
         Me.msMenu.TabIndex = 5
         Me.msMenu.Text = "MenuStrip"
+        '
+        'ReportToolStripMenuItem
+        '
+        Me.ReportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CPFToolStripMenuItem})
+        Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
+        Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
+        Me.ReportToolStripMenuItem.Text = "Report"
         '
         'tsUser
         '
@@ -230,6 +238,7 @@ Partial Class MDIMENU
         'txtUserLogin
         '
         Me.txtUserLogin.Name = "txtUserLogin"
+        Me.txtUserLogin.Text = "dumairy@gmail.com"
         Me.txtUserLogin.Width = 205
         '
         'InputLabel2
@@ -242,6 +251,7 @@ Partial Class MDIMENU
         '
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtPassword.Text = "Ranwid94"
         Me.txtPassword.Width = 205
         '
         'cmdSubmit
@@ -259,11 +269,11 @@ Partial Class MDIMENU
         Me.cmdClose.Text = "CLOSE"
         Me.cmdClose.Width = 100
         '
-        'ReportToolStripMenuItem
+        'CPFToolStripMenuItem
         '
-        Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
-        Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
-        Me.ReportToolStripMenuItem.Text = "Report"
+        Me.CPFToolStripMenuItem.Name = "CPFToolStripMenuItem"
+        Me.CPFToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CPFToolStripMenuItem.Text = "CPF"
         '
         'MDIMENU
         '
@@ -320,4 +330,5 @@ Partial Class MDIMENU
     Friend WithEvents btnStatus As ToolStripButton
     Friend WithEvents ToolStripSeparator9 As ToolStripSeparator
     Friend WithEvents ReportToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CPFToolStripMenuItem As ToolStripMenuItem
 End Class
