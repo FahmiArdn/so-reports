@@ -516,7 +516,7 @@ Public Class ReportFundSheetCPF
         Dim headerBrush As New SolidBrush(Color.White)
         Dim koordX As Single = 40, koordY As Single = 35
         Dim fontType = "Calibri", fontSize = 8
-        Dim layout = Image.FromFile("D:\simpiPRO\so.simpi-pro-lan\bin\Debug\Template\portrait.jpg")
+        Dim layout = Image.FromFile("..\..\Template\Fund Sheet CPF - Portrait.jpg")
         With C1PdfDocument1
             .Clear()
             .PaperKind = Printing.PaperKind.A4
