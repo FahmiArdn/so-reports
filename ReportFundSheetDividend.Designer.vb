@@ -134,6 +134,7 @@ Partial Class ReportFundSheetDividend
         Me.txtAboutUs = New C1.Win.C1InputPanel.InputTextBox()
         Me.InputGroupHeader4 = New C1.Win.C1InputPanel.InputGroupHeader()
         Me.txtMarketReview = New C1.Win.C1InputPanel.InputTextBox()
+        Me.c1pdf = New C1.C1Pdf.C1PdfDocument()
         CType(Me.C1InputPanel2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1DockingTab1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.C1DockingTab1.SuspendLayout()
@@ -360,6 +361,7 @@ Partial Class ReportFundSheetDividend
         'txtAssetType
         '
         Me.txtAssetType.Name = "txtAssetType"
+        Me.txtAssetType.Text = "Pendapatan Tetap"
         Me.txtAssetType.Width = 237
         '
         'InputLabel3
@@ -371,6 +373,7 @@ Partial Class ReportFundSheetDividend
         'txtInceptionDate
         '
         Me.txtInceptionDate.Name = "txtInceptionDate"
+        Me.txtInceptionDate.Text = "9-Dec-2014"
         Me.txtInceptionDate.Width = 237
         '
         'InputLabel4
@@ -382,6 +385,7 @@ Partial Class ReportFundSheetDividend
         'txtAUM
         '
         Me.txtAUM.Name = "txtAUM"
+        Me.txtAUM.Text = "448.42"
         Me.txtAUM.Width = 237
         '
         'InputLabel5
@@ -393,6 +397,7 @@ Partial Class ReportFundSheetDividend
         'txtCcy
         '
         Me.txtCcy.Name = "txtCcy"
+        Me.txtCcy.Text = "Rupiah"
         Me.txtCcy.Width = 237
         '
         'InputLabel6
@@ -404,6 +409,7 @@ Partial Class ReportFundSheetDividend
         'txtValuation
         '
         Me.txtValuation.Name = "txtValuation"
+        Me.txtValuation.Text = "Harian"
         Me.txtValuation.Width = 237
         '
         'InputLabel7
@@ -415,6 +421,7 @@ Partial Class ReportFundSheetDividend
         'txtCustodian
         '
         Me.txtCustodian.Name = "txtCustodian"
+        Me.txtCustodian.Text = "Bank Permata"
         Me.txtCustodian.Width = 237
         '
         'InputLabel8
@@ -426,6 +433,7 @@ Partial Class ReportFundSheetDividend
         'txtBenchmark
         '
         Me.txtBenchmark.Name = "txtBenchmark"
+        Me.txtBenchmark.Text = "INDOBeX Corp Clean price"
         Me.txtBenchmark.Width = 237
         '
         'InputLabel9
@@ -437,6 +445,7 @@ Partial Class ReportFundSheetDividend
         'txtNAVUnit
         '
         Me.txtNAVUnit.Name = "txtNAVUnit"
+        Me.txtNAVUnit.Text = "1,097.19"
         Me.txtNAVUnit.Width = 237
         '
         'InputGroupHeader6
@@ -453,6 +462,7 @@ Partial Class ReportFundSheetDividend
         'txtMinimumInitialSubscription
         '
         Me.txtMinimumInitialSubscription.Name = "txtMinimumInitialSubscription"
+        Me.txtMinimumInitialSubscription.Text = "100,000,000"
         Me.txtMinimumInitialSubscription.Width = 186
         '
         'InputLabel11
@@ -464,6 +474,7 @@ Partial Class ReportFundSheetDividend
         'txtMinimumAdditionalSubscription
         '
         Me.txtMinimumAdditionalSubscription.Name = "txtMinimumAdditionalSubscription"
+        Me.txtMinimumAdditionalSubscription.Text = "10,000,000"
         Me.txtMinimumAdditionalSubscription.Width = 186
         '
         'InputLabel12
@@ -475,6 +486,7 @@ Partial Class ReportFundSheetDividend
         'txtSellingFee
         '
         Me.txtSellingFee.Name = "txtSellingFee"
+        Me.txtSellingFee.Text = "Maks 1.00"
         Me.txtSellingFee.Width = 186
         '
         'InputLabel13
@@ -486,6 +498,7 @@ Partial Class ReportFundSheetDividend
         'txtRedemptionFee
         '
         Me.txtRedemptionFee.Name = "txtRedemptionFee"
+        Me.txtRedemptionFee.Text = "Maks 1.00"
         Me.txtRedemptionFee.Width = 186
         '
         'InputLabel14
@@ -497,6 +510,7 @@ Partial Class ReportFundSheetDividend
         'txtManagementFee
         '
         Me.txtManagementFee.Name = "txtManagementFee"
+        Me.txtManagementFee.Text = "Maks 2.00"
         Me.txtManagementFee.Width = 186
         '
         'InputLabel15
@@ -508,6 +522,7 @@ Partial Class ReportFundSheetDividend
         'txtCustodianFee
         '
         Me.txtCustodianFee.Name = "txtCustodianFee"
+        Me.txtCustodianFee.Text = "Maks 0.25"
         Me.txtCustodianFee.Width = 186
         '
         'C1SplitterPanel5
@@ -745,6 +760,7 @@ Partial Class ReportFundSheetDividend
         'txtRisk1
         '
         Me.txtRisk1.Name = "txtRisk1"
+        Me.txtRisk1.Text = "Risk 1"
         Me.txtRisk1.Width = 407
         '
         'InputLabel23
@@ -755,6 +771,7 @@ Partial Class ReportFundSheetDividend
         'txtRisk2
         '
         Me.txtRisk2.Name = "txtRisk2"
+        Me.txtRisk2.Text = "Risk 2"
         Me.txtRisk2.Width = 407
         '
         'InputLabel24
@@ -765,6 +782,7 @@ Partial Class ReportFundSheetDividend
         'txtRisk3
         '
         Me.txtRisk3.Name = "txtRisk3"
+        Me.txtRisk3.Text = "Risk 3"
         Me.txtRisk3.Width = 407
         '
         'InputLabel25
@@ -775,6 +793,7 @@ Partial Class ReportFundSheetDividend
         'txtRisk4
         '
         Me.txtRisk4.Name = "txtRisk4"
+        Me.txtRisk4.Text = "Risk 4"
         Me.txtRisk4.Width = 407
         '
         'InputLabel26
@@ -785,6 +804,7 @@ Partial Class ReportFundSheetDividend
         'txtRisk5
         '
         Me.txtRisk5.Name = "txtRisk5"
+        Me.txtRisk5.Text = "Risk 5"
         Me.txtRisk5.Width = 407
         '
         'InputLabel27
@@ -795,6 +815,7 @@ Partial Class ReportFundSheetDividend
         'txtRisk6
         '
         Me.txtRisk6.Name = "txtRisk6"
+        Me.txtRisk6.Text = "Risk 6"
         Me.txtRisk6.Width = 407
         '
         'InputLabel28
@@ -806,6 +827,7 @@ Partial Class ReportFundSheetDividend
         '
         Me.txtRisk7.Break = C1.Win.C1InputPanel.BreakType.Column
         Me.txtRisk7.Name = "txtRisk7"
+        Me.txtRisk7.Text = "Risk 7"
         Me.txtRisk7.Width = 407
         '
         'InputLabel31
@@ -1012,6 +1034,13 @@ Partial Class ReportFundSheetDividend
         Me.txtMarketReview.VerticalAlign = C1.Win.C1InputPanel.InputContentAlignment.Spread
         Me.txtMarketReview.Width = 965
         '
+        'c1pdf
+        '
+        Me.c1pdf.RotateAngle = 0!
+        Me.c1pdf.UniqueFontsPerPage = False
+        Me.c1pdf.UseFastTextOut = False
+        Me.c1pdf.UseFileCaching = False
+        '
         'ReportFundSheetDividend
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1159,4 +1188,5 @@ Partial Class ReportFundSheetDividend
     Friend WithEvents txtBeta As C1.Win.C1InputPanel.InputTextBox
     Friend WithEvents DBGDividend As C1.Win.C1TrueDBGrid.C1TrueDBGrid
     Friend WithEvents lblSimpiName As C1.Win.C1InputPanel.InputLabel
+    Friend WithEvents c1pdf As C1.C1Pdf.C1PdfDocument
 End Class

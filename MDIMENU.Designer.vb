@@ -55,6 +55,7 @@ Partial Class MDIMENU
         Me.txtPassword = New C1.Win.C1InputPanel.InputTextBox()
         Me.cmdSubmit = New C1.Win.C1InputPanel.InputButton()
         Me.cmdClose = New C1.Win.C1InputPanel.InputButton()
+        Me.ReportFundSheetDividendToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CPFToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.msMenu.SuspendLayout()
         Me.tsUser.SuspendLayout()
@@ -74,6 +75,7 @@ Partial Class MDIMENU
         '
         'ReportToolStripMenuItem
         '
+        Me.ReportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportFundSheetDividendToolStripMenuItem})
         Me.ReportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CPFToolStripMenuItem})
         Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
         Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
@@ -269,6 +271,11 @@ Partial Class MDIMENU
         Me.cmdClose.Text = "CLOSE"
         Me.cmdClose.Width = 100
         '
+        'ReportFundSheetDividendToolStripMenuItem
+        '
+        Me.ReportFundSheetDividendToolStripMenuItem.Name = "ReportFundSheetDividendToolStripMenuItem"
+        Me.ReportFundSheetDividendToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
+        Me.ReportFundSheetDividendToolStripMenuItem.Text = "Report Fund Sheet Dividend"
         'CPFToolStripMenuItem
         '
         Me.CPFToolStripMenuItem.Name = "CPFToolStripMenuItem"
@@ -330,5 +337,6 @@ Partial Class MDIMENU
     Friend WithEvents btnStatus As ToolStripButton
     Friend WithEvents ToolStripSeparator9 As ToolStripSeparator
     Friend WithEvents ReportToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReportFundSheetDividendToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CPFToolStripMenuItem As ToolStripMenuItem
 End Class
