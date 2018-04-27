@@ -26,6 +26,7 @@ Partial Class MDIMENU
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MDIMENU))
         Me.msMenu = New System.Windows.Forms.MenuStrip()
+        Me.ReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsUser = New System.Windows.Forms.ToolStrip()
         Me.tsbExit = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator10 = New System.Windows.Forms.ToolStripSeparator()
@@ -54,7 +55,7 @@ Partial Class MDIMENU
         Me.txtPassword = New C1.Win.C1InputPanel.InputTextBox()
         Me.cmdSubmit = New C1.Win.C1InputPanel.InputButton()
         Me.cmdClose = New C1.Win.C1InputPanel.InputButton()
-        Me.ReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportFundSheetDividendToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.msMenu.SuspendLayout()
         Me.tsUser.SuspendLayout()
         CType(Me.C1StatusBar1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -70,6 +71,13 @@ Partial Class MDIMENU
         Me.msMenu.Size = New System.Drawing.Size(1064, 24)
         Me.msMenu.TabIndex = 5
         Me.msMenu.Text = "MenuStrip"
+        '
+        'ReportToolStripMenuItem
+        '
+        Me.ReportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportFundSheetDividendToolStripMenuItem})
+        Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
+        Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
+        Me.ReportToolStripMenuItem.Text = "Report"
         '
         'tsUser
         '
@@ -259,11 +267,11 @@ Partial Class MDIMENU
         Me.cmdClose.Text = "CLOSE"
         Me.cmdClose.Width = 100
         '
-        'ReportToolStripMenuItem
+        'ReportFundSheetDividendToolStripMenuItem
         '
-        Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
-        Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
-        Me.ReportToolStripMenuItem.Text = "Report"
+        Me.ReportFundSheetDividendToolStripMenuItem.Name = "ReportFundSheetDividendToolStripMenuItem"
+        Me.ReportFundSheetDividendToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
+        Me.ReportFundSheetDividendToolStripMenuItem.Text = "Report Fund Sheet Dividend"
         '
         'MDIMENU
         '
@@ -320,4 +328,5 @@ Partial Class MDIMENU
     Friend WithEvents btnStatus As ToolStripButton
     Friend WithEvents ToolStripSeparator9 As ToolStripSeparator
     Friend WithEvents ReportToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReportFundSheetDividendToolStripMenuItem As ToolStripMenuItem
 End Class
