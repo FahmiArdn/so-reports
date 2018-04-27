@@ -126,37 +126,37 @@ Public Class ReportFundSheetCPF
 
     Public Sub pdfColorDefault()
         pdfLayout.layoutType = "DEFAULT"
-        pdfLayout.Header_R = 0
-        pdfLayout.Header_G = 0
-        pdfLayout.Header_B = 205
+        pdfLayout.Header_R = 9
+        pdfLayout.Header_G = 62
+        pdfLayout.Header_B = 111
         pdfLayout.Header = "Fund Fact Sheet"
 
-        pdfLayout.Title_R = 0
-        pdfLayout.Title_G = 0
-        pdfLayout.Title_B = 205
+        pdfLayout.Title_R = 9
+        pdfLayout.Title_G = 62
+        pdfLayout.Title_B = 111
         pdfLayout.Title = "Mandiri Protected Growth Dollar 3 "
 
-        pdfLayout.ChartTitle_R = 0
-        pdfLayout.ChartTitle_G = 0
-        pdfLayout.ChartTitle_B = 205
+        pdfLayout.ChartTitle_R = 9
+        pdfLayout.ChartTitle_G = 62
+        pdfLayout.ChartTitle_B = 111
         pdfLayout.ChartTitle = "Kinerja Reksa Dana "
 
         pdfLayout.HeaderLine_R = 255
         pdfLayout.HeaderLine_G = 255
         pdfLayout.HeaderLine_B = 0
 
-        pdfLayout.NAV_R = 0
-        pdfLayout.NAV_G = 0
-        pdfLayout.NAV_B = 205
+        pdfLayout.NAV_R = 9
+        pdfLayout.NAV_G = 62
+        pdfLayout.NAV_B = 111
         pdfLayout.NAV = "NAV/Unit "
 
         pdfLayout.SummaryLine_R = 255
         pdfLayout.SummaryLine_G = 255
         pdfLayout.SummaryLine_B = 0
 
-        pdfLayout.SummaryItems_R = 0
-        pdfLayout.SummaryItems_G = 0
-        pdfLayout.SummaryItems_B = 205
+        pdfLayout.SummaryItems_R = 9
+        pdfLayout.SummaryItems_G = 62
+        pdfLayout.SummaryItems_B = 111
         pdfLayout.SummaryItemsTanggalLaporan = "Tanggal Laporan : "
         pdfLayout.SummaryItemsBankKustodian = "Bank Kustodian : "
         pdfLayout.SummaryItemsTanggalPeluncuran = "Tanggal Peluncuran : "
@@ -170,14 +170,14 @@ Public Class ReportFundSheetCPF
         pdfLayout.SummaryItemsBiayaPengalihan = "Biaya Pengaliah : "
         pdfLayout.SummaryItemsNote = "Note : "
 
-        pdfLayout.Subtitle_R = 0
-        pdfLayout.Subtitle_G = 0
-        pdfLayout.Subtitle_B = 205
+        pdfLayout.Subtitle_R = 9
+        pdfLayout.Subtitle_G = 62
+        pdfLayout.Subtitle_B = 111
         pdfLayout.Subtitle = "Kebijakan Investasi "
 
-        pdfLayout.TanggalPenting_R = 0
-        pdfLayout.TanggalPenting_G = 0
-        pdfLayout.TanggalPenting_B = 205
+        pdfLayout.TanggalPenting_R = 9
+        pdfLayout.TanggalPenting_G = 62
+        pdfLayout.TanggalPenting_B = 111
         pdfLayout.TanggalPenting = "Tanggal Penting"
         pdfLayout.PembagianDividendTerakhir = "Pembagian Devidend Terakhir"
         pdfLayout.PembagianDividendBerikutnya = "Pembagian Devidend Berikutnya"
@@ -188,14 +188,14 @@ Public Class ReportFundSheetCPF
         pdfLayout.TanggalPentingLine_B = 0
 
 
-        pdfLayout.TableHeader_R = 0
-        pdfLayout.TableHeader_G = 0
-        pdfLayout.TableHeader_B = 205
+        pdfLayout.TableHeader_R = 9
+        pdfLayout.TableHeader_G = 62
+        pdfLayout.TableHeader_B = 111
         pdfLayout.TableHeader = "Kinerja Historis (%)"
 
-        pdfLayout.TableTitle_R = 0
-        pdfLayout.TableTitle_G = 0
-        pdfLayout.TableTitle_B = 205
+        pdfLayout.TableTitle_R = 9
+        pdfLayout.TableTitle_G = 62
+        pdfLayout.TableTitle_B = 111
         pdfLayout.Table1Bln = "1 Bulan"
         pdfLayout.Table3Bln = "3 Bulan"
         pdfLayout.Table6Bln = "6 Bulan"
@@ -204,23 +204,23 @@ Public Class ReportFundSheetCPF
         pdfLayout.TableSejakPembentukan = "Sejak Pembentukan"
         pdfLayout.TableIndikasiRateDividenTetap = "Indikasi Rate Dividen Tetap"
 
-        pdfLayout.FooterTitle1_R = 0
-        pdfLayout.FooterTitle1_G = 0
-        pdfLayout.FooterTitle1_B = 205
+        pdfLayout.FooterTitle1_R = 9
+        pdfLayout.FooterTitle1_G = 62
+        pdfLayout.FooterTitle1_B = 111
         pdfLayout.Footer1 = "Tujuan Investasi"
 
-        pdfLayout.FooterTitle2_R = 0
-        pdfLayout.FooterTitle2_G = 0
-        pdfLayout.FooterTitle2_B = 205
+        pdfLayout.FooterTitle2_R = 9
+        pdfLayout.FooterTitle2_G = 62
+        pdfLayout.FooterTitle2_B = 111
         pdfLayout.Footer2 = "Tentang Mandiri Investasi"
 
         pdfLayout.TableLine_R = 255
         pdfLayout.TableLine_G = 255
         pdfLayout.TableLine_B = 0
 
-        pdfLayout.ChartBorder_R = 0
-        pdfLayout.ChartBorder_G = 0
-        pdfLayout.ChartBorder_B = 205
+        pdfLayout.ChartBorder_R = 255
+        pdfLayout.ChartBorder_G = 255
+        pdfLayout.ChartBorder_B = 0
         pdfLayout.ChartBorder = False
 
     End Sub
