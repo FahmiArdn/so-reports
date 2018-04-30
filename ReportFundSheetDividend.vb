@@ -414,6 +414,13 @@ Public Class ReportFundSheetDividend
     End Sub
 
     Private Sub btnPDF_Click(sender As Object, e As EventArgs) Handles btnPDF.Click
+        ExportPDF(False)
+    End Sub
+
+    Public Function ExportPDF(ByVal isAttachment As Boolean) As String
+        Return PrintPDF(isAttachment)
+    End Function
+    Private Function PrintPDF(ByVal isAttachment As Boolean) As String
         'Stuff
         Dim strFile As String = ""
         Dim strLayout As String = ""
@@ -1031,10 +1038,9 @@ Public Class ReportFundSheetDividend
             .Save(strFile)
 
         End With
-        'If Not isAttachment Then Process.Start(strFile)
-        'Return strFile
-    End Sub
-
+        If Not isAttachment Then Process.Start(strFile)
+        Return strFile
+    End Function
     Private Sub ReportSetting()
         Dim frm As New ReportFundSheetDividendSetting
         frm.frm = Me
