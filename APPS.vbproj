@@ -57,6 +57,8 @@
     <Reference Include="C1.Win.C1SplitContainer.4, Version=4.0.20151.38, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
     <Reference Include="C1.Win.C1TrueDBGrid.4, Version=4.0.20151.38, Culture=neutral, PublicKeyToken=75ae3fb0e2b1e0da, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="simpi.Codeset">
@@ -199,10 +201,22 @@
     <Compile Include="ReportFundSheetCPF.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ReportFundSheetCPFSetting.Designer.vb">
+      <DependentUpon>ReportFundSheetCPFSetting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportFundSheetCPFSetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ReportFundSheetDividend.Designer.vb">
       <DependentUpon>ReportFundSheetDividend.vb</DependentUpon>
     </Compile>
     <Compile Include="ReportFundSheetDividend.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportFundSheetDividendSetting.Designer.vb">
+      <DependentUpon>ReportFundSheetDividendSetting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportFundSheetDividendSetting.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ReportFundSheetEQ.Designer.vb">
@@ -310,8 +324,14 @@
     <EmbeddedResource Include="ReportFundSheetCPF.resx">
       <DependentUpon>ReportFundSheetCPF.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportFundSheetCPFSetting.resx">
+      <DependentUpon>ReportFundSheetCPFSetting.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportFundSheetDividend.resx">
       <DependentUpon>ReportFundSheetDividend.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportFundSheetDividendSetting.resx">
+      <DependentUpon>ReportFundSheetDividendSetting.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportFundSheetEQ.resx">
       <DependentUpon>ReportFundSheetEQ.vb</DependentUpon>
@@ -369,6 +389,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\simpi3.png" />
   </ItemGroup>
   <ItemGroup>

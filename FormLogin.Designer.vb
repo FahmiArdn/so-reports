@@ -112,7 +112,7 @@ Partial Class FormLogin
         'txtUserLogin
         '
         Me.txtUserLogin.Name = "txtUserLogin"
-        Me.txtUserLogin.Text = "novizarhadisaputra@gmail.com"
+        Me.txtUserLogin.Text = "@gmail.com"
         Me.txtUserLogin.ToolTipText = "<i>Username</i>"
         Me.txtUserLogin.Width = 202
         '

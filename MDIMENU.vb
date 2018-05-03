@@ -133,11 +133,27 @@ Public Class MDIMENU
         'End If
     End Sub
 
+    Private Sub ReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportToolStripMenuItem.Click
 
-    Private Sub ReportFundSheetSectorEQToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportFundSheetSectorEQToolStripMenuItem.Click
+    End Sub
+
+    Private Sub ReportFundSheetDividendToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportFundSheetDividendToolStripMenuItem.Click
         Try
             'MenuCheck("Account Maintenance")
-            Dim frm As New ReportFundSheetSectorEQ
+            Dim frm As New ReportFundSheetDividend
+            frm.Left = 0
+            frm.Top = 30
+            frm.MdiParent = Me
+            frm.Show()
+        Catch ex As Exception
+            ExceptionMessage.Show(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub CPFToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CPFToolStripMenuItem.Click
+        Try
+            'MenuCheck("Account Maintenance")
+            Dim frm As New ReportFundSheetCPF
             frm.Left = 0
             frm.Top = 30
             frm.MdiParent = Me
