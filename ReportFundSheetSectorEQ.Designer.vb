@@ -909,12 +909,11 @@ Partial Class ReportFundSheetSectorEQ
         'chartPerformance
         '
         Me.chartPerformance.BackColor = System.Drawing.Color.White
-        Me.chartPerformance.Dock = System.Windows.Forms.DockStyle.Fill
         Me.chartPerformance.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.chartPerformance.Location = New System.Drawing.Point(0, 0)
         Me.chartPerformance.Name = "chartPerformance"
         Me.chartPerformance.PropBag = resources.GetString("chartPerformance.PropBag")
-        Me.chartPerformance.Size = New System.Drawing.Size(493, 200)
+        Me.chartPerformance.Size = New System.Drawing.Size(493, 197)
         Me.chartPerformance.TabIndex = 18
         '
         'C1SplitterPanel3
