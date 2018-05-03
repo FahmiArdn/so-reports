@@ -4,6 +4,7 @@ Imports simpi.CoreData
 Imports simpi.MasterPortfolio
 Imports System.Drawing.Imaging
 Imports C1.Win.C1Chart
+Imports C1.Win.C1TrueDBGrid
 
 Public Class ReportFundSheetDividend
     Dim objPortfolio As New MasterPortfolio
@@ -12,6 +13,7 @@ Public Class ReportFundSheetDividend
     Dim objBenchmark As New simpi.CoreData.PortfolioBenchmark
     Dim objSecurities As New PositionSecurities
 
+    Dim dtNav As New DataTable
     Dim dtReturn As New DataTable
     Dim dtDividend As New DataTable
     Dim reportSection As String = "REPORT FUND SHEET DIVIDEND"
@@ -72,6 +74,7 @@ Public Class ReportFundSheetDividend
         Public ChartTitle_G As Integer
         Public ChartTitle_B As Integer
         Public ChartTitle As String
+        'right column
         Public KinerjaKumulatif_R As Integer
         Public KinerjaKumulatif_G As Integer
         Public KinerjaKumulatif_B As Integer
@@ -88,6 +91,7 @@ Public Class ReportFundSheetDividend
         Public InformasiDividend_G As Integer
         Public InformasiDividend_B As Integer
         Public InformasiDividend As String
+        'stuff
         Public ReportLine_R As Integer
         Public ReportLine_G As Integer
         Public ReportLine_B As Integer
@@ -300,6 +304,7 @@ Public Class ReportFundSheetDividend
         DBGPerformance1.FetchRowStyles = True
         DBGHolding.FetchRowStyles = True
         DBGDividend.FetchRowStyles = True
+        pdfSetting()
     End Sub
 
     Private Sub btnSearchPortfolio_Click(sender As Object, e As EventArgs) Handles btnSearchPortfolio.Click
@@ -341,21 +346,50 @@ Public Class ReportFundSheetDividend
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
         DataLoad()
         DataDisplay()
+        DisplayPerformance()
+        'DisplayNAV()
     End Sub
 
     Private Sub DataLoad()
         If objPortfolio.GetPortfolioID > 0 Then
             objNAV.Clear()
             objNAV.LoadAt(objPortfolio, dtAs.Value)
-            'objPortfolio.LoadCode(objMasterSimpi, dtAs.Value)
-            'objReturn.LoadAt(objPortfolio, dtAs.Value)
+            objPortfolio.LoadCode(objMasterSimpi, dtAs.Value)
+            objReturn.LoadAt(objPortfolio, dtAs.Value)
+            objBenchmark.LoadAt(objPortfolio, dtAs.Value)
             'objPortfolio.LoadCode(objPortfolio, )
             If objNAV.ErrID = 0 Then
+                'mutual fund
+                txtAssetType.Text = objPortfolio.GetAssetType.GetAssetTypeDescription.ToString
                 txtCcy.Text = objPortfolio.GetPortfolioCcy.GetCcyDescription & " (" & objPortfolio.GetPortfolioCcy.GetCcy & ")"
-                txtInception.Text = objPortfolio.GetInceptionDate.ToString
-                txtBenchmark.Text = "GetPortfolioBenchmark.GetBenchmarkName not found"
+                txtInceptionDate.Text = objPortfolio.GetInceptionDate.ToString("dd-MMM-yyyy")
+                txtValuation.Text = objPortfolio.GetPortfolioType.GetTypeDescription.ToString
+                txtCustodian.Text = "not found"
+
+                'txtBenchmark.Text = objPortfolio.GetPortfolioBenchmarkClass.GetClassName.ToString
+                'txtBenchmark.Text = objPortfolio.GetPortfolioBenchmarkPortfolioName.Trim.ToString
+                'txtBestMonth.Text = objPortfolio.get
+                'data GetPortfolioBenchmarkPortfolioName tidak muncul
+                'txtBenchmark.Text = objPortfolio.GetPortfolioBenchmarkPortfolioName.ToString
+                'txtBenchmark.Text = objPortfolio.GetPortfolioBenchmarkPortfolioName.Trim.ToString
+                'txtBenchmark.Text = objGetPortfolioBenchmark.get
+                txtBenchmark.Text = "not found"
                 txtNAVUnit.Text = objNAV.GetNAVPerUnit.ToString("n2")
                 txtAUM.Text = (objNAV.GetNAV / 1000000).ToString("n4")
+
+                'invesment amount and cost
+                txtMinimumInitialSubscription.Text = "not found"
+
+                txtSellingFee.Text = "Maks " & objNAV.GetPercentagePayableSellingFeeAsset.ToString
+                txtRedemptionFee.Text = "Maks " & objNAV.GetPercentagePayableRedemptionFeeAsset.ToString
+
+                'statistic
+                txtInception.Text = objPortfolio.GetInceptionDate.ToString("ddMMMyyyy")
+                'txtStandardDeviation.Text =
+                txtBestMonth.Text = objReturn.Getr1Mo.ToString()
+                'txtBestMonthDate.Text = objReturn.Getr1Mo.ToString()
+                txtBestLastYear.Text = objReturn.GetrYTD.ToString()
+
             End If
             dtDividend = objNAV.SearchHistoryLast(objPortfolio, objNAV.GetPositionDate, 0)
             dtReturn = objReturn.SearchHistoryLast(objPortfolio, objReturn.GetPositionDate, 0)
@@ -400,6 +434,52 @@ Public Class ReportFundSheetDividend
         End If
     End Sub
 
+    'Private Sub DisplayNAV()
+    '    If dtNav IsNot Nothing AndAlso dtNav.Rows.Count > 0 Then
+    '        With chartPerformance
+    '            .Style.Border.BorderStyle = BorderStyleEnum.None
+    '            Dim ds As ChartDataSeriesCollection = .ChartGroups(0).ChartData.SeriesList
+    '            ds.Clear()
+    '            Dim series As ChartDataSeries = ds.AddNewSeries()
+    '            series.LineStyle.Color = Color.Green
+    '            series.LineStyle.Thickness = 1
+    '            series.SymbolStyle.Shape = SymbolShapeEnum.None
+    '            series.FitType = FitTypeEnum.Line
+
+    '            series.X.CopyDataIn((From q In dtNav.AsEnumerable Order By q.Field(Of Date)("PositionDate") Ascending Select q.Field(Of Date)("PositionDate")).ToArray)
+    '            series.Y.CopyDataIn((From q In dtNav.AsEnumerable Order By q.Field(Of Date)("PositionDate") Ascending Select q.Field(Of Decimal)("GeometricIndex") - 1).ToArray)
+    '            series.PointData.Length = dtNav.Rows.Count
+
+    '            .BackColor = Color.Transparent
+    '            .ChartArea.AxisX.Max = CDate(dtNav.Rows(0)("PositionDate")).ToOADate
+    '            .ChartArea.AxisX.Min = CDate(dtNav.Rows(dtNav.Rows.Count - 1)("PositionDate")).ToOADate
+    '            .ChartArea.AxisX.AutoMajor = True
+    '            .ChartArea.AxisX.AutoMinor = True
+    '            .ChartArea.AxisX.AnnoFormat = FormatEnum.DateManual
+    '            .ChartArea.AxisX.AnnoFormatString = "MMM-yy"
+    '            .ChartArea.AxisX.AnnotationRotation = 25
+    '            .ChartArea.AxisX.Origin = .ChartArea.AxisX.Min
+
+
+    '            Dim Max As Double = (Decimal.Floor((From q In dtNav.AsEnumerable Select q.Field(Of Decimal)("GeometricIndex") - 1).Max * 10) + 1) / 10D
+    '            Dim Min As Double = Decimal.Floor((From q In dtNav.AsEnumerable Select q.Field(Of Decimal)("GeometricIndex") - 1).Min * 10) / 10D
+    '            .ChartArea.AxisY.Max = Max
+    '            .ChartArea.AxisY.Min = Min
+    '            If Max < 0 And Min < 0 Then .ChartArea.AxisY.Origin = (Min + Max) / 2D Else .ChartArea.AxisY.Origin = 0D
+    '            .ChartArea.AxisY.AutoMajor = True
+    '            .ChartArea.AxisY.AutoMinor = True
+    '            .ChartArea.AxisY.AnnoFormat = FormatEnum.NumericManual
+    '            .ChartArea.AxisY.AnnoFormatString = "p0"
+
+    '            .ChartArea.AxisX.Thickness = 1
+    '            .ChartArea.AxisY.Thickness = 1
+    '        End With
+
+    '        pgPerformance.SelectedObject = chartPerformance
+    '        'pgNAV.Text = chartNAV.Name
+    '    End If
+    'End Sub
+
     Private Sub btnEmail_Click(sender As Object, e As EventArgs) Handles btnEmail.Click
         ReportEmail()
     End Sub
@@ -413,10 +493,87 @@ Public Class ReportFundSheetDividend
         'End If
     End Sub
 
+    Private Sub DisplayPerformance()
+        Dim dtPerformance1 As New DataTable
+        If dtPerformance1.Rows.Count = 0 Then
+            dtPerformance1.Columns.AddRange(New DataColumn() {
+                    New DataColumn("Items", GetType(String)),
+                    New DataColumn("1D", GetType(String)),
+                    New DataColumn("MTD", GetType(String)),
+                    New DataColumn("30D", GetType(String)),
+                    New DataColumn("1Mo", GetType(String)),
+                    New DataColumn("3Mo", GetType(String)),
+                    New DataColumn("6Mo", GetType(String)),
+                    New DataColumn("YTD", GetType(String)),
+                    New DataColumn("1Y", GetType(String)),
+                    New DataColumn("2Y", GetType(String)),
+                    New DataColumn("3Y", GetType(String)),
+                    New DataColumn("5Y", GetType(String)),
+                    New DataColumn("10Y", GetType(String)),
+                    New DataColumn("Inception", GetType(String))})
+        End If
+
+        dtPerformance1.Clear()
+        dtPerformance1.Rows.Add(objPortfolio.GetPortfolioCode, (objReturn.Getr1D * 100).ToString("n2"),
+                       (objReturn.GetrMTD * 100).ToString("n2"), (objReturn.Getr30D * 100).ToString("n2"),
+                       (objReturn.Getr1Mo * 100).ToString("n2"), (objReturn.Getr3Mo * 100).ToString("n2"),
+                       (objReturn.Getr6Mo * 100).ToString("n2"), (objReturn.GetrYTD * 100).ToString("n2"),
+                       (objReturn.Getr1Y * 100).ToString("n2"), (objReturn.Getr2Y * 100).ToString("n2"),
+                       (objReturn.Getr3Y * 100).ToString("n2"), (objReturn.Getr5Y * 100).ToString("n2"),
+                       (objReturn.Getr10Y * 100).ToString("n2"), (objReturn.GetrInception * 100).ToString("n2"))
+
+
+        dtPerformance1.Rows.Add("Benchmark", (objBenchmark.Getr1D * 100).ToString("n2"),
+                (objBenchmark.GetrMTD * 100).ToString("n2"), (objBenchmark.Getr30D * 100).ToString("n2"),
+                (objBenchmark.Getr1Mo * 100).ToString("n2"), (objBenchmark.Getr3Mo * 100).ToString("n2"),
+                (objBenchmark.Getr6Mo * 100).ToString("n2"), (objBenchmark.GetrYTD * 100).ToString("n2"),
+                (objBenchmark.Getr1Y * 100).ToString("n2"), (objBenchmark.Getr2Y * 100).ToString("n2"),
+                (objBenchmark.Getr3Y * 100).ToString("n2"), (objBenchmark.Getr5Y * 100).ToString("n2"),
+                (objBenchmark.Getr10Y * 100).ToString("n2"), (objBenchmark.GetrInception * 100).ToString("n2"))
+
+
+        '1: portfolio vs benchmark: 1d, mtd, 30d, 1Mo, 3Mo, 6Mo, YTD, 1Y, 2Y, 3Y, 5Y, 10Y, Inception
+        '2: this year vs last year: JAN - DEC, Q1 - Q4
+        'report list of fund: MTD, YTD, 2016, 2015, 2014 - 10 tahun, Average 1Y
+        With DBGPerformance1
+            .AllowAddNew = False
+            .AllowDelete = False
+            .AllowUpdate = False
+            .Style.WrapText = False
+            .Columns.Clear()
+            .DataSource = dtPerformance1
+
+            .Splits(0).DisplayColumns("1D").Style.HorizontalAlignment = C1.Win.C1TrueDBGrid.AlignHorzEnum.Far
+            .Splits(0).DisplayColumns("MTD").Style.HorizontalAlignment = C1.Win.C1TrueDBGrid.AlignHorzEnum.Far
+            .Splits(0).DisplayColumns("30D").Style.HorizontalAlignment = C1.Win.C1TrueDBGrid.AlignHorzEnum.Far
+            .Splits(0).DisplayColumns("1Mo").Style.HorizontalAlignment = C1.Win.C1TrueDBGrid.AlignHorzEnum.Far
+            .Splits(0).DisplayColumns("3Mo").Style.HorizontalAlignment = C1.Win.C1TrueDBGrid.AlignHorzEnum.Far
+            .Splits(0).DisplayColumns("6Mo").Style.HorizontalAlignment = C1.Win.C1TrueDBGrid.AlignHorzEnum.Far
+            .Splits(0).DisplayColumns("YTD").Style.HorizontalAlignment = C1.Win.C1TrueDBGrid.AlignHorzEnum.Far
+            .Splits(0).DisplayColumns("1Y").Style.HorizontalAlignment = C1.Win.C1TrueDBGrid.AlignHorzEnum.Far
+            .Splits(0).DisplayColumns("2Y").Style.HorizontalAlignment = C1.Win.C1TrueDBGrid.AlignHorzEnum.Far
+            .Splits(0).DisplayColumns("3Y").Style.HorizontalAlignment = C1.Win.C1TrueDBGrid.AlignHorzEnum.Far
+            .Splits(0).DisplayColumns("5Y").Style.HorizontalAlignment = C1.Win.C1TrueDBGrid.AlignHorzEnum.Far
+            .Splits(0).DisplayColumns("10Y").Style.HorizontalAlignment = C1.Win.C1TrueDBGrid.AlignHorzEnum.Far
+            .Splits(0).DisplayColumns("Inception").Style.HorizontalAlignment = C1.Win.C1TrueDBGrid.AlignHorzEnum.Far
+
+            For Each column As C1DisplayColumn In .Splits(0).DisplayColumns
+                column.AutoSize()
+                .Splits(0).DisplayColumns(column.Name).HeadingStyle.HorizontalAlignment = C1.Win.C1TrueDBGrid.AlignHorzEnum.Center
+            Next
+
+        End With
+
+    End Sub
+
+    Private Sub DBGHolding_FetchRowStyle(sender As Object, e As FetchRowStyleEventArgs) Handles DBGHolding.FetchRowStyle
+        If e.Row Mod 2 = 0 Then e.CellStyle.BackColor = Color.LemonChiffon
+    End Sub
+
+
     Private Sub btnPDF_Click(sender As Object, e As EventArgs) Handles btnPDF.Click
         ExportPDF(False)
     End Sub
-
     Public Function ExportPDF(ByVal isAttachment As Boolean) As String
         Return PrintPDF(isAttachment)
     End Function
