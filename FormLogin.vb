@@ -180,4 +180,7 @@ Public Class FormLogin
         End Try
     End Sub
 
+    Private Sub txtUserLogin_TextChanged(sender As Object, e As EventArgs) Handles txtUserLogin.TextChanged
+
+    End Sub
 End Class

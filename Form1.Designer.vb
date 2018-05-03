@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.C1InputPanel1 = New C1.Win.C1InputPanel.C1InputPanel()
@@ -32,7 +32,6 @@ Partial Class Form1
         Me.C1SplitContainer1 = New C1.Win.C1SplitContainer.C1SplitContainer()
         Me.C1SplitterPanel1 = New C1.Win.C1SplitContainer.C1SplitterPanel()
         Me.C1TrueDBGrid1 = New C1.Win.C1TrueDBGrid.C1TrueDBGrid()
-        Me.C1FlexGrid1 = New C1.Win.C1FlexGrid.C1FlexGrid()
         CType(Me.C1InputPanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1StatusBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -40,9 +39,7 @@ Partial Class Form1
         Me.C1DockingTab1.SuspendLayout()
         CType(Me.C1SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.C1SplitContainer1.SuspendLayout()
-        Me.C1SplitterPanel1.SuspendLayout()
         CType(Me.C1TrueDBGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.C1FlexGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'C1InputPanel1
@@ -104,7 +101,6 @@ Partial Class Form1
         '
         'C1SplitterPanel1
         '
-        Me.C1SplitterPanel1.Controls.Add(Me.C1FlexGrid1)
         Me.C1SplitterPanel1.Height = 200
         Me.C1SplitterPanel1.Location = New System.Drawing.Point(0, 21)
         Me.C1SplitterPanel1.Name = "C1SplitterPanel1"
@@ -124,15 +120,6 @@ Partial Class Form1
         Me.C1TrueDBGrid1.PropBag = resources.GetString("C1TrueDBGrid1.PropBag")
         Me.C1TrueDBGrid1.Size = New System.Drawing.Size(240, 150)
         Me.C1TrueDBGrid1.TabIndex = 4
-        '
-        'C1FlexGrid1
-        '
-        Me.C1FlexGrid1.ColumnInfo = "10,1,0,0,0,95,Columns:"
-        Me.C1FlexGrid1.Location = New System.Drawing.Point(60, 16)
-        Me.C1FlexGrid1.Name = "C1FlexGrid1"
-        Me.C1FlexGrid1.Rows.DefaultSize = 19
-        Me.C1FlexGrid1.Size = New System.Drawing.Size(240, 150)
-        Me.C1FlexGrid1.TabIndex = 6
         '
         'Form1
         '
@@ -154,9 +141,7 @@ Partial Class Form1
         Me.C1DockingTab1.ResumeLayout(False)
         CType(Me.C1SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.C1SplitContainer1.ResumeLayout(False)
-        Me.C1SplitterPanel1.ResumeLayout(False)
         CType(Me.C1TrueDBGrid1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.C1FlexGrid1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -171,5 +156,4 @@ Partial Class Form1
     Friend WithEvents C1SplitContainer1 As C1.Win.C1SplitContainer.C1SplitContainer
     Friend WithEvents C1SplitterPanel1 As C1.Win.C1SplitContainer.C1SplitterPanel
     Friend WithEvents C1TrueDBGrid1 As C1.Win.C1TrueDBGrid.C1TrueDBGrid
-    Friend WithEvents C1FlexGrid1 As C1.Win.C1FlexGrid.C1FlexGrid
 End Class

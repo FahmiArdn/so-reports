@@ -57,6 +57,8 @@
     <Reference Include="C1.Win.C1SplitContainer.4, Version=4.0.20151.38, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
     <Reference Include="C1.Win.C1TrueDBGrid.4, Version=4.0.20151.38, Culture=neutral, PublicKeyToken=75ae3fb0e2b1e0da, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="simpi.Codeset">
@@ -199,10 +201,22 @@
     <Compile Include="ReportFundSheetCPF.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ReportFundSheetCPFSetting.Designer.vb">
+      <DependentUpon>ReportFundSheetCPFSetting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportFundSheetCPFSetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ReportFundSheetDividend.Designer.vb">
       <DependentUpon>ReportFundSheetDividend.vb</DependentUpon>
     </Compile>
     <Compile Include="ReportFundSheetDividend.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportFundSheetDividendSetting.Designer.vb">
+      <DependentUpon>ReportFundSheetDividendSetting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportFundSheetDividendSetting.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ReportFundSheetEQ.Designer.vb">
@@ -245,6 +259,12 @@
       <DependentUpon>ReportFundSheetSectorEQ.vb</DependentUpon>
     </Compile>
     <Compile Include="ReportFundSheetSectorEQ.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportFundSheetSectorEQSetting.Designer.vb">
+      <DependentUpon>ReportFundSheetSectorEQSetting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportFundSheetSectorEQSetting.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ReportFundSheetSectorFI.Designer.vb">
@@ -304,8 +324,14 @@
     <EmbeddedResource Include="ReportFundSheetCPF.resx">
       <DependentUpon>ReportFundSheetCPF.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportFundSheetCPFSetting.resx">
+      <DependentUpon>ReportFundSheetCPFSetting.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportFundSheetDividend.resx">
       <DependentUpon>ReportFundSheetDividend.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportFundSheetDividendSetting.resx">
+      <DependentUpon>ReportFundSheetDividendSetting.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportFundSheetEQ.resx">
       <DependentUpon>ReportFundSheetEQ.vb</DependentUpon>
@@ -327,6 +353,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReportFundSheetSectorEQ.resx">
       <DependentUpon>ReportFundSheetSectorEQ.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportFundSheetSectorEQSetting.resx">
+      <DependentUpon>ReportFundSheetSectorEQSetting.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportFundSheetSectorFI.resx">
       <DependentUpon>ReportFundSheetSectorFI.vb</DependentUpon>
@@ -360,7 +389,37 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\simpi3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel1">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
