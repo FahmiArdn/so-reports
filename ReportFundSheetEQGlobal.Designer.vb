@@ -29,6 +29,7 @@ Partial Class ReportFundSheetEQGlobal
         Me.lblPortfolioCode = New C1.Win.C1InputPanel.InputLabel()
         Me.lblPortfolioName = New C1.Win.C1InputPanel.InputLabel()
         Me.lblSimpiEmail = New C1.Win.C1InputPanel.InputLabel()
+        Me.lblSimpiName = New C1.Win.C1InputPanel.InputLabel()
         Me.InputLabel1 = New C1.Win.C1InputPanel.InputLabel()
         Me.dtAs = New C1.Win.C1InputPanel.InputDatePicker()
         Me.btnSearch = New C1.Win.C1InputPanel.InputButton()
@@ -60,6 +61,17 @@ Partial Class ReportFundSheetEQGlobal
         Me.txtInvestmentPeriode = New C1.Win.C1InputPanel.InputTextBox()
         Me.InputLabel19 = New C1.Win.C1InputPanel.InputLabel()
         Me.txtRisk = New C1.Win.C1InputPanel.InputTextBox()
+        Me.InputGroupHeader4 = New C1.Win.C1InputPanel.InputGroupHeader()
+        Me.InputLabel10 = New C1.Win.C1InputPanel.InputLabel()
+        Me.InputLabel17 = New C1.Win.C1InputPanel.InputLabel()
+        Me.txtManagementFee = New C1.Win.C1InputPanel.InputTextBox()
+        Me.txtCustodianFee = New C1.Win.C1InputPanel.InputTextBox()
+        Me.InputLabel20 = New C1.Win.C1InputPanel.InputLabel()
+        Me.InputLabel21 = New C1.Win.C1InputPanel.InputLabel()
+        Me.InputLabel22 = New C1.Win.C1InputPanel.InputLabel()
+        Me.txtSellingFee = New C1.Win.C1InputPanel.InputTextBox()
+        Me.txtRedemptionFee = New C1.Win.C1InputPanel.InputTextBox()
+        Me.txtSwitchingFee = New C1.Win.C1InputPanel.InputTextBox()
         Me.C1SplitterPanel5 = New C1.Win.C1SplitContainer.C1SplitterPanel()
         Me.DBGHolding = New C1.Win.C1TrueDBGrid.C1TrueDBGrid()
         Me.C1InputPanel3 = New C1.Win.C1InputPanel.C1InputPanel()
@@ -75,13 +87,31 @@ Partial Class ReportFundSheetEQGlobal
         Me.InputLabel16 = New C1.Win.C1InputPanel.InputLabel()
         Me.txtPolicyMM = New C1.Win.C1InputPanel.InputTextBox()
         Me.txtCompositionMM = New C1.Win.C1InputPanel.InputTextBox()
+        Me.InputLabel9 = New C1.Win.C1InputPanel.InputLabel()
+        Me.txtPolicyNotes = New C1.Win.C1InputPanel.InputTextBox()
         Me.InputGroupHeader15 = New C1.Win.C1InputPanel.InputGroupHeader()
         Me.C1DockingTabPage2 = New C1.Win.C1Command.C1DockingTabPage()
         Me.C1SplitContainer1 = New C1.Win.C1SplitContainer.C1SplitContainer()
         Me.C1SplitterPanel1 = New C1.Win.C1SplitContainer.C1SplitterPanel()
-        Me.chartSector = New C1.Win.C1Chart.C1Chart()
+        Me.C1InputPanel4 = New C1.Win.C1InputPanel.C1InputPanel()
+        Me.InputLabel23 = New C1.Win.C1InputPanel.InputLabel()
+        Me.txtRisk1 = New C1.Win.C1InputPanel.InputTextBox()
+        Me.InputLabel24 = New C1.Win.C1InputPanel.InputLabel()
+        Me.txtRisk2 = New C1.Win.C1InputPanel.InputTextBox()
+        Me.InputLabel25 = New C1.Win.C1InputPanel.InputLabel()
+        Me.txtRisk3 = New C1.Win.C1InputPanel.InputTextBox()
+        Me.InputLabel26 = New C1.Win.C1InputPanel.InputLabel()
+        Me.txtRisk4 = New C1.Win.C1InputPanel.InputTextBox()
+        Me.InputLabel27 = New C1.Win.C1InputPanel.InputLabel()
+        Me.txtRisk5 = New C1.Win.C1InputPanel.InputTextBox()
+        Me.InputLabel28 = New C1.Win.C1InputPanel.InputLabel()
+        Me.txtRisk6 = New C1.Win.C1InputPanel.InputTextBox()
+        Me.InputLabel29 = New C1.Win.C1InputPanel.InputLabel()
+        Me.txtRisk7 = New C1.Win.C1InputPanel.InputTextBox()
         Me.C1SplitterPanel2 = New C1.Win.C1SplitContainer.C1SplitterPanel()
         Me.chartNAV = New C1.Win.C1Chart.C1Chart()
+        Me.C1SplitterPanel6 = New C1.Win.C1SplitContainer.C1SplitterPanel()
+        Me.chartSector = New C1.Win.C1Chart.C1Chart()
         Me.C1DockingTabPage3 = New C1.Win.C1Command.C1DockingTabPage()
         Me.C1InputPanel9 = New C1.Win.C1InputPanel.C1InputPanel()
         Me.InputGroupHeader9 = New C1.Win.C1InputPanel.InputGroupHeader()
@@ -95,36 +125,6 @@ Partial Class ReportFundSheetEQGlobal
         Me.InputLabel3 = New C1.Win.C1InputPanel.InputLabel()
         Me.txtMIDesc = New C1.Win.C1InputPanel.InputTextBox()
         Me.c1pdf = New C1.C1Pdf.C1PdfDocument()
-        Me.InputLabel9 = New C1.Win.C1InputPanel.InputLabel()
-        Me.txtPolicyNotes = New C1.Win.C1InputPanel.InputTextBox()
-        Me.InputGroupHeader4 = New C1.Win.C1InputPanel.InputGroupHeader()
-        Me.InputLabel10 = New C1.Win.C1InputPanel.InputLabel()
-        Me.InputLabel17 = New C1.Win.C1InputPanel.InputLabel()
-        Me.InputLabel20 = New C1.Win.C1InputPanel.InputLabel()
-        Me.InputLabel21 = New C1.Win.C1InputPanel.InputLabel()
-        Me.InputLabel22 = New C1.Win.C1InputPanel.InputLabel()
-        Me.txtManagementFee = New C1.Win.C1InputPanel.InputTextBox()
-        Me.txtCustodianFee = New C1.Win.C1InputPanel.InputTextBox()
-        Me.txtSellingFee = New C1.Win.C1InputPanel.InputTextBox()
-        Me.txtRedemptionFee = New C1.Win.C1InputPanel.InputTextBox()
-        Me.txtSwitchingFee = New C1.Win.C1InputPanel.InputTextBox()
-        Me.C1SplitterPanel6 = New C1.Win.C1SplitContainer.C1SplitterPanel()
-        Me.C1InputPanel4 = New C1.Win.C1InputPanel.C1InputPanel()
-        Me.lblSimpiName = New C1.Win.C1InputPanel.InputLabel()
-        Me.InputLabel23 = New C1.Win.C1InputPanel.InputLabel()
-        Me.InputLabel24 = New C1.Win.C1InputPanel.InputLabel()
-        Me.InputLabel25 = New C1.Win.C1InputPanel.InputLabel()
-        Me.InputLabel26 = New C1.Win.C1InputPanel.InputLabel()
-        Me.InputLabel27 = New C1.Win.C1InputPanel.InputLabel()
-        Me.InputLabel28 = New C1.Win.C1InputPanel.InputLabel()
-        Me.InputLabel29 = New C1.Win.C1InputPanel.InputLabel()
-        Me.txtRisk1 = New C1.Win.C1InputPanel.InputTextBox()
-        Me.txtRisk2 = New C1.Win.C1InputPanel.InputTextBox()
-        Me.txtRisk3 = New C1.Win.C1InputPanel.InputTextBox()
-        Me.txtRisk4 = New C1.Win.C1InputPanel.InputTextBox()
-        Me.txtRisk5 = New C1.Win.C1InputPanel.InputTextBox()
-        Me.txtRisk6 = New C1.Win.C1InputPanel.InputTextBox()
-        Me.txtRisk7 = New C1.Win.C1InputPanel.InputTextBox()
         CType(Me.C1InputPanel2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1DockingTab1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.C1DockingTab1.SuspendLayout()
@@ -142,13 +142,13 @@ Partial Class ReportFundSheetEQGlobal
         CType(Me.C1SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.C1SplitContainer1.SuspendLayout()
         Me.C1SplitterPanel1.SuspendLayout()
-        CType(Me.chartSector, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.C1InputPanel4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.C1SplitterPanel2.SuspendLayout()
         CType(Me.chartNAV, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.C1SplitterPanel6.SuspendLayout()
+        CType(Me.chartSector, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.C1DockingTabPage3.SuspendLayout()
         CType(Me.C1InputPanel9, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.C1SplitterPanel6.SuspendLayout()
-        CType(Me.C1InputPanel4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'C1InputPanel2
@@ -200,6 +200,11 @@ Partial Class ReportFundSheetEQGlobal
         Me.lblSimpiEmail.Name = "lblSimpiEmail"
         Me.lblSimpiEmail.Visibility = C1.Win.C1InputPanel.Visibility.Hidden
         Me.lblSimpiEmail.Width = 1
+        '
+        'lblSimpiName
+        '
+        Me.lblSimpiName.Name = "lblSimpiName"
+        Me.lblSimpiName.Width = 1
         '
         'InputLabel1
         '
@@ -304,7 +309,7 @@ Partial Class ReportFundSheetEQGlobal
         Me.DBGPerformance.PreviewInfo.Location = New System.Drawing.Point(0, 0)
         Me.DBGPerformance.PreviewInfo.Size = New System.Drawing.Size(0, 0)
         Me.DBGPerformance.PreviewInfo.ZoomFactor = 75.0R
-        Me.DBGPerformance.PrintInfo.PageSettings = CType(resources.GetObject("DBGPerformance1.PrintInfo.PageSettings"), System.Drawing.Printing.PageSettings)
+        Me.DBGPerformance.PrintInfo.PageSettings = CType(resources.GetObject("DBGPerformance.PrintInfo.PageSettings"), System.Drawing.Printing.PageSettings)
         Me.DBGPerformance.PropBag = resources.GetString("DBGPerformance.PropBag")
         Me.DBGPerformance.RecordSelectors = False
         Me.DBGPerformance.Size = New System.Drawing.Size(881, 85)
@@ -473,6 +478,64 @@ Partial Class ReportFundSheetEQGlobal
         Me.txtRisk.Text = " "
         Me.txtRisk.Width = 215
         '
+        'InputGroupHeader4
+        '
+        Me.InputGroupHeader4.Height = 1
+        Me.InputGroupHeader4.Name = "InputGroupHeader4"
+        '
+        'InputLabel10
+        '
+        Me.InputLabel10.Name = "InputLabel10"
+        Me.InputLabel10.Text = "Management Fee"
+        Me.InputLabel10.Width = 101
+        '
+        'InputLabel17
+        '
+        Me.InputLabel17.Break = C1.Win.C1InputPanel.BreakType.Row
+        Me.InputLabel17.Name = "InputLabel17"
+        Me.InputLabel17.Text = "Custodian Fee"
+        '
+        'txtManagementFee
+        '
+        Me.txtManagementFee.Break = C1.Win.C1InputPanel.BreakType.None
+        Me.txtManagementFee.Name = "txtManagementFee"
+        '
+        'txtCustodianFee
+        '
+        Me.txtCustodianFee.Name = "txtCustodianFee"
+        '
+        'InputLabel20
+        '
+        Me.InputLabel20.Name = "InputLabel20"
+        Me.InputLabel20.Text = "Selling Fee"
+        Me.InputLabel20.Width = 101
+        '
+        'InputLabel21
+        '
+        Me.InputLabel21.Name = "InputLabel21"
+        Me.InputLabel21.Text = "Redemption Fee"
+        Me.InputLabel21.Width = 101
+        '
+        'InputLabel22
+        '
+        Me.InputLabel22.Break = C1.Win.C1InputPanel.BreakType.Row
+        Me.InputLabel22.Name = "InputLabel22"
+        Me.InputLabel22.Text = "Switching Fee"
+        '
+        'txtSellingFee
+        '
+        Me.txtSellingFee.Break = C1.Win.C1InputPanel.BreakType.None
+        Me.txtSellingFee.Name = "txtSellingFee"
+        '
+        'txtRedemptionFee
+        '
+        Me.txtRedemptionFee.Break = C1.Win.C1InputPanel.BreakType.None
+        Me.txtRedemptionFee.Name = "txtRedemptionFee"
+        '
+        'txtSwitchingFee
+        '
+        Me.txtSwitchingFee.Name = "txtSwitchingFee"
+        '
         'C1SplitterPanel5
         '
         Me.C1SplitterPanel5.Controls.Add(Me.DBGHolding)
@@ -493,7 +556,7 @@ Partial Class ReportFundSheetEQGlobal
         Me.DBGHolding.PreviewInfo.Location = New System.Drawing.Point(0, 0)
         Me.DBGHolding.PreviewInfo.Size = New System.Drawing.Size(0, 0)
         Me.DBGHolding.PreviewInfo.ZoomFactor = 75.0R
-        Me.DBGHolding.PrintInfo.PageSettings = CType(resources.GetObject("DBGEfek.PrintInfo.PageSettings"), System.Drawing.Printing.PageSettings)
+        Me.DBGHolding.PrintInfo.PageSettings = CType(resources.GetObject("DBGHolding.PrintInfo.PageSettings"), System.Drawing.Printing.PageSettings)
         Me.DBGHolding.PropBag = resources.GetString("DBGHolding.PropBag")
         Me.DBGHolding.Size = New System.Drawing.Size(542, 119)
         Me.DBGHolding.TabIndex = 22
@@ -599,6 +662,17 @@ Partial Class ReportFundSheetEQGlobal
         Me.txtCompositionMM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.txtCompositionMM.Width = 60
         '
+        'InputLabel9
+        '
+        Me.InputLabel9.Name = "InputLabel9"
+        Me.InputLabel9.Text = "Notes: "
+        Me.InputLabel9.Width = 120
+        '
+        'txtPolicyNotes
+        '
+        Me.txtPolicyNotes.Name = "txtPolicyNotes"
+        Me.txtPolicyNotes.Width = 401
+        '
         'InputGroupHeader15
         '
         Me.InputGroupHeader15.Name = "InputGroupHeader15"
@@ -645,15 +719,101 @@ Partial Class ReportFundSheetEQGlobal
         Me.C1SplitterPanel1.Text = "Main Risk Factors"
         Me.C1SplitterPanel1.Width = 283
         '
-        'chartSector
+        'C1InputPanel4
         '
-        Me.chartSector.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.chartSector.Dock = System.Windows.Forms.DockStyle.Left
-        Me.chartSector.Location = New System.Drawing.Point(0, 0)
-        Me.chartSector.Name = "chartSector"
-        Me.chartSector.PropBag = resources.GetString("chartSector.PropBag")
-        Me.chartSector.Size = New System.Drawing.Size(327, 170)
-        Me.chartSector.TabIndex = 5
+        Me.C1InputPanel4.BackColor = System.Drawing.Color.White
+        Me.C1InputPanel4.BorderThickness = 1
+        Me.C1InputPanel4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.C1InputPanel4.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.C1InputPanel4.Items.Add(Me.InputLabel23)
+        Me.C1InputPanel4.Items.Add(Me.txtRisk1)
+        Me.C1InputPanel4.Items.Add(Me.InputLabel24)
+        Me.C1InputPanel4.Items.Add(Me.txtRisk2)
+        Me.C1InputPanel4.Items.Add(Me.InputLabel25)
+        Me.C1InputPanel4.Items.Add(Me.txtRisk3)
+        Me.C1InputPanel4.Items.Add(Me.InputLabel26)
+        Me.C1InputPanel4.Items.Add(Me.txtRisk4)
+        Me.C1InputPanel4.Items.Add(Me.InputLabel27)
+        Me.C1InputPanel4.Items.Add(Me.txtRisk5)
+        Me.C1InputPanel4.Items.Add(Me.InputLabel28)
+        Me.C1InputPanel4.Items.Add(Me.txtRisk6)
+        Me.C1InputPanel4.Items.Add(Me.InputLabel29)
+        Me.C1InputPanel4.Items.Add(Me.txtRisk7)
+        Me.C1InputPanel4.Location = New System.Drawing.Point(0, 0)
+        Me.C1InputPanel4.Name = "C1InputPanel4"
+        Me.C1InputPanel4.Size = New System.Drawing.Size(283, 442)
+        Me.C1InputPanel4.TabIndex = 0
+        Me.C1InputPanel4.VisualStyle = C1.Win.C1InputPanel.VisualStyle.Office2010Blue
+        '
+        'InputLabel23
+        '
+        Me.InputLabel23.Name = "InputLabel23"
+        Me.InputLabel23.Text = "1."
+        '
+        'txtRisk1
+        '
+        Me.txtRisk1.Name = "txtRisk1"
+        Me.txtRisk1.Width = 248
+        '
+        'InputLabel24
+        '
+        Me.InputLabel24.Name = "InputLabel24"
+        Me.InputLabel24.Text = "2."
+        '
+        'txtRisk2
+        '
+        Me.txtRisk2.Name = "txtRisk2"
+        Me.txtRisk2.Width = 248
+        '
+        'InputLabel25
+        '
+        Me.InputLabel25.Name = "InputLabel25"
+        Me.InputLabel25.Text = "3."
+        '
+        'txtRisk3
+        '
+        Me.txtRisk3.Name = "txtRisk3"
+        Me.txtRisk3.Width = 248
+        '
+        'InputLabel26
+        '
+        Me.InputLabel26.Name = "InputLabel26"
+        Me.InputLabel26.Text = "4."
+        '
+        'txtRisk4
+        '
+        Me.txtRisk4.Name = "txtRisk4"
+        Me.txtRisk4.Width = 248
+        '
+        'InputLabel27
+        '
+        Me.InputLabel27.Name = "InputLabel27"
+        Me.InputLabel27.Text = "5."
+        '
+        'txtRisk5
+        '
+        Me.txtRisk5.Name = "txtRisk5"
+        Me.txtRisk5.Width = 248
+        '
+        'InputLabel28
+        '
+        Me.InputLabel28.Name = "InputLabel28"
+        Me.InputLabel28.Text = "6."
+        '
+        'txtRisk6
+        '
+        Me.txtRisk6.Name = "txtRisk6"
+        Me.txtRisk6.Width = 248
+        '
+        'InputLabel29
+        '
+        Me.InputLabel29.Name = "InputLabel29"
+        Me.InputLabel29.Text = "7."
+        '
+        'txtRisk7
+        '
+        Me.txtRisk7.Name = "txtRisk7"
+        Me.txtRisk7.Width = 248
         '
         'C1SplitterPanel2
         '
@@ -677,6 +837,28 @@ Partial Class ReportFundSheetEQGlobal
         Me.chartNAV.PropBag = resources.GetString("chartNAV.PropBag")
         Me.chartNAV.Size = New System.Drawing.Size(597, 250)
         Me.chartNAV.TabIndex = 6
+        '
+        'C1SplitterPanel6
+        '
+        Me.C1SplitterPanel6.Controls.Add(Me.chartSector)
+        Me.C1SplitterPanel6.Height = 191
+        Me.C1SplitterPanel6.Location = New System.Drawing.Point(284, 293)
+        Me.C1SplitterPanel6.Name = "C1SplitterPanel6"
+        Me.C1SplitterPanel6.Size = New System.Drawing.Size(597, 170)
+        Me.C1SplitterPanel6.TabIndex = 2
+        Me.C1SplitterPanel6.Text = "Sector Allocation"
+        '
+        'chartSector
+        '
+        Me.chartSector.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.chartSector.BackColor = System.Drawing.Color.White
+        Me.chartSector.Dock = System.Windows.Forms.DockStyle.Left
+        Me.chartSector.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.chartSector.Location = New System.Drawing.Point(0, 0)
+        Me.chartSector.Name = "chartSector"
+        Me.chartSector.PropBag = resources.GetString("chartSector.PropBag")
+        Me.chartSector.Size = New System.Drawing.Size(327, 170)
+        Me.chartSector.TabIndex = 5
         '
         'C1DockingTabPage3
         '
@@ -782,187 +964,7 @@ Partial Class ReportFundSheetEQGlobal
         Me.c1pdf.UseFastTextOut = False
         Me.c1pdf.UseFileCaching = False
         '
-        'InputLabel9
-        '
-        Me.InputLabel9.Name = "InputLabel9"
-        Me.InputLabel9.Text = "Notes: "
-        Me.InputLabel9.Width = 120
-        '
-        'txtPolicyNotes
-        '
-        Me.txtPolicyNotes.Name = "txtPolicyNotes"
-        Me.txtPolicyNotes.Width = 401
-        '
-        'InputGroupHeader4
-        '
-        Me.InputGroupHeader4.Height = 1
-        Me.InputGroupHeader4.Name = "InputGroupHeader4"
-        '
-        'InputLabel10
-        '
-        Me.InputLabel10.Name = "InputLabel10"
-        Me.InputLabel10.Text = "Management Fee"
-        Me.InputLabel10.Width = 101
-        '
-        'InputLabel17
-        '
-        Me.InputLabel17.Break = C1.Win.C1InputPanel.BreakType.Row
-        Me.InputLabel17.Name = "InputLabel17"
-        Me.InputLabel17.Text = "Custodian Fee"
-        '
-        'InputLabel20
-        '
-        Me.InputLabel20.Name = "InputLabel20"
-        Me.InputLabel20.Text = "Selling Fee"
-        Me.InputLabel20.Width = 101
-        '
-        'InputLabel21
-        '
-        Me.InputLabel21.Name = "InputLabel21"
-        Me.InputLabel21.Text = "Redemption Fee"
-        Me.InputLabel21.Width = 101
-        '
-        'InputLabel22
-        '
-        Me.InputLabel22.Break = C1.Win.C1InputPanel.BreakType.Row
-        Me.InputLabel22.Name = "InputLabel22"
-        Me.InputLabel22.Text = "Switching Fee"
-        '
-        'txtManagementFee
-        '
-        Me.txtManagementFee.Break = C1.Win.C1InputPanel.BreakType.None
-        Me.txtManagementFee.Name = "txtManagementFee"
-        '
-        'txtCustodianFee
-        '
-        Me.txtCustodianFee.Name = "txtCustodianFee"
-        '
-        'txtSellingFee
-        '
-        Me.txtSellingFee.Break = C1.Win.C1InputPanel.BreakType.None
-        Me.txtSellingFee.Name = "txtSellingFee"
-        '
-        'txtRedemptionFee
-        '
-        Me.txtRedemptionFee.Break = C1.Win.C1InputPanel.BreakType.None
-        Me.txtRedemptionFee.Name = "txtRedemptionFee"
-        '
-        'txtSwitchingFee
-        '
-        Me.txtSwitchingFee.Name = "txtSwitchingFee"
-        '
-        'C1SplitterPanel6
-        '
-        Me.C1SplitterPanel6.Controls.Add(Me.chartSector)
-        Me.C1SplitterPanel6.Height = 191
-        Me.C1SplitterPanel6.Location = New System.Drawing.Point(284, 293)
-        Me.C1SplitterPanel6.Name = "C1SplitterPanel6"
-        Me.C1SplitterPanel6.Size = New System.Drawing.Size(597, 170)
-        Me.C1SplitterPanel6.TabIndex = 2
-        Me.C1SplitterPanel6.Text = "Sector Allocation"
-        '
-        'C1InputPanel4
-        '
-        Me.C1InputPanel4.BackColor = System.Drawing.Color.White
-        Me.C1InputPanel4.BorderThickness = 1
-        Me.C1InputPanel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.C1InputPanel4.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.C1InputPanel4.Items.Add(Me.InputLabel23)
-        Me.C1InputPanel4.Items.Add(Me.txtRisk1)
-        Me.C1InputPanel4.Items.Add(Me.InputLabel24)
-        Me.C1InputPanel4.Items.Add(Me.txtRisk2)
-        Me.C1InputPanel4.Items.Add(Me.InputLabel25)
-        Me.C1InputPanel4.Items.Add(Me.txtRisk3)
-        Me.C1InputPanel4.Items.Add(Me.InputLabel26)
-        Me.C1InputPanel4.Items.Add(Me.txtRisk4)
-        Me.C1InputPanel4.Items.Add(Me.InputLabel27)
-        Me.C1InputPanel4.Items.Add(Me.txtRisk5)
-        Me.C1InputPanel4.Items.Add(Me.InputLabel28)
-        Me.C1InputPanel4.Items.Add(Me.txtRisk6)
-        Me.C1InputPanel4.Items.Add(Me.InputLabel29)
-        Me.C1InputPanel4.Items.Add(Me.txtRisk7)
-        Me.C1InputPanel4.Location = New System.Drawing.Point(0, 0)
-        Me.C1InputPanel4.Name = "C1InputPanel4"
-        Me.C1InputPanel4.Size = New System.Drawing.Size(283, 442)
-        Me.C1InputPanel4.TabIndex = 0
-        Me.C1InputPanel4.VisualStyle = C1.Win.C1InputPanel.VisualStyle.Office2010Blue
-        '
-        'lblSimpiName
-        '
-        Me.lblSimpiName.Name = "lblSimpiName"
-        Me.lblSimpiName.Width = 1
-        '
-        'InputLabel23
-        '
-        Me.InputLabel23.Name = "InputLabel23"
-        Me.InputLabel23.Text = "1."
-        '
-        'InputLabel24
-        '
-        Me.InputLabel24.Name = "InputLabel24"
-        Me.InputLabel24.Text = "2."
-        '
-        'InputLabel25
-        '
-        Me.InputLabel25.Name = "InputLabel25"
-        Me.InputLabel25.Text = "3."
-        '
-        'InputLabel26
-        '
-        Me.InputLabel26.Name = "InputLabel26"
-        Me.InputLabel26.Text = "4."
-        '
-        'InputLabel27
-        '
-        Me.InputLabel27.Name = "InputLabel27"
-        Me.InputLabel27.Text = "5."
-        '
-        'InputLabel28
-        '
-        Me.InputLabel28.Name = "InputLabel28"
-        Me.InputLabel28.Text = "6."
-        '
-        'InputLabel29
-        '
-        Me.InputLabel29.Name = "InputLabel29"
-        Me.InputLabel29.Text = "7."
-        '
-        'txtRisk1
-        '
-        Me.txtRisk1.Name = "txtRisk1"
-        Me.txtRisk1.Width = 248
-        '
-        'txtRisk2
-        '
-        Me.txtRisk2.Name = "txtRisk2"
-        Me.txtRisk2.Width = 248
-        '
-        'txtRisk3
-        '
-        Me.txtRisk3.Name = "txtRisk3"
-        Me.txtRisk3.Width = 248
-        '
-        'txtRisk4
-        '
-        Me.txtRisk4.Name = "txtRisk4"
-        Me.txtRisk4.Width = 248
-        '
-        'txtRisk5
-        '
-        Me.txtRisk5.Name = "txtRisk5"
-        Me.txtRisk5.Width = 248
-        '
-        'txtRisk6
-        '
-        Me.txtRisk6.Name = "txtRisk6"
-        Me.txtRisk6.Width = 248
-        '
-        'txtRisk7
-        '
-        Me.txtRisk7.Name = "txtRisk7"
-        Me.txtRisk7.Width = 248
-        '
-        'ReportFundSheetEQ
+        'ReportFundSheetEQGlobal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -989,13 +991,13 @@ Partial Class ReportFundSheetEQGlobal
         CType(Me.C1SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.C1SplitContainer1.ResumeLayout(False)
         Me.C1SplitterPanel1.ResumeLayout(False)
-        CType(Me.chartSector, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.C1InputPanel4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.C1SplitterPanel2.ResumeLayout(False)
         CType(Me.chartNAV, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.C1SplitterPanel6.ResumeLayout(False)
+        CType(Me.chartSector, System.ComponentModel.ISupportInitialize).EndInit()
         Me.C1DockingTabPage3.ResumeLayout(False)
         CType(Me.C1InputPanel9, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.C1SplitterPanel6.ResumeLayout(False)
-        CType(Me.C1InputPanel4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

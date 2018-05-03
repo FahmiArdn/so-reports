@@ -1,9 +1,8 @@
 ﻿Imports simpi.GlobalUtilities
 Imports simpi.GlobalConnection
-
-Public Class ReportFundSheetEQSetting
-    Public frm As ReportFundSheetEQ
-    Dim reportSection As String = "REPORT FUND SHEET EQ"
+Public Class ReportFundSheetEQGlobalSetting
+    Public frm As ReportFundSheetEQGlobal
+    Dim reportSection As String = "REPORT FUND SHEET EQ GLOBAL"
 
     Public Sub FormLoad()
         If frm.pdfLayout.layoutType = "DEFAULT" Then
@@ -231,7 +230,7 @@ Public Class ReportFundSheetEQSetting
         colorSet()
     End Sub
     Private Sub chkChartBorder_Click(sender As Object, e As EventArgs) Handles chkChartBorder.Click
-        If chkChartBorder.Checked Then chkChartBorder.Text = "Y" Else chkChartBorder.Text = "N"
+
     End Sub
     Private Sub rbKepemilikan_Click(sender As Object, e As EventArgs) Handles rbTitleKepemilikan.Click
         colorSet()
@@ -246,7 +245,7 @@ Public Class ReportFundSheetEQSetting
         colorSet()
     End Sub
     Private Sub chkChartBorderpie_Click(sender As Object, e As EventArgs) Handles chkChartBorderPie.Click
-        If chkChartBorderPie.Checked Then chkChartBorderPie.Text = "Y" Else chkChartBorderPie.Text = "N"
+
     End Sub
     Private Sub rbTableTitle_Click(sender As Object, e As EventArgs) Handles rbTableTitle.Click
         colorSet()
@@ -551,8 +550,6 @@ Public Class ReportFundSheetEQSetting
                     txtTableItem3Bulan.Text = file.GetString(reportSection, iniType & " 3 Bulan", "")
                     txtTableItem6Bulan.Text = file.GetString(reportSection, iniType & " 6 Bulan", "")
                     txtTableItem1Tahun.Text = file.GetString(reportSection, iniType & " 1 Tahun", "")
-                    txtTableItem3Tahun.Text = file.GetString(reportSection, iniType & " 3 Tahun", "")
-                    txtTableItem5Tahun.Text = file.GetString(reportSection, iniType & " 5 Tahun", "")
                     txtTableItemDariAwalTahun.Text = file.GetString(reportSection, iniType & " Dari Awal", "")
                     txtTableItemSejakPembentukan.Text = file.GetString(reportSection, iniType & " Sejak Pembentukan", "")
 
@@ -754,8 +751,6 @@ Public Class ReportFundSheetEQSetting
             txtTableItem3Bulan.Text = .TableItem3Bulan
             txtTableItem6Bulan.Text = .TableItem6Bulan
             txtTableItem1Tahun.Text = .TableItem1Tahun
-            txtTableItem3Tahun.Text = .TableItem3Tahun
-            txtTableItem5Tahun.Text = .TableItem5Tahun
             txtTableItemDariAwalTahun.Text = .TableItemDariAwal
             txtTableItemSejakPembentukan.Text = .TableItemSejakPembentukan
 
@@ -772,13 +767,7 @@ Public Class ReportFundSheetEQSetting
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        If rbDefault.Checked Then
-            iniSave("DEFAULT")
-        ElseIf rbOption1.Checked Then
-            iniSave("OPTION1")
-        ElseIf rbOption2.Checked Then
-            iniSave("OPTION2")
-        End If
+
     End Sub
 
     Private Sub iniSave(ByVal iniType As String)
@@ -932,8 +921,6 @@ Public Class ReportFundSheetEQSetting
                 file.WriteString(reportSection, iniType & " 3 Bulan", txtTableItem3Bulan.Text.Trim)
                 file.WriteString(reportSection, iniType & " 6 Bulan", txtTableItem6Bulan.Text.Trim)
                 file.WriteString(reportSection, iniType & " 1 Tahun", txtTableItem1Tahun.Text.Trim)
-                file.WriteString(reportSection, iniType & " 3 Tahun", txtTableItem3Tahun.Text.Trim)
-                file.WriteString(reportSection, iniType & " 5 Tahun", txtTableItem5Tahun.Text.Trim)
                 file.WriteString(reportSection, iniType & " Dari Awal", txtTableItemDariAwalTahun.Text.Trim)
                 file.WriteString(reportSection, iniType & " Sejak Pembentukan", txtTableItemSejakPembentukan.Text.Trim)
 

@@ -38,14 +38,18 @@ Public Class ReportFundSheetEQ
         Public NAB_G As Integer
         Public NAB_B As Integer
         Public NAB As String
+        Public TglLaporan_R As Integer
+        Public TglLaporan_G As Integer
+        Public TglLaporan_B As Integer
+        Public TglLaporan As String
         Public Bank_R As Integer
         Public Bank_G As Integer
         Public Bank_B As Integer
         Public Bank As String
-        Public Tanggal_R As Integer
-        Public Tanggal_G As Integer
-        Public Tanggal_B As Integer
-        Public Tanggal As String
+        Public TglPeluncuran_R As Integer
+        Public TglPeluncuran_G As Integer
+        Public TglPeluncuran_B As Integer
+        Public TglPeluncuran As String
         Public Total_R As Integer
         Public Total_G As Integer
         Public Total_B As Integer
@@ -70,30 +74,14 @@ Public Class ReportFundSheetEQ
         Public BiayaJual_G As Integer
         Public BiayaJual_B As Integer
         Public BiayaJual As String
-        Public InvestsiAwal_R As Integer
-        Public InvestsiAwal_G As Integer
-        Public InvestsiAwal_B As Integer
-        Public InvestsiAwal As String
-        Public InvestasiSelanjutnya_R As Integer
-        Public InvestasiSelanjutnya_G As Integer
-        Public InvestasiSelanjutnya_B As Integer
-        Public InvestasiSelanjutnya As String
+        Public BiayaPengalihan_R As Integer
+        Public BiayaPengalihan_G As Integer
+        Public BiayaPengalihan_B As Integer
+        Public BiayaPengalihan As String
         Public Kode_R As Integer
         Public Kode_G As Integer
         Public Kode_B As Integer
         Public Kode As String
-        Public KinerjaAwal_R As Integer
-        Public KinerjaAwal_G As Integer
-        Public KinerjaAwal_B As Integer
-        Public KinerjaAwal As String
-        Public KinerjaTerbaik_R As Integer
-        Public KinerjaTerbaik_G As Integer
-        Public KinerjaTerbaik_B As Integer
-        Public KinerjaTerbaik As String
-        Public KinerjaTerburuk_R As Integer
-        Public KinerjaTerburuk_G As Integer
-        Public KinerjaTerburuk_B As Integer
-        Public KinerjaTerburuk As String
         Public FaktorRisiko_R As Integer
         Public FaktorRisiko_G As Integer
         Public FaktorRisiko_B As Integer
@@ -163,6 +151,8 @@ Public Class ReportFundSheetEQ
         Public TableItem3Bulan As String
         Public TableItem6Bulan As String
         Public TableItem1Tahun As String
+        Public TableItem3Tahun As String
+        Public TableItem5Tahun As String
         Public TableItemDariAwal As String
         Public TableItemSejakPembentukan As String
         Public OutlookHolding_R As Integer
@@ -183,14 +173,18 @@ Public Class ReportFundSheetEQ
         pdfLayout.NAB_G = 61
         pdfLayout.NAB_B = 121
         pdfLayout.NAB = "NAB/Unit"
+        pdfLayout.TglLaporan_R = 0
+        pdfLayout.TglLaporan_G = 61
+        pdfLayout.TglLaporan_B = 121
+        pdfLayout.TglLaporan = "Tanggal Laporan"
         pdfLayout.Bank_R = 0
         pdfLayout.Bank_G = 61
         pdfLayout.Bank_B = 121
         pdfLayout.Bank = "Bank Kustodian"
-        pdfLayout.Tanggal_R = 0
-        pdfLayout.Tanggal_G = 61
-        pdfLayout.Tanggal_B = 121
-        pdfLayout.Tanggal = "Tanggal Peluncuran"
+        pdfLayout.TglPeluncuran_R = 0
+        pdfLayout.TglPeluncuran_G = 61
+        pdfLayout.TglPeluncuran_B = 121
+        pdfLayout.TglPeluncuran = "Tanggal Peluncuran"
         pdfLayout.Total_R = 0
         pdfLayout.Total_G = 61
         pdfLayout.Total_B = 121
@@ -214,31 +208,15 @@ Public Class ReportFundSheetEQ
         pdfLayout.BiayaJual_R = 0
         pdfLayout.BiayaJual_G = 61
         pdfLayout.BiayaJual_B = 121
-        pdfLayout.BiayaJual = "Biaya Penjualan"
-        pdfLayout.InvestsiAwal_R = 0
-        pdfLayout.InvestsiAwal_G = 61
-        pdfLayout.InvestsiAwal_B = 121
-        pdfLayout.InvestsiAwal = "Minimal Investasi Awal"
-        pdfLayout.InvestasiSelanjutnya_R = 0
-        pdfLayout.InvestasiSelanjutnya_G = 61
-        pdfLayout.InvestasiSelanjutnya_B = 121
-        pdfLayout.InvestasiSelanjutnya = "Minimal Investasi Selanjutnya"
+        pdfLayout.BiayaJual = "Biaya Penjualan Kembali"
+        pdfLayout.BiayaPengalihan_R = 0
+        pdfLayout.BiayaPengalihan_G = 61
+        pdfLayout.BiayaPengalihan_B = 121
+        pdfLayout.BiayaPengalihan = "Biaya Pengalihan"
         pdfLayout.Kode_R = 0
         pdfLayout.Kode_G = 61
         pdfLayout.Kode_B = 121
         pdfLayout.Kode = "Kode ISIN / Bloomberg"
-        pdfLayout.KinerjaAwal_R = 0
-        pdfLayout.KinerjaAwal_G = 61
-        pdfLayout.KinerjaAwal_B = 121
-        pdfLayout.KinerjaAwal = "Kinerja Sejak Diluncurkan"
-        pdfLayout.KinerjaTerbaik_R = 0
-        pdfLayout.KinerjaTerbaik_G = 61
-        pdfLayout.KinerjaTerbaik_B = 121
-        pdfLayout.KinerjaTerbaik = "Kinerja Bulan Terbaik"
-        pdfLayout.KinerjaTerburuk_R = 0
-        pdfLayout.KinerjaTerburuk_G = 61
-        pdfLayout.KinerjaTerburuk_B = 121
-        pdfLayout.KinerjaTerburuk = "Kinerja Bulan Terburuk"
         pdfLayout.FaktorRisiko_R = 0
         pdfLayout.FaktorRisiko_G = 61
         pdfLayout.FaktorRisiko_B = 121
@@ -308,6 +286,8 @@ Public Class ReportFundSheetEQ
         pdfLayout.TableItem3Bulan = "3 Bulan"
         pdfLayout.TableItem6Bulan = "6 Bulan"
         pdfLayout.TableItem1Tahun = "1 Tahun"
+        pdfLayout.TableItem3Tahun = "3 Tahun"
+        pdfLayout.TableItem5Tahun = "5 Tahun"
         pdfLayout.TableItemDariAwal = "Dari Awal Tahun"
         pdfLayout.TableItemSejakPembentukan = "Sejak Pembentukan"
         pdfLayout.OutlookHolding_R = 0
@@ -338,15 +318,20 @@ Public Class ReportFundSheetEQ
                     pdfLayout.NAB_B = file.GetInteger(reportSection, iniType & " NAB/Unit B", 0)
                     pdfLayout.NAB = file.GetString(reportSection, iniType & " NAB/Unit", "")
 
+                    pdfLayout.TglLaporan_R = file.GetInteger(reportSection, iniType & " Tanggal Laporan R", 0)
+                    pdfLayout.TglLaporan_G = file.GetInteger(reportSection, iniType & " Tanggal Laporan G", 0)
+                    pdfLayout.TglLaporan_B = file.GetInteger(reportSection, iniType & " Tanggal Laporan B", 0)
+                    pdfLayout.TglLaporan = file.GetString(reportSection, iniType & " Tanggal Laporan", "")
+
                     pdfLayout.Bank_R = file.GetInteger(reportSection, iniType & " Bank Kustodian R", 0)
                     pdfLayout.Bank_G = file.GetInteger(reportSection, iniType & " Bank Kustodian G", 0)
                     pdfLayout.Bank_B = file.GetInteger(reportSection, iniType & " Bank Kustodian B", 0)
                     pdfLayout.Bank = file.GetString(reportSection, iniType & " Bank Kustodian", "")
 
-                    pdfLayout.Tanggal_R = file.GetInteger(reportSection, iniType & " Tanggal R", 0)
-                    pdfLayout.Tanggal_G = file.GetInteger(reportSection, iniType & " Tanggal G", 0)
-                    pdfLayout.Tanggal_B = file.GetInteger(reportSection, iniType & " Tanggal B", 0)
-                    pdfLayout.Tanggal = file.GetString(reportSection, iniType & " Tanggal Peluncuran", "")
+                    pdfLayout.TglPeluncuran_R = file.GetInteger(reportSection, iniType & " Tanggal Peluncuran R", 0)
+                    pdfLayout.TglPeluncuran_G = file.GetInteger(reportSection, iniType & " Tanggal Peluncuran G", 0)
+                    pdfLayout.TglPeluncuran_B = file.GetInteger(reportSection, iniType & " Tanggal Peluncuran B", 0)
+                    pdfLayout.TglPeluncuran = file.GetString(reportSection, iniType & " Tanggal Peluncuran", "")
 
                     pdfLayout.Total_R = file.GetInteger(reportSection, iniType & " Total AUM R", 0)
                     pdfLayout.Total_G = file.GetInteger(reportSection, iniType & " Total AUM G", 0)
@@ -378,35 +363,15 @@ Public Class ReportFundSheetEQ
                     pdfLayout.BiayaJual_B = file.GetInteger(reportSection, iniType & " Biaya Penjualan B", 0)
                     pdfLayout.BiayaJual = file.GetString(reportSection, iniType & " Biaya Penjualan Kembali", "")
 
-                    pdfLayout.InvestsiAwal_R = file.GetInteger(reportSection, iniType & " Investasi Awal R", 0)
-                    pdfLayout.InvestsiAwal_G = file.GetInteger(reportSection, iniType & " Investasi Awal G", 0)
-                    pdfLayout.InvestsiAwal_B = file.GetInteger(reportSection, iniType & " Investasi Awal B", 0)
-                    pdfLayout.InvestsiAwal = file.GetString(reportSection, iniType & " Minimal Investasi Awal", "")
-
-                    pdfLayout.InvestasiSelanjutnya_R = file.GetInteger(reportSection, iniType & " Investasi Selanjutnya R", 0)
-                    pdfLayout.InvestasiSelanjutnya_G = file.GetInteger(reportSection, iniType & " Investasi Selanjutnya G", 0)
-                    pdfLayout.InvestasiSelanjutnya_B = file.GetInteger(reportSection, iniType & " Investasi Selanjutnya B", 0)
-                    pdfLayout.InvestasiSelanjutnya = file.GetString(reportSection, iniType & " Minimal Investasi Selanjutnya", "")
+                    pdfLayout.BiayaPengalihan_R = file.GetInteger(reportSection, iniType & " Biaya Penglaihan R", 0)
+                    pdfLayout.BiayaPengalihan_G = file.GetInteger(reportSection, iniType & " Biaya Pengalihan G", 0)
+                    pdfLayout.BiayaPengalihan_B = file.GetInteger(reportSection, iniType & " Biaya Pengalihan B", 0)
+                    pdfLayout.BiayaPengalihan = file.GetString(reportSection, iniType & " Biaya Pengalihan", "")
 
                     pdfLayout.Kode_R = file.GetInteger(reportSection, iniType & " Kode R", 0)
                     pdfLayout.Kode_G = file.GetInteger(reportSection, iniType & " Kode G", 0)
                     pdfLayout.Kode_B = file.GetInteger(reportSection, iniType & " Kode B", 0)
                     pdfLayout.Kode = file.GetString(reportSection, iniType & " Kode ISIN/Bloomberg", "")
-
-                    pdfLayout.KinerjaAwal_R = file.GetInteger(reportSection, iniType & " Kinerja Sejak Diluncurkan R", 0)
-                    pdfLayout.KinerjaAwal_G = file.GetInteger(reportSection, iniType & " Kinerja Sejak Diluncurkan G", 0)
-                    pdfLayout.KinerjaAwal_B = file.GetInteger(reportSection, iniType & " Kinerja Sejak Diluncurkan B", 0)
-                    pdfLayout.KinerjaAwal = file.GetString(reportSection, iniType & " Kinerja Sejak Diluncurkan", "")
-
-                    pdfLayout.KinerjaTerbaik_R = file.GetInteger(reportSection, iniType & " Kinerja Bulan Terbaik R", 0)
-                    pdfLayout.KinerjaTerbaik_G = file.GetInteger(reportSection, iniType & " Kinerja Bulan Terbaik G", 0)
-                    pdfLayout.KinerjaTerbaik_B = file.GetInteger(reportSection, iniType & " Kinerja Bulan Terbaik B", 0)
-                    pdfLayout.KinerjaTerbaik = file.GetString(reportSection, iniType & " Kinerja Bulan Terbaik", "")
-
-                    pdfLayout.KinerjaTerburuk_R = file.GetInteger(reportSection, iniType & " Kinerja Bulan Terburuk R", 0)
-                    pdfLayout.KinerjaTerburuk_G = file.GetInteger(reportSection, iniType & " Kinerja Bulan Terburuk G", 0)
-                    pdfLayout.KinerjaTerburuk_B = file.GetInteger(reportSection, iniType & " Kinerja Bulan Terburuk B", 0)
-                    pdfLayout.KinerjaTerburuk = file.GetString(reportSection, iniType & " Kinerja Bulan Terburuk", "")
 
                     pdfLayout.FaktorRisiko_R = file.GetInteger(reportSection, iniType & " Faktor Risiko Utama R", 0)
                     pdfLayout.FaktorRisiko_G = file.GetInteger(reportSection, iniType & " Faktor Risiko Utama G", 0)
@@ -488,6 +453,8 @@ Public Class ReportFundSheetEQ
                     pdfLayout.TableItem3Bulan = file.GetString(reportSection, iniType & " 3 Bulan", "")
                     pdfLayout.TableItem6Bulan = file.GetString(reportSection, iniType & " 6 Bulan", "")
                     pdfLayout.TableItem1Tahun = file.GetString(reportSection, iniType & " 1 Tahun", "")
+                    pdfLayout.TableItem3Tahun = file.GetString(reportSection, iniType & " 3 Tahun", "")
+                    pdfLayout.TableItem5Tahun = file.GetString(reportSection, iniType & " 5 Tahun", "")
                     pdfLayout.TableItemDariAwal = file.GetString(reportSection, iniType & " Dari Awal", "")
                     pdfLayout.TableItemSejakPembentukan = file.GetString(reportSection, iniType & " Sejak Pembentukan", "")
 
@@ -541,7 +508,7 @@ Public Class ReportFundSheetEQ
         form.lblSimpiEmail = lblSimpiEmail
         form.lblSimpiName = lblSimpiName
         form.Show()
-        form.MdiParent = mdimenu
+        form.MdiParent = MDIMENU
         lblPortfolioCode.Text = ""
         lblPortfolioName.Text = ""
         lblSimpiEmail.Text = ""
@@ -702,11 +669,11 @@ Public Class ReportFundSheetEQ
 
         End With
 
-    End Sub
+    End Sub 'Table Performance -Data Grid
 
     Private Sub DBGPerformance_FetchRowStyle(sender As Object, e As FetchRowStyleEventArgs) Handles DBGPerformance.FetchRowStyle
         If e.Row Mod 2 = 0 Then e.CellStyle.BackColor = Color.LemonChiffon
-    End Sub
+    End Sub 'Style
 
     Private Sub DisplayHolding()
         If dtSecurities IsNot Nothing AndAlso dtSecurities.Rows.Count > 0 AndAlso
@@ -773,11 +740,11 @@ Public Class ReportFundSheetEQ
             End With
         End If
 
-    End Sub
+    End Sub 'Table Holding -Data Grid
 
     Private Sub DBGHolding_FetchRowStyle(sender As Object, e As FetchRowStyleEventArgs) Handles DBGHolding.FetchRowStyle
         If e.Row Mod 2 = 0 Then e.CellStyle.BackColor = Color.LemonChiffon
-    End Sub
+    End Sub 'Style
 
     Private Sub DisplaySector()
         If dtSecurities IsNot Nothing AndAlso dtSecurities.Rows.Count > 0 AndAlso
@@ -855,8 +822,9 @@ Public Class ReportFundSheetEQ
 
             End If
         End If
-    End Sub
+    End Sub 'Doughnut Chart
 
+#Region "Chart TAB"
     Private Sub tbarHoleRadius_Scroll(sender As Object, e As System.EventArgs) Handles tbarHoleRadius.Scroll
         chartSector.ChartGroups.Group0.Pie.InnerRadius = tbarHoleRadius.Value
     End Sub
@@ -899,6 +867,7 @@ Public Class ReportFundSheetEQ
         f.Controls.Add(pg)
         f.ShowDialog()
     End Sub
+#End Region
 
     Private Sub DisplayNAV()
         If dtNAV IsNot Nothing AndAlso dtNAV.Rows.Count > 0 Then
@@ -944,10 +913,11 @@ Public Class ReportFundSheetEQ
             pgNAV.SelectedObject = chartNAV
             pgNAV.Text = chartNAV.Name
         End If
-    End Sub
+    End Sub 'Line Chart
 
+#Region "Market Review TAB"
     Private Sub btnReviewAdd_Click(sender As Object, e As EventArgs) Handles btnReviewAdd.Click
-        reviewAdd
+        reviewAdd()
     End Sub
 
     Private Sub reviewAdd()
@@ -981,7 +951,7 @@ Public Class ReportFundSheetEQ
     End Sub
 
     Private Sub btnReviewList_Click(sender As Object, e As EventArgs) Handles btnReviewList.Click
-        reviewlist
+        reviewList()
     End Sub
 
     Private Sub reviewList()
@@ -992,12 +962,14 @@ Public Class ReportFundSheetEQ
             form.txtReview = txtReviewText
             form.objPortfolio = objPortfolio
             form.Show()
-            form.MdiParent = mdimenu
+            form.MdiParent = MDIMENU
             lblReviewID.Text = ""
             lblLastReview.Text = ""
             txtReviewText.Text = ""
         End If
     End Sub
+
+#End Region
 
 #Region "export"
     Private Sub btnPDF_Click(sender As Object, e As EventArgs) Handles btnPDF.Click
@@ -1016,7 +988,7 @@ Public Class ReportFundSheetEQ
         Dim frm As New ReportFundSheetEmail
         frm.Show()
         frm.frm = Me
-        frm.MdiParent = mdimenu
+        frm.MdiParent = MDIMENU
     End Sub
 
     Private Function PrintPDF(ByVal isAttachment As Boolean) As String
@@ -1074,9 +1046,6 @@ Public Class ReportFundSheetEQ
                         New SolidBrush(Color.FromArgb(pdfLayout.ReportTitle_R, pdfLayout.ReportTitle_G, pdfLayout.ReportTitle_B)), New PointF(koordX, koordY))
 
             koordY += 20
-            .DrawString("" & pdfLayout.NAB & " " & txtNAVPerUnit.Text, New Font(fontType, 10),
-                        New SolidBrush(Color.FromArgb(pdfLayout.NAB_R, pdfLayout.NAB_G, pdfLayout.NAB_B)), New PointF(koordX + 130, koordY - 20))
-
             .DrawLine(New Pen(Color.FromArgb(224, 225, 226), 2), New PointF(koordX + 140, koordY + 10), New PointF(koordX + 140, koordY + 490))
 
             koordX += 160
@@ -1087,30 +1056,30 @@ Public Class ReportFundSheetEQ
                         New SolidBrush(Color.FromArgb(pdfLayout.TujuanInvestasi_R, pdfLayout.TujuanInvestasi_G, pdfLayout.TujuanInvestasi_B)), rc)
 
             .DrawString(pdfLayout.Investasi, New Font(fontType, 16),
-                        New SolidBrush(Color.FromArgb(pdfLayout.Investasi_R, pdfLayout.InvestsiAwal_G, pdfLayout.Investasi_B)), New PointF(koordX, koordY + 50))
+                        New SolidBrush(Color.FromArgb(pdfLayout.Investasi_R, pdfLayout.Investasi_G, pdfLayout.Investasi_B)), New PointF(koordX, koordY + 50))
             .DrawString(pdfLayout.Portofolio, New Font(fontType, 16),
                         New SolidBrush(Color.FromArgb(pdfLayout.Portofolio_R, pdfLayout.Portofolio_G, pdfLayout.Portofolio_B)), New PointF(koordX + 215, koordY + 50))
 
             .DrawString(pdfLayout.InvestasiSaham, New Font(fontType, fontSize),
-                        New SolidBrush(Color.FromArgb(pdfLayout.InvestsiAwal_R, pdfLayout.InvestsiAwal_G, pdfLayout.Investasi_B)), New PointF(koordX, koordY + 70))
+                        New SolidBrush(Color.FromArgb(pdfLayout.Investasi_R, pdfLayout.Investasi_G, pdfLayout.Investasi_B)), New PointF(koordX, koordY + 70))
             .DrawString(":  " & txtPolicyEQ.Text, New Font(fontType, fontSize),
-                        New SolidBrush(Color.FromArgb(pdfLayout.InvestsiAwal_R, pdfLayout.InvestsiAwal_G, pdfLayout.Investasi_B)), New PointF(koordX + 70, koordY + 70))
+                        New SolidBrush(Color.FromArgb(pdfLayout.Investasi_R, pdfLayout.Investasi_G, pdfLayout.Investasi_B)), New PointF(koordX + 70, koordY + 70))
             .DrawString(pdfLayout.PortofolioSaham, New Font(fontType, fontSize),
                         New SolidBrush(Color.FromArgb(pdfLayout.Portofolio_R, pdfLayout.Portofolio_G, pdfLayout.Portofolio_B)), New PointF(koordX + 215, koordY + 70))
             .DrawString(":  " & txtCompositionEQ.Text, New Font(fontType, fontSize),
                         New SolidBrush(Color.FromArgb(pdfLayout.Portofolio_R, pdfLayout.Portofolio_G, pdfLayout.Portofolio_B)), New PointF(koordX + 285, koordY + 70))
             .DrawString(pdfLayout.investasiObligasi, New Font(fontType, fontSize),
-                        New SolidBrush(Color.FromArgb(pdfLayout.InvestsiAwal_R, pdfLayout.InvestsiAwal_G, pdfLayout.Investasi_B)), New PointF(koordX, koordY + 80))
+                        New SolidBrush(Color.FromArgb(pdfLayout.Investasi_R, pdfLayout.Investasi_G, pdfLayout.Investasi_B)), New PointF(koordX, koordY + 80))
             .DrawString(":  " & txtPolicyFI.Text, New Font(fontType, fontSize),
-                        New SolidBrush(Color.FromArgb(pdfLayout.InvestsiAwal_R, pdfLayout.InvestsiAwal_G, pdfLayout.Investasi_B)), New PointF(koordX + 70, koordY + 80))
+                        New SolidBrush(Color.FromArgb(pdfLayout.Investasi_R, pdfLayout.Investasi_G, pdfLayout.Investasi_B)), New PointF(koordX + 70, koordY + 80))
             .DrawString(pdfLayout.PortifolioObligasi, New Font(fontType, fontSize),
                         New SolidBrush(Color.FromArgb(pdfLayout.Portofolio_R, pdfLayout.Portofolio_G, pdfLayout.Portofolio_B)), New PointF(koordX + 215, koordY + 80))
             .DrawString(":  " & txtCompositionFI.Text, New Font(fontType, fontSize),
                         New SolidBrush(Color.FromArgb(pdfLayout.Portofolio_R, pdfLayout.Portofolio_G, pdfLayout.Portofolio_B)), New PointF(koordX + 285, koordY + 80))
             .DrawString(pdfLayout.InvestasiPasarUang, New Font(fontType, fontSize),
-                        New SolidBrush(Color.FromArgb(pdfLayout.InvestsiAwal_R, pdfLayout.InvestsiAwal_G, pdfLayout.Investasi_B)), New PointF(koordX, koordY + 90))
+                        New SolidBrush(Color.FromArgb(pdfLayout.Investasi_R, pdfLayout.Investasi_G, pdfLayout.Investasi_B)), New PointF(koordX, koordY + 90))
             .DrawString(":  " & txtPolicyMM.Text, New Font(fontType, fontSize),
-                        New SolidBrush(Color.FromArgb(pdfLayout.InvestsiAwal_R, pdfLayout.InvestsiAwal_G, pdfLayout.Investasi_B)), New PointF(koordX + 70, koordY + 90))
+                        New SolidBrush(Color.FromArgb(pdfLayout.Investasi_R, pdfLayout.Investasi_G, pdfLayout.Investasi_B)), New PointF(koordX + 70, koordY + 90))
             .DrawString(pdfLayout.PortofolioPasarUang, New Font(fontType, fontSize),
                         New SolidBrush(Color.FromArgb(pdfLayout.Portofolio_R, pdfLayout.Portofolio_G, pdfLayout.Portofolio_B)), New PointF(koordX + 215, koordY + 90))
             .DrawString(":  " & txtCompositionMM.Text, New Font(fontType, fontSize),
@@ -1148,18 +1117,18 @@ Public Class ReportFundSheetEQ
             '.DrawString("(5 Sektor Terbesar)", New Font(fontType, fontSize),
             'New SolidBrush(Color.FromArgb(pdfLayout.TitleKepemilikan_R, pdfLayout.TitleKepemilikan_G, pdfLayout.TitleKepemilikan_B)), New PointF(koordX + 215, koordY + 290))
 
-            If DBGPerformance.RowCount > 5 Then efek = 5 Else efek = DBGPerformance.RowCount - 1
+            If DBGHolding.RowCount > 5 Then efek = 5 Else efek = DBGHolding.RowCount - 1
             Dim pos = koordY + 300
             For i = 0 To efek
-                DBGPerformance.Row = i
+                DBGHolding.Row = i
 
                 rc = New RectangleF(koordX, pos, 150, 10)
-                str = DBGPerformance.Columns("Name").Text
+                str = DBGHolding.Columns("Name").Text
                 .DrawString(str, New Font(fontType, fontSize),
                             New SolidBrush(Color.FromArgb(pdfLayout.TitleKepemilikan_R, pdfLayout.TitleKepemilikan_G, pdfLayout.TitleKepemilikan_B)), rc)
 
                 rc = New RectangleF(koordX + 150, pos, 150, 10)
-                str = DBGPerformance.Columns("Type").Text
+                str = DBGHolding.Columns("Type").Text
                 .DrawString(str, New Font(fontType, fontSize),
                             New SolidBrush(Color.FromArgb(pdfLayout.TitleKepemilikan_R, pdfLayout.TitleKepemilikan_G, pdfLayout.TitleKepemilikan_B)), rc)
 
@@ -1191,66 +1160,93 @@ Public Class ReportFundSheetEQ
                         New SolidBrush(Color.FromArgb(pdfLayout.TableTitle_R, pdfLayout.TableTitle_G, pdfLayout.TableTitle_B)), New PointF(koordX, koordY + 390))
             .DrawLine(New Pen(Color.FromArgb(0, 61, 121), 0.5), New PointF(koordX, koordY + 410), New PointF(koordX + 375, koordY + 410))
             .DrawString(pdfLayout.TableItem1Bulan, New Font(fontType, 7, FontStyle.Bold),
-                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New PointF(koordX + 60, koordY + 420))
+                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New Rectangle(koordX + 40, koordY + 420, 65, 10), sf)
             .DrawString(pdfLayout.TableItem3Bulan, New Font(fontType, 7, FontStyle.Bold),
-                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New PointF(koordX + 105, koordY + 420))
+                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New Rectangle(koordX + 75, koordY + 420, 65, 10), sf)
             .DrawString(pdfLayout.TableItem6Bulan, New Font(fontType, 7, FontStyle.Bold),
-                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New PointF(koordX + 150, koordY + 420))
+                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New Rectangle(koordX + 110, koordY + 420, 65, 10), sf)
             .DrawString(pdfLayout.TableItem1Tahun, New Font(fontType, 7, FontStyle.Bold),
-                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New PointF(koordX + 195, koordY + 420))
-            rc = New RectangleF(koordX + 240, koordY + 420, 60, 20)
+                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New Rectangle(koordX + 145, koordY + 420, 65, 10), sf)
+            .DrawString(pdfLayout.TableItem3Tahun, New Font(fontType, 7, FontStyle.Bold),
+                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New Rectangle(koordX + 180, koordY + 420, 65, 10), sf)
+            .DrawString(pdfLayout.TableItem5Tahun, New Font(fontType, 7, FontStyle.Bold),
+                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New Rectangle(koordX + 215, koordY + 420, 65, 10), sf)
             .DrawString(pdfLayout.TableItemDariAwal, New Font(fontType, 7, FontStyle.Bold),
-                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New PointF(koordX + 240, koordY + 420))
-            rc = New RectangleF(koordX + 300, koordY + 420, 60, 20)
+                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New Rectangle(koordX + 255, koordY + 420, 65, 10), sf)
+            'koordY = If(pdfLayout.TableItemDariAwal.Length > 6, koordY + 2 * (fontSize + 1), koordY + fontSize)
             .DrawString(pdfLayout.TableItemSejakPembentukan, New Font(fontType, 7, FontStyle.Bold),
-                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New PointF(koordX + 300, koordY + 420))
+                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New Rectangle(koordX + 310, koordY + 420, 65, 10), sf)
+            'koordY = If(pdfLayout.TableItemSejakPembentukan.Length > 7, koordY + 2 * (fontSize + 1), koordY + fontSize)
 
-            DBGHolding.Row = 0
+            DBGPerformance.Row = 0
             .DrawString(pdfLayout.TableItemReturn, New Font(fontType, fontSize, FontStyle.Bold),
                         New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New PointF(koordX, koordY + 430))
-            str = DBGHolding.Columns("1Mo").Text
+            str = DBGPerformance.Columns("1Mo").Text
             .DrawString(str & "%", New Font(fontType, fontSize),
-                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New PointF(koordX + 60, koordY + 430))
-            str = DBGHolding.Columns("3Mo").Text
+                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New Rectangle(koordX + 40, koordY + 430, 65, 10), sf)
+            str = DBGPerformance.Columns("3Mo").Text
             .DrawString(str & "%", New Font(fontType, fontSize),
-                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New PointF(koordX + 105, koordY + 430))
-            str = DBGHolding.Columns("6Mo").Text
+                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New Rectangle(koordX + 75, koordY + 430, 65, 10), sf)
+            str = DBGPerformance.Columns("6Mo").Text
             .DrawString(str & "%", New Font(fontType, fontSize),
-                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New PointF(koordX + 150, koordY + 430))
-            str = DBGHolding.Columns("1Y").Text
+                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New Rectangle(koordX + 110, koordY + 430, 65, 10), sf)
+            str = DBGPerformance.Columns("1Y").Text
             .DrawString(str & "%", New Font(fontType, fontSize),
-                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New PointF(koordX + 195, koordY + 430))
-            str = DBGHolding.Columns("YTD").Text
+                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New Rectangle(koordX + 145, koordY + 430, 65, 10), sf)
+            str = DBGPerformance.Columns("3Y").Text
             .DrawString(str & "%", New Font(fontType, fontSize),
-                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New PointF(koordX + 255, koordY + 430))
-            str = DBGHolding.Columns("Inception").Text
+                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New Rectangle(koordX + 180, koordY + 430, 65, 10), sf)
+            str = DBGPerformance.Columns("5Y").Text
             .DrawString(str & "%", New Font(fontType, fontSize),
-                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New PointF(koordX + 320, koordY + 430))
+                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New Rectangle(koordX + 215, koordY + 430, 65, 10), sf)
+            str = DBGPerformance.Columns("YTD").Text
+            .DrawString(str & "%", New Font(fontType, fontSize),
+                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New Rectangle(koordX + 255, koordY + 430, 65, 10), sf)
+            str = DBGPerformance.Columns("Inception").Text
+            .DrawString(str & "%", New Font(fontType, fontSize),
+                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New Rectangle(koordX + 310, koordY + 430, 65, 10), sf)
 
-            DBGHolding.Row = 1
+            DBGPerformance.Row = 1
             .DrawString(pdfLayout.TableItemBenchmark, New Font(fontType, fontSize, FontStyle.Bold),
                         New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New PointF(koordX, koordY + 445))
-            str = DBGHolding.Columns("1Mo").Text
+            str = DBGPerformance.Columns("1Mo").Text
             .DrawString(str & "%", New Font(fontType, fontSize),
-                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New PointF(koordX + 60, koordY + 445))
-            str = DBGHolding.Columns("3Mo").Text
+                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New Rectangle(koordX + 40, koordY + 445, 65, 10), sf)
+            str = DBGPerformance.Columns("3Mo").Text
             .DrawString(str & "%", New Font(fontType, fontSize),
-                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New PointF(koordX + 105, koordY + 445))
-            str = DBGHolding.Columns("6Mo").Text
+                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New Rectangle(koordX + 75, koordY + 445, 65, 10), sf)
+            str = DBGPerformance.Columns("6Mo").Text
             .DrawString(str & "%", New Font(fontType, fontSize),
-                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New PointF(koordX + 150, koordY + 445))
-            str = DBGHolding.Columns("1Y").Text
+                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New Rectangle(koordX + 110, koordY + 445, 65, 10), sf)
+            str = DBGPerformance.Columns("1Y").Text
             .DrawString(str & "%", New Font(fontType, fontSize),
-                New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New PointF(koordX + 195, koordY + 445))
-            str = DBGHolding.Columns("YTD").Text
+                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New Rectangle(koordX + 145, koordY + 445, 65, 10), sf)
+            str = DBGPerformance.Columns("3Y").Text
             .DrawString(str & "%", New Font(fontType, fontSize),
-                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New PointF(koordX + 255, koordY + 445))
-            str = DBGHolding.Columns("Inception").Text
+                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New Rectangle(koordX + 180, koordY + 445, 65, 10), sf)
+            str = DBGPerformance.Columns("5Y").Text
             .DrawString(str & "%", New Font(fontType, fontSize),
-                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New PointF(koordX + 320, koordY + 445))
+                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New Rectangle(koordX + 215, koordY + 445, 65, 10), sf)
+            str = DBGPerformance.Columns("YTD").Text
+            .DrawString(str & "%", New Font(fontType, fontSize),
+                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New Rectangle(koordX + 255, koordY + 445, 65, 10), sf)
+            str = DBGPerformance.Columns("Inception").Text
+            .DrawString(str & "%", New Font(fontType, fontSize),
+                        New SolidBrush(Color.FromArgb(pdfLayout.TableItem_R, pdfLayout.TableItem_G, pdfLayout.TableItem_B)), New Rectangle(koordX + 310, koordY + 445, 65, 10), sf)
             koordX -= 160
 
             koordY += 10
+            .DrawString("" & pdfLayout.NAB & " " & txtNAVPerUnit.Text, New Font(fontType, 10),
+                        New SolidBrush(Color.FromArgb(pdfLayout.NAB_R, pdfLayout.NAB_G, pdfLayout.NAB_B)), New PointF(koordX, koordY - 10))
+
+            koordY += fontSize + 6 'Tanggal Laporan
+            .DrawString(pdfLayout.TglLaporan, New Font(fontType, fontSize, FontStyle.Bold),
+                        New SolidBrush(Color.FromArgb(pdfLayout.TglLaporan_R, pdfLayout.TglLaporan_G, pdfLayout.TglLaporan_B)), New PointF(koordX, koordY))
+            koordY += fontSize + 1
+            .DrawString(dtAs.Text, New Font(fontType, fontSize),
+                        New SolidBrush(Color.FromArgb(pdfLayout.TglLaporan_R, pdfLayout.TglLaporan_G, pdfLayout.TglLaporan_B)), New PointF(koordX, koordY))
+
+            koordY += fontSize + 6
             .DrawString(pdfLayout.Bank, New Font(fontType, fontSize, FontStyle.Bold),
                         New SolidBrush(Color.FromArgb(pdfLayout.Bank_R, pdfLayout.Bank_G, pdfLayout.Bank_B)), New PointF(koordX, koordY))
             koordY += fontSize + 1
@@ -1258,11 +1254,11 @@ Public Class ReportFundSheetEQ
                         New SolidBrush(Color.FromArgb(pdfLayout.Bank_R, pdfLayout.Bank_G, pdfLayout.Bank_B)), New PointF(koordX, koordY))
 
             koordY += fontSize + 6
-            .DrawString(pdfLayout.Tanggal, New Font(fontType, fontSize, FontStyle.Bold),
-                        New SolidBrush(Color.FromArgb(pdfLayout.Tanggal_R, pdfLayout.Tanggal_G, pdfLayout.Tanggal_B)), New PointF(koordX, koordY))
+            .DrawString(pdfLayout.TglPeluncuran, New Font(fontType, fontSize, FontStyle.Bold),
+                        New SolidBrush(Color.FromArgb(pdfLayout.TglPeluncuran_R, pdfLayout.TglPeluncuran_G, pdfLayout.TglPeluncuran_B)), New PointF(koordX, koordY))
             koordY += fontSize + 1
             .DrawString(txtInception.Text, New Font(fontType, fontSize),
-                        New SolidBrush(Color.FromArgb(pdfLayout.Tanggal_R, pdfLayout.Tanggal_G, pdfLayout.Tanggal_B)), New PointF(koordX, koordY))
+                        New SolidBrush(Color.FromArgb(pdfLayout.TglPeluncuran_R, pdfLayout.TglPeluncuran_G, pdfLayout.TglPeluncuran_B)), New PointF(koordX, koordY))
 
             koordY += fontSize + 6
             .DrawString(pdfLayout.Total, New Font(fontType, fontSize, FontStyle.Bold),
@@ -1282,43 +1278,36 @@ Public Class ReportFundSheetEQ
             .DrawString(pdfLayout.ImbalManajer, New Font(fontType, fontSize, FontStyle.Bold),
                         New SolidBrush(Color.FromArgb(pdfLayout.ImbalManajer_R, pdfLayout.ImbalManajer_G, pdfLayout.ImbalManajer_B)), New PointF(koordX, koordY))
             koordY += fontSize + 1
-            .DrawString("-", New Font(fontType, fontSize),
+            .DrawString(txtManagementFee.Text, New Font(fontType, fontSize),
                         New SolidBrush(Color.FromArgb(pdfLayout.ImbalManajer_R, pdfLayout.ImbalManajer_G, pdfLayout.ImbalManajer_B)), New PointF(koordX, koordY))
 
             koordY += fontSize + 6
             .DrawString(pdfLayout.ImbalBank, New Font(fontType, fontSize, FontStyle.Bold),
                         New SolidBrush(Color.FromArgb(pdfLayout.ImbalBank_R, pdfLayout.ImbalBank_G, pdfLayout.ImbalBank_B)), New PointF(koordX, koordY))
             koordY += fontSize + 1
-            .DrawString("-", New Font(fontType, fontSize),
+            .DrawString(txtCustodianFee.Text, New Font(fontType, fontSize),
                         New SolidBrush(Color.FromArgb(pdfLayout.ImbalBank_R, pdfLayout.ImbalBank_G, pdfLayout.ImbalBank_B)), New PointF(koordX, koordY))
 
             koordY += fontSize + 6
             .DrawString(pdfLayout.BiayaBeli, New Font(fontType, fontSize, FontStyle.Bold),
                         New SolidBrush(Color.FromArgb(pdfLayout.BiayaBeli_R, pdfLayout.BiayaBeli_G, pdfLayout.BiayaBeli_B)), New PointF(koordX, koordY))
             koordY += fontSize + 1
-            .DrawString("-", New Font(fontType, fontSize),
+            .DrawString(txtRedemptionFee.Text, New Font(fontType, fontSize),
                         New SolidBrush(Color.FromArgb(pdfLayout.BiayaBeli_R, pdfLayout.BiayaBeli_G, pdfLayout.BiayaBeli_B)), New PointF(koordX, koordY))
 
             koordY += fontSize + 6
             .DrawString(pdfLayout.BiayaJual, New Font(fontType, fontSize, FontStyle.Bold),
-                        New SolidBrush(Color.FromArgb(pdfLayout.BiayaBeli_R, pdfLayout.BiayaBeli_G, pdfLayout.BiayaBeli_B)), New PointF(koordX, koordY))
+                        New SolidBrush(Color.FromArgb(pdfLayout.BiayaJual_R, pdfLayout.BiayaJual_G, pdfLayout.BiayaJual_B)), New PointF(koordX, koordY))
             koordY += fontSize + 1
-            .DrawString("-", New Font(fontType, fontSize),
+            .DrawString(txtSellingFee.Text, New Font(fontType, fontSize),
                         New SolidBrush(Color.FromArgb(pdfLayout.BiayaJual_R, pdfLayout.BiayaJual_G, pdfLayout.BiayaJual_B)), New PointF(koordX, koordY))
 
             koordY += fontSize + 6
-            .DrawString(pdfLayout.InvestsiAwal, New Font(fontType, fontSize, FontStyle.Bold),
-                        New SolidBrush(Color.FromArgb(pdfLayout.InvestsiAwal_R, pdfLayout.InvestsiAwal_G, pdfLayout.InvestsiAwal_B)), New PointF(koordX, koordY))
+            .DrawString(pdfLayout.BiayaPengalihan, New Font(fontType, fontSize, FontStyle.Bold),
+                        New SolidBrush(Color.FromArgb(pdfLayout.BiayaPengalihan_R, pdfLayout.BiayaPengalihan_G, pdfLayout.BiayaPengalihan_B)), New PointF(koordX, koordY))
             koordY += fontSize + 1
-            .DrawString("-", New Font(fontType, fontSize),
-                        New SolidBrush(Color.FromArgb(pdfLayout.InvestsiAwal_R, pdfLayout.InvestsiAwal_G, pdfLayout.InvestsiAwal_B)), New PointF(koordX, koordY))
-
-            koordY += fontSize + 6
-            .DrawString(pdfLayout.InvestasiSelanjutnya, New Font(fontType, fontSize, FontStyle.Bold),
-                        New SolidBrush(Color.FromArgb(pdfLayout.InvestasiSelanjutnya_R, pdfLayout.InvestasiSelanjutnya_G, pdfLayout.InvestasiSelanjutnya_B)), New PointF(koordX, koordY))
-            koordY += fontSize + 1
-            .DrawString("-", New Font(fontType, fontSize),
-                        New SolidBrush(Color.FromArgb(pdfLayout.InvestasiSelanjutnya_R, pdfLayout.InvestasiSelanjutnya_G, pdfLayout.InvestasiSelanjutnya_B)), New PointF(koordX, koordY))
+            .DrawString(txtSwitchingFee.Text, New Font(fontType, fontSize),
+                        New SolidBrush(Color.FromArgb(pdfLayout.BiayaPengalihan_R, pdfLayout.BiayaPengalihan_G, pdfLayout.BiayaPengalihan_B)), New PointF(koordX, koordY))
 
             koordY += fontSize + 6
             .DrawString(pdfLayout.Kode, New Font(fontType, fontSize, FontStyle.Bold),
@@ -1327,30 +1316,9 @@ Public Class ReportFundSheetEQ
             .DrawString(txtISIN.Text & " / " & txtBloomberg.Text, New Font(fontType, fontSize),
                         New SolidBrush(Color.FromArgb(pdfLayout.Kode_R, pdfLayout.Kode_G, pdfLayout.Kode_B)), New PointF(koordX, koordY))
 
-            koordY += fontSize + 6
-            .DrawString(pdfLayout.KinerjaAwal, New Font(fontType, fontSize, FontStyle.Bold),
-                        New SolidBrush(Color.FromArgb(pdfLayout.KinerjaAwal_R, pdfLayout.KinerjaAwal_G, pdfLayout.KinerjaAwal_B)), New PointF(koordX, koordY))
-            koordY += fontSize + 1
-            .DrawString("x,xx", New Font(fontType, fontSize),
-                        New SolidBrush(Color.FromArgb(pdfLayout.KinerjaAwal_R, pdfLayout.KinerjaAwal_G, pdfLayout.KinerjaAwal_B)), New PointF(koordX, koordY))
-
-            koordY += fontSize + 6
-            .DrawString(pdfLayout.KinerjaTerbaik, New Font(fontType, fontSize, FontStyle.Bold),
-                        New SolidBrush(Color.FromArgb(pdfLayout.KinerjaTerbaik_R, pdfLayout.KinerjaTerbaik_G, pdfLayout.KinerjaTerbaik_B)), New PointF(koordX, koordY))
-            koordY += fontSize + 1
-            .DrawString("x,xx MMM-YY", New Font(fontType, fontSize),
-                        New SolidBrush(Color.FromArgb(pdfLayout.KinerjaTerbaik_R, pdfLayout.KinerjaTerbaik_G, pdfLayout.KinerjaTerbaik_B)), New PointF(koordX, koordY))
-
-            koordY += fontSize + 6
-            .DrawString(pdfLayout.KinerjaTerburuk, New Font(fontType, fontSize, FontStyle.Bold),
-                        New SolidBrush(Color.FromArgb(pdfLayout.KinerjaTerburuk_R, pdfLayout.KinerjaTerburuk_G, pdfLayout.KinerjaTerburuk_B)), New PointF(koordX, koordY))
-            koordY += fontSize + 1
-            .DrawString("x,xx MMM-YY", New Font(fontType, fontSize),
-                        New SolidBrush(Color.FromArgb(pdfLayout.KinerjaTerburuk_R, pdfLayout.KinerjaTerburuk_G, pdfLayout.KinerjaTerburuk_B)), New PointF(koordX, koordY))
-
-            Dim factorList As String() = {"Risiko Perubahan Kondisi Ekonomi dan Politik", "Risiko Wanprestasi",
-                                          "Risiko Likuiditas", "Risiko Berkurangnya Nilai Aktiva Bersih Setiap Unit Penyertaan",
-                                          "Risiko Transaksi Melalui Media Elektronik"}
+            Dim factorList As String() = {txtRisk1.Text, txtRisk2.Text,
+                                          txtRisk3.Text, txtRisk4.Text,
+                                          txtRisk5.Text, txtRisk6.Text, txtRisk7.Text}
             koordY += fontSize + 6
             rc = New RectangleF(koordX, koordY, 140, 20)
             .DrawString(pdfLayout.FaktorRisiko, New Font(fontType, fontSize, FontStyle.Bold),
@@ -1358,9 +1326,11 @@ Public Class ReportFundSheetEQ
             koordY += fontSize
             For i As Integer = 0 To factorList.Length - 1
                 rc = New RectangleF(koordX, koordY, 120, 50)
-                .DrawString("- " & factorList(i), New Font(fontType, fontSize),
+                If factorList(i) IsNot "" Then
+                    .DrawString("- " & factorList(i), New Font(fontType, fontSize),
                             New SolidBrush(Color.FromArgb(pdfLayout.FaktorRisiko_R, pdfLayout.FaktorRisiko_G, pdfLayout.FaktorRisiko_B)), rc)
-                koordY = If(factorList(i).Length > 27, koordY + 2 * (fontSize + 1), koordY + fontSize)
+                    koordY = If(factorList(i).Length > 27, koordY + 2 * (fontSize + 1), koordY + fontSize)
+                End If
             Next
 
             sf.LineAlignment = StringAlignment.Center
@@ -1419,7 +1389,7 @@ Public Class ReportFundSheetEQ
                 .DrawString(txtRisk.Text, New Font(fontType, fontSize), Brushes.WhiteSmoke, New Rectangle(koordX + 50, koordY, 80, fontSize + 2), sf)
             End If
 
-            koordY += 18
+            koordY = 620
             .DrawLine(New Pen(Color.FromArgb(224, 225, 226), 2), New PointF(koordX, koordY), New PointF(koordX + 530, koordY))
             koordY += fontSize + 1
             .DrawString(txtTitleUlasan.Text, New Font(fontType, 13),

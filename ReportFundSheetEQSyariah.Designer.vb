@@ -55,22 +55,22 @@ Partial Class ReportFundSheetEQSyariah
         Me.InputLabel13 = New C1.Win.C1InputPanel.InputLabel()
         Me.txtCurrency = New C1.Win.C1InputPanel.InputTextBox()
         Me.InputLabel4 = New C1.Win.C1InputPanel.InputLabel()
-        Me.txtInception = New C1.Win.C1InputPanel.InputTextBox()
+        Me.txtMinInvestment = New C1.Win.C1InputPanel.InputTextBox()
         Me.InputLabel11 = New C1.Win.C1InputPanel.InputLabel()
         Me.txtCustodian = New C1.Win.C1InputPanel.InputTextBox()
         Me.InputLabel14 = New C1.Win.C1InputPanel.InputLabel()
-        Me.txtISIN = New C1.Win.C1InputPanel.InputTextBox()
-        Me.txtBloomberg = New C1.Win.C1InputPanel.InputTextBox()
+        Me.txtBestMonth = New C1.Win.C1InputPanel.InputTextBox()
+        Me.txtBestMonthDate = New C1.Win.C1InputPanel.InputTextBox()
         Me.InputLabel17 = New C1.Win.C1InputPanel.InputLabel()
-        Me.InputTextBox1 = New C1.Win.C1InputPanel.InputTextBox()
-        Me.InputTextBox2 = New C1.Win.C1InputPanel.InputTextBox()
+        Me.txtWorstMonth = New C1.Win.C1InputPanel.InputTextBox()
+        Me.txtWorstMonthDate = New C1.Win.C1InputPanel.InputTextBox()
         Me.InputGroupHeader4 = New C1.Win.C1InputPanel.InputGroupHeader()
         Me.InputLabel10 = New C1.Win.C1InputPanel.InputLabel()
         Me.InputLabel20 = New C1.Win.C1InputPanel.InputLabel()
         Me.InputLabel30 = New C1.Win.C1InputPanel.InputLabel()
         Me.txtManagementFee = New C1.Win.C1InputPanel.InputTextBox()
         Me.txtSellingFee = New C1.Win.C1InputPanel.InputTextBox()
-        Me.InputTextBox3 = New C1.Win.C1InputPanel.InputTextBox()
+        Me.txtInception = New C1.Win.C1InputPanel.InputTextBox()
         Me.InputLabel21 = New C1.Win.C1InputPanel.InputLabel()
         Me.InputLabel22 = New C1.Win.C1InputPanel.InputLabel()
         Me.InputLabel31 = New C1.Win.C1InputPanel.InputLabel()
@@ -117,7 +117,7 @@ Partial Class ReportFundSheetEQSyariah
         Me.C1SplitterPanel2 = New C1.Win.C1SplitContainer.C1SplitterPanel()
         Me.chartNAV = New C1.Win.C1Chart.C1Chart()
         Me.C1SplitterPanel6 = New C1.Win.C1SplitContainer.C1SplitterPanel()
-        Me.C1Chart1 = New C1.Win.C1Chart.C1Chart()
+        Me.chartMonthly = New C1.Win.C1Chart.C1Chart()
         Me.C1DockingTabPage3 = New C1.Win.C1Command.C1DockingTabPage()
         Me.C1InputPanel9 = New C1.Win.C1InputPanel.C1InputPanel()
         Me.InputGroupHeader9 = New C1.Win.C1InputPanel.InputGroupHeader()
@@ -153,7 +153,7 @@ Partial Class ReportFundSheetEQSyariah
         Me.C1SplitterPanel2.SuspendLayout()
         CType(Me.chartNAV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.C1SplitterPanel6.SuspendLayout()
-        CType(Me.C1Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.chartMonthly, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.C1DockingTabPage3.SuspendLayout()
         CType(Me.C1InputPanel9, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -351,22 +351,22 @@ Partial Class ReportFundSheetEQSyariah
         Me.C1InputPanel1.Items.Add(Me.InputLabel13)
         Me.C1InputPanel1.Items.Add(Me.txtCurrency)
         Me.C1InputPanel1.Items.Add(Me.InputLabel4)
-        Me.C1InputPanel1.Items.Add(Me.txtInception)
+        Me.C1InputPanel1.Items.Add(Me.txtMinInvestment)
         Me.C1InputPanel1.Items.Add(Me.InputLabel11)
         Me.C1InputPanel1.Items.Add(Me.txtCustodian)
         Me.C1InputPanel1.Items.Add(Me.InputLabel14)
-        Me.C1InputPanel1.Items.Add(Me.txtISIN)
-        Me.C1InputPanel1.Items.Add(Me.txtBloomberg)
+        Me.C1InputPanel1.Items.Add(Me.txtBestMonth)
+        Me.C1InputPanel1.Items.Add(Me.txtBestMonthDate)
         Me.C1InputPanel1.Items.Add(Me.InputLabel17)
-        Me.C1InputPanel1.Items.Add(Me.InputTextBox1)
-        Me.C1InputPanel1.Items.Add(Me.InputTextBox2)
+        Me.C1InputPanel1.Items.Add(Me.txtWorstMonth)
+        Me.C1InputPanel1.Items.Add(Me.txtWorstMonthDate)
         Me.C1InputPanel1.Items.Add(Me.InputGroupHeader4)
         Me.C1InputPanel1.Items.Add(Me.InputLabel10)
         Me.C1InputPanel1.Items.Add(Me.InputLabel20)
         Me.C1InputPanel1.Items.Add(Me.InputLabel30)
         Me.C1InputPanel1.Items.Add(Me.txtManagementFee)
         Me.C1InputPanel1.Items.Add(Me.txtSellingFee)
-        Me.C1InputPanel1.Items.Add(Me.InputTextBox3)
+        Me.C1InputPanel1.Items.Add(Me.txtInception)
         Me.C1InputPanel1.Items.Add(Me.InputLabel21)
         Me.C1InputPanel1.Items.Add(Me.InputLabel22)
         Me.C1InputPanel1.Items.Add(Me.InputLabel31)
@@ -454,10 +454,10 @@ Partial Class ReportFundSheetEQSyariah
         Me.InputLabel4.Text = "Min. Investment: "
         Me.InputLabel4.Width = 100
         '
-        'txtInception
+        'txtMinInvestment
         '
-        Me.txtInception.Name = "txtInception"
-        Me.txtInception.Width = 215
+        Me.txtMinInvestment.Name = "txtMinInvestment"
+        Me.txtMinInvestment.Width = 215
         '
         'InputLabel11
         '
@@ -477,17 +477,17 @@ Partial Class ReportFundSheetEQSyariah
         Me.InputLabel14.Text = "Best Month: "
         Me.InputLabel14.Width = 100
         '
-        'txtISIN
+        'txtBestMonth
         '
-        Me.txtISIN.Break = C1.Win.C1InputPanel.BreakType.None
-        Me.txtISIN.Name = "txtISIN"
-        Me.txtISIN.Text = " "
-        Me.txtISIN.Width = 65
+        Me.txtBestMonth.Break = C1.Win.C1InputPanel.BreakType.None
+        Me.txtBestMonth.Name = "txtBestMonth"
+        Me.txtBestMonth.Text = " "
+        Me.txtBestMonth.Width = 65
         '
-        'txtBloomberg
+        'txtBestMonthDate
         '
-        Me.txtBloomberg.Name = "txtBloomberg"
-        Me.txtBloomberg.Text = " "
+        Me.txtBestMonthDate.Name = "txtBestMonthDate"
+        Me.txtBestMonthDate.Text = " "
         '
         'InputLabel17
         '
@@ -495,15 +495,15 @@ Partial Class ReportFundSheetEQSyariah
         Me.InputLabel17.Text = "Worst Month: "
         Me.InputLabel17.Width = 100
         '
-        'InputTextBox1
+        'txtWorstMonth
         '
-        Me.InputTextBox1.Break = C1.Win.C1InputPanel.BreakType.None
-        Me.InputTextBox1.Name = "InputTextBox1"
-        Me.InputTextBox1.Width = 65
+        Me.txtWorstMonth.Break = C1.Win.C1InputPanel.BreakType.None
+        Me.txtWorstMonth.Name = "txtWorstMonth"
+        Me.txtWorstMonth.Width = 65
         '
-        'InputTextBox2
+        'txtWorstMonthDate
         '
-        Me.InputTextBox2.Name = "InputTextBox2"
+        Me.txtWorstMonthDate.Name = "txtWorstMonthDate"
         '
         'InputGroupHeader4
         '
@@ -540,10 +540,10 @@ Partial Class ReportFundSheetEQSyariah
         Me.txtSellingFee.Name = "txtSellingFee"
         Me.txtSellingFee.Width = 95
         '
-        'InputTextBox3
+        'txtInception
         '
-        Me.InputTextBox3.Name = "InputTextBox3"
-        Me.InputTextBox3.Width = 121
+        Me.txtInception.Name = "txtInception"
+        Me.txtInception.Width = 121
         '
         'InputLabel21
         '
@@ -897,7 +897,7 @@ Partial Class ReportFundSheetEQSyariah
         '
         'C1SplitterPanel6
         '
-        Me.C1SplitterPanel6.Controls.Add(Me.C1Chart1)
+        Me.C1SplitterPanel6.Controls.Add(Me.chartMonthly)
         Me.C1SplitterPanel6.Height = 224
         Me.C1SplitterPanel6.Location = New System.Drawing.Point(284, 260)
         Me.C1SplitterPanel6.Name = "C1SplitterPanel6"
@@ -905,16 +905,16 @@ Partial Class ReportFundSheetEQSyariah
         Me.C1SplitterPanel6.TabIndex = 2
         Me.C1SplitterPanel6.Text = "Monthly Return"
         '
-        'C1Chart1
+        'chartMonthly
         '
-        Me.C1Chart1.BackColor = System.Drawing.Color.White
-        Me.C1Chart1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.C1Chart1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.C1Chart1.Location = New System.Drawing.Point(0, 0)
-        Me.C1Chart1.Name = "C1Chart1"
-        Me.C1Chart1.PropBag = resources.GetString("C1Chart1.PropBag")
-        Me.C1Chart1.Size = New System.Drawing.Size(597, 203)
-        Me.C1Chart1.TabIndex = 7
+        Me.chartMonthly.BackColor = System.Drawing.Color.White
+        Me.chartMonthly.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.chartMonthly.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.chartMonthly.Location = New System.Drawing.Point(0, 0)
+        Me.chartMonthly.Name = "chartMonthly"
+        Me.chartMonthly.PropBag = resources.GetString("chartMonthly.PropBag")
+        Me.chartMonthly.Size = New System.Drawing.Size(597, 203)
+        Me.chartMonthly.TabIndex = 7
         '
         'C1DockingTabPage3
         '
@@ -1052,7 +1052,7 @@ Partial Class ReportFundSheetEQSyariah
         Me.C1SplitterPanel2.ResumeLayout(False)
         CType(Me.chartNAV, System.ComponentModel.ISupportInitialize).EndInit()
         Me.C1SplitterPanel6.ResumeLayout(False)
-        CType(Me.C1Chart1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.chartMonthly, System.ComponentModel.ISupportInitialize).EndInit()
         Me.C1DockingTabPage3.ResumeLayout(False)
         CType(Me.C1InputPanel9, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -1106,8 +1106,8 @@ Partial Class ReportFundSheetEQSyariah
     Friend WithEvents InputLabel13 As C1.Win.C1InputPanel.InputLabel
     Friend WithEvents txtCurrency As C1.Win.C1InputPanel.InputTextBox
     Friend WithEvents InputLabel14 As C1.Win.C1InputPanel.InputLabel
-    Friend WithEvents txtISIN As C1.Win.C1InputPanel.InputTextBox
-    Friend WithEvents txtBloomberg As C1.Win.C1InputPanel.InputTextBox
+    Friend WithEvents txtBestMonth As C1.Win.C1InputPanel.InputTextBox
+    Friend WithEvents txtBestMonthDate As C1.Win.C1InputPanel.InputTextBox
     Friend WithEvents InputLabel18 As C1.Win.C1InputPanel.InputLabel
     Friend WithEvents txtInvestmentPeriode As C1.Win.C1InputPanel.InputTextBox
     Friend WithEvents InputLabel19 As C1.Win.C1InputPanel.InputLabel
@@ -1127,7 +1127,7 @@ Partial Class ReportFundSheetEQSyariah
     Friend WithEvents txtCompositionMM As C1.Win.C1InputPanel.InputTextBox
     Friend WithEvents InputGroupHeader15 As C1.Win.C1InputPanel.InputGroupHeader
     Friend WithEvents DBGHolding As C1.Win.C1TrueDBGrid.C1TrueDBGrid
-    Friend WithEvents txtInception As C1.Win.C1InputPanel.InputTextBox
+    Friend WithEvents txtMinInvestment As C1.Win.C1InputPanel.InputTextBox
     Friend WithEvents DBGPerformance As C1.Win.C1TrueDBGrid.C1TrueDBGrid
     Friend WithEvents btnSetting As C1.Win.C1InputPanel.InputButton
     Friend WithEvents c1pdf As C1.C1Pdf.C1PdfDocument
@@ -1160,11 +1160,11 @@ Partial Class ReportFundSheetEQSyariah
     Friend WithEvents InputLabel29 As C1.Win.C1InputPanel.InputLabel
     Friend WithEvents txtRisk7 As C1.Win.C1InputPanel.InputTextBox
     Friend WithEvents InputLabel17 As C1.Win.C1InputPanel.InputLabel
-    Friend WithEvents InputTextBox1 As C1.Win.C1InputPanel.InputTextBox
-    Friend WithEvents InputTextBox2 As C1.Win.C1InputPanel.InputTextBox
+    Friend WithEvents txtWorstMonth As C1.Win.C1InputPanel.InputTextBox
+    Friend WithEvents txtWorstMonthDate As C1.Win.C1InputPanel.InputTextBox
     Friend WithEvents InputLabel30 As C1.Win.C1InputPanel.InputLabel
-    Friend WithEvents InputTextBox3 As C1.Win.C1InputPanel.InputTextBox
+    Friend WithEvents txtInception As C1.Win.C1InputPanel.InputTextBox
     Friend WithEvents InputLabel31 As C1.Win.C1InputPanel.InputLabel
     Friend WithEvents InputTextBox4 As C1.Win.C1InputPanel.InputTextBox
-    Friend WithEvents C1Chart1 As C1.Win.C1Chart.C1Chart
+    Friend WithEvents chartMonthly As C1.Win.C1Chart.C1Chart
 End Class

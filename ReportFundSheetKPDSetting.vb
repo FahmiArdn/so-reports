@@ -1,10 +1,9 @@
-﻿Imports simpi.GlobalUtilities
-Imports simpi.GlobalConnection
+﻿Imports simpi.GlobalConnection
+Imports simpi.GlobalUtilities
 
-Public Class ReportFundSheetEQSetting
-    Public frm As ReportFundSheetEQ
-    Dim reportSection As String = "REPORT FUND SHEET EQ"
-
+Public Class ReportFundSheetKPDSetting
+    Public frm As ReportFundSheetKPD
+    Dim reportSection As String = "REPORT FUND SHEET KPD"
     Public Sub FormLoad()
         If frm.pdfLayout.layoutType = "DEFAULT" Then
             rbDefault.Checked = True
@@ -74,17 +73,27 @@ Public Class ReportFundSheetEQSetting
                 BiayaJual_R.Text = RGBWrite("R", ColorDialog1.Color.R)
                 BiayaJual_G.Text = RGBWrite("G", ColorDialog1.Color.G)
                 BiayaJual_B.Text = RGBWrite("B", ColorDialog1.Color.B)
-            ElseIf rbBiayaPengalihan.Checked Then
-                txtColorBiayaPengalihan.BackColor = ColorDialog1.Color
-                BiayaPengalihan_R.Text = RGBWrite("R", ColorDialog1.Color.R)
-                BiayaPengalihan_G.Text = RGBWrite("G", ColorDialog1.Color.G)
-                BiayaPengalihan_B.Text = RGBWrite("B", ColorDialog1.Color.B)
+            ElseIf rbSwitchingFee.Checked Then
+                txtColorSwitchingFee.BackColor = ColorDialog1.Color
+                SwitchingFee_R.Text = RGBWrite("R", ColorDialog1.Color.R)
+                SwitchingFee_G.Text = RGBWrite("G", ColorDialog1.Color.G)
+                SwitchingFee_B.Text = RGBWrite("B", ColorDialog1.Color.B)
             ElseIf rbKode.Checked Then
                 txtColorKode.BackColor = ColorDialog1.Color
                 Kode_R.Text = RGBWrite("R", ColorDialog1.Color.R)
                 Kode_G.Text = RGBWrite("G", ColorDialog1.Color.G)
                 Kode_B.Text = RGBWrite("B", ColorDialog1.Color.B)
-            ElseIf rbFaktorRisikUtama.Checked Then
+            ElseIf rbKinerjaTerbaik.Checked Then
+                txtColorKinerjaTerbaik.BackColor = ColorDialog1.Color
+                KinerjaTerbaik_R.Text = RGBWrite("R", ColorDialog1.Color.R)
+                KinerjaTerbaik_G.Text = RGBWrite("G", ColorDialog1.Color.G)
+                KinerjaTerbaik_B.Text = RGBWrite("B", ColorDialog1.Color.B)
+            ElseIf rbKinerjaTerburuk.Checked Then
+                txtColorKinerjaTerburuk.BackColor = ColorDialog1.Color
+                KinerjaTerburuk_R.Text = RGBWrite("R", ColorDialog1.Color.R)
+                KinerjaTerburuk_G.Text = RGBWrite("G", ColorDialog1.Color.G)
+                KinerjaTerburuk_B.Text = RGBWrite("B", ColorDialog1.Color.B)
+            ElseIf rbFaktorRisikoUtama.Checked Then
                 txtColorFaktorRisiko.BackColor = ColorDialog1.Color
                 FaktorRisiko_R.Text = RGBWrite("R", ColorDialog1.Color.R)
                 FaktorRisiko_G.Text = RGBWrite("G", ColorDialog1.Color.G)
@@ -94,11 +103,11 @@ Public Class ReportFundSheetEQSetting
                 PeriodeInvestasi_R.Text = RGBWrite("R", ColorDialog1.Color.R)
                 PeriodeInvestasi_G.Text = RGBWrite("G", ColorDialog1.Color.G)
                 PeriodeInvestasi_B.Text = RGBWrite("B", ColorDialog1.Color.B)
-            ElseIf rbTingkatRisiko.Checked Then
-                txtColorTingkatRisiko.BackColor = ColorDialog1.Color
-                TingkatRisiko_R.Text = RGBWrite("R", ColorDialog1.Color.R)
-                TIngkatRisiko_G.Text = RGBWrite("G", ColorDialog1.Color.G)
-                TingkatRisiko_B.Text = RGBWrite("B", ColorDialog1.Color.B)
+            ElseIf rbFund.Checked Then
+                txtColorFund.BackColor = ColorDialog1.Color
+                Fund_R.Text = RGBWrite("R", ColorDialog1.Color.R)
+                Fund_G.Text = RGBWrite("G", ColorDialog1.Color.G)
+                Fund_B.Text = RGBWrite("B", ColorDialog1.Color.B)
             ElseIf rbTujuanInvestasi.Checked Then
                 txtColorTujuanInvestasi.BackColor = ColorDialog1.Color
                 TujuanInvestasi_R.Text = RGBWrite("R", ColorDialog1.Color.R)
@@ -110,7 +119,7 @@ Public Class ReportFundSheetEQSetting
                 Investasi_G.Text = RGBWrite("G", ColorDialog1.Color.G)
                 Investasi_B.Text = RGBWrite("B", ColorDialog1.Color.B)
             ElseIf rbPortofolio.Checked Then
-                txtColorPortofolio.BackColor = ColorDialog1.Color
+                txtColorKomposisPortofolio.BackColor = ColorDialog1.Color
                 Portofolio_R.Text = RGBWrite("R", ColorDialog1.Color.R)
                 Portofolio_G.Text = RGBWrite("G", ColorDialog1.Color.G)
                 Portofolio_B.Text = RGBWrite("B", ColorDialog1.Color.B)
@@ -179,7 +188,7 @@ Public Class ReportFundSheetEQSetting
     Private Sub rbBankKustodian_Click(sender As Object, e As EventArgs) Handles rbBankKustodian.Click
         colorSet()
     End Sub
-    Private Sub rbTglPeluncuran_Click(sender As Object, e As EventArgs) Handles rbTglPeluncuran.Click
+    Private Sub rbTanggalPeluncuran_Click(sender As Object, e As EventArgs) Handles rbTglPeluncuran.Click
         colorSet()
     End Sub
     Private Sub rbTotal_Click(sender As Object, e As EventArgs) Handles rbTotal.Click
@@ -200,19 +209,28 @@ Public Class ReportFundSheetEQSetting
     Private Sub rbBiayaJual_Click(sender As Object, e As EventArgs) Handles rbBiayaJual.Click
         colorSet()
     End Sub
-    Private Sub rbBiayaPengalihan_Click(sender As Object, e As EventArgs) Handles rbBiayaPengalihan.Click
+    Private Sub rbSwitchingFee_Click(sender As Object, e As EventArgs) Handles rbSwitchingFee.Click
         colorSet()
     End Sub
     Private Sub rbKode_Click(sender As Object, e As EventArgs) Handles rbKode.Click
         colorSet()
     End Sub
-    Private Sub rbFaktorRisikoUtama_Click(sender As Object, e As EventArgs) Handles rbFaktorRisikUtama.Click
+    Private Sub rbKinerjaSejakDiluncurkan_Click(sender As Object, e As EventArgs)
+        colorSet()
+    End Sub
+    Private Sub rbKinerjaTerbaik_Click(sender As Object, e As EventArgs) Handles rbKinerjaTerbaik.Click
+        colorSet()
+    End Sub
+    Private Sub rbKinerjaTerburuk_Click(sender As Object, e As EventArgs) Handles rbKinerjaTerburuk.Click
+        colorSet()
+    End Sub
+    Private Sub rbFaktorRisikoUtama_Click(sender As Object, e As EventArgs) Handles rbFaktorRisikoUtama.Click
         colorSet()
     End Sub
     Private Sub rbPeriodeInvestasi_Click(sender As Object, e As EventArgs) Handles rbPeriodeInvestasi.Click
         colorSet()
     End Sub
-    Private Sub rbTingkatRisiko_Click(sender As Object, e As EventArgs) Handles rbTingkatRisiko.Click
+    Private Sub rbFund_Click(sender As Object, e As EventArgs) Handles rbFund.Click
         colorSet()
     End Sub
     Private Sub rbTujuanInvestasi_Click(sender As Object, e As EventArgs) Handles rbTujuanInvestasi.Click
@@ -397,14 +415,14 @@ Public Class ReportFundSheetEQSetting
                     txtColorBiayaJual.BackColor = Color.FromArgb(r, g, b)
                     txtBiayaPenjualaKembali.Text = file.GetString(reportSection, iniType & " Biaya Penjualan Kembali", "")
 
-                    r = file.GetInteger(reportSection, iniType & " Biaya Pengalihan R", 0)
-                    g = file.GetInteger(reportSection, iniType & " Biaya Pengalihan G", 0)
-                    b = file.GetInteger(reportSection, iniType & " Biaya Pengalihan B", 0)
-                    BiayaPengalihan_R.Text = RGBWrite("R", r)
-                    BiayaPengalihan_G.Text = RGBWrite("G", g)
-                    BiayaPengalihan_B.Text = RGBWrite("B", b)
-                    txtColorBiayaPengalihan.BackColor = Color.FromArgb(r, g, b)
-                    txtBiayaPengalihan.Text = file.GetString(reportSection, iniType & " Biaya Pengalihan", "")
+                    r = file.GetInteger(reportSection, iniType & " Switching Fee R", 0)
+                    g = file.GetInteger(reportSection, iniType & " Switching Fee G", 0)
+                    b = file.GetInteger(reportSection, iniType & " Switching Fee B", 0)
+                    SwitchingFee_R.Text = RGBWrite("R", r)
+                    SwitchingFee_G.Text = RGBWrite("G", g)
+                    SwitchingFee_B.Text = RGBWrite("B", b)
+                    txtColorSwitchingFee.BackColor = Color.FromArgb(r, g, b)
+                    txtSwitchingFee.Text = file.GetString(reportSection, iniType & " Switching Fee", "")
 
                     r = file.GetInteger(reportSection, iniType & " Kode R", 0)
                     g = file.GetInteger(reportSection, iniType & " Kode G", 0)
@@ -414,6 +432,24 @@ Public Class ReportFundSheetEQSetting
                     Kode_B.Text = RGBWrite("B", b)
                     txtColorKode.BackColor = Color.FromArgb(r, g, b)
                     txtKodeISINBloomberg.Text = file.GetString(reportSection, iniType & " Kode ISIN/Bloomberg", "")
+
+                    r = file.GetInteger(reportSection, iniType & " Kinerja Bulan Terbaik R", 0)
+                    g = file.GetInteger(reportSection, iniType & " Kinerja Bulan Terbaik G", 0)
+                    b = file.GetInteger(reportSection, iniType & " Kinerja Bulan Terbaik B", 0)
+                    KinerjaTerbaik_R.Text = RGBWrite("R", r)
+                    KinerjaTerbaik_G.Text = RGBWrite("G", g)
+                    KinerjaTerbaik_B.Text = RGBWrite("B", b)
+                    txtColorKinerjaTerbaik.BackColor = Color.FromArgb(r, g, b)
+                    txtKinerjaBulanTerbaik.Text = file.GetString(reportSection, iniType & " Kinerja Bulan Terbaik", "")
+
+                    r = file.GetInteger(reportSection, iniType & " Kinerja Bulan Terburuk R", 0)
+                    g = file.GetInteger(reportSection, iniType & " Kinerja Bulan Terburuk G", 0)
+                    b = file.GetInteger(reportSection, iniType & " Kinerja Bulan Terburuk B", 0)
+                    KinerjaTerburuk_R.Text = RGBWrite("R", r)
+                    KinerjaTerburuk_G.Text = RGBWrite("G", g)
+                    KinerjaTerburuk_B.Text = RGBWrite("B", b)
+                    txtColorKinerjaTerburuk.BackColor = Color.FromArgb(r, g, b)
+                    txtKinerjaBulanTerburuk.Text = file.GetString(reportSection, iniType & " Kinerja Bulan Terburuk", "")
 
                     r = file.GetInteger(reportSection, iniType & " Faktor Risiko Utama R", 0)
                     g = file.GetInteger(reportSection, iniType & " Faktor Risiko Utama G", 0)
@@ -433,14 +469,14 @@ Public Class ReportFundSheetEQSetting
                     txtColorPeriode.BackColor = Color.FromArgb(r, g, b)
                     txtPerodeInvestasi.Text = file.GetString(reportSection, iniType & " Periode Investasi", "")
 
-                    r = file.GetInteger(reportSection, iniType & " Tingkat Risiko R", 0)
-                    g = file.GetInteger(reportSection, iniType & " Tingkat Risiko G", 0)
-                    b = file.GetInteger(reportSection, iniType & " Tingkat Risiko B", 0)
-                    TingkatRisiko_R.Text = RGBWrite("R", r)
-                    TIngkatRisiko_G.Text = RGBWrite("G", g)
-                    TingkatRisiko_B.Text = RGBWrite("B", b)
-                    txtColorTingkatRisiko.BackColor = Color.FromArgb(r, g, b)
-                    txtTingkatRisiko.Text = file.GetString(reportSection, iniType & " Tingkat Risiko", "")
+                    r = file.GetInteger(reportSection, iniType & " Fund R", 0)
+                    g = file.GetInteger(reportSection, iniType & " Fund G", 0)
+                    b = file.GetInteger(reportSection, iniType & " Fund B", 0)
+                    Fund_R.Text = RGBWrite("R", r)
+                    Fund_G.Text = RGBWrite("G", g)
+                    Fund_B.Text = RGBWrite("B", b)
+                    txtColorFund.BackColor = Color.FromArgb(r, g, b)
+                    txtFund.Text = file.GetString(reportSection, iniType & " Fund", "")
 
                     r = file.GetInteger(reportSection, iniType & " Tujuan Investasi R", 0)
                     g = file.GetInteger(reportSection, iniType & " Tujuan Investasi G", 0)
@@ -461,7 +497,7 @@ Public Class ReportFundSheetEQSetting
                     txtKebijakanInvestasi.Text = file.GetString(reportSection, iniType & " Kebijakan Investasi", "")
                     txtInvestasiSaham.Text = file.GetString(reportSection, iniType & " Saham", "")
                     txtInvestasiObligasi.Text = file.GetString(reportSection, iniType & " Obligasi", "")
-                    txtInvesatiPasarUang.Text = file.GetString(reportSection, iniType & " Pasar Uang", "")
+                    txtInvestasiPasarUang.Text = file.GetString(reportSection, iniType & " Pasar Uang", "")
 
                     r = file.GetInteger(reportSection, iniType & " Portofolio R", 0)
                     g = file.GetInteger(reportSection, iniType & " Portofolio G", 0)
@@ -469,7 +505,7 @@ Public Class ReportFundSheetEQSetting
                     Portofolio_R.Text = RGBWrite("R", r)
                     Portofolio_G.Text = RGBWrite("G", g)
                     Portofolio_B.Text = RGBWrite("B", b)
-                    txtColorPortofolio.BackColor = Color.FromArgb(r, g, b)
+                    txtColorKomposisPortofolio.BackColor = Color.FromArgb(r, g, b)
                     txtKomposisiPortofolio.Text = file.GetString(reportSection, iniType & " Komposisi Portofolio", "")
                     txtPortofolioSaham.Text = file.GetString(reportSection, iniType & " Saham", "")
                     txtPortofoliObligasi.Text = file.GetString(reportSection, iniType & " Obligasi", "")
@@ -647,11 +683,11 @@ Public Class ReportFundSheetEQSetting
             txtColorBiayaJual.BackColor = Color.FromArgb(.BiayaJual_R, .BiayaJual_G, .BiayaJual_B)
             txtBiayaPenjualaKembali.Text = .BiayaJual
 
-            BiayaPengalihan_R.Text = "R: " & .BiayaPengalihan_R
-            BiayaPengalihan_G.Text = "G: " & .BiayaPengalihan_G
-            BiayaPengalihan_B.Text = "B: " & .BiayaPengalihan_B
-            txtColorBiayaPengalihan.BackColor = Color.FromArgb(.BiayaPengalihan_R, .BiayaPengalihan_G, .BiayaPengalihan_B)
-            txtBiayaPengalihan.Text = .BiayaPengalihan
+            SwitchingFee_R.Text = "R: " & .SwitchingFee_R
+            SwitchingFee_G.Text = "G: " & .SwitchingFee_G
+            SwitchingFee_B.Text = "B: " & .SwitchingFee_B
+            txtColorSwitchingFee.BackColor = Color.FromArgb(.SwitchingFee_R, .SwitchingFee_G, .SwitchingFee_B)
+            txtSwitchingFee.Text = .SwitchingFee
 
             Kode_R.Text = "R: " & .Kode_R
             Kode_G.Text = "G: " & .Kode_G
@@ -659,23 +695,35 @@ Public Class ReportFundSheetEQSetting
             txtColorKode.BackColor = Color.FromArgb(.Kode_R, .Kode_G, .Kode_B)
             txtKodeISINBloomberg.Text = .Kode
 
+            KinerjaTerbaik_R.Text = "R: " & .KinerjaTerbaik_R
+            KinerjaTerbaik_G.Text = "G: " & .KinerjaTerbaik_G
+            KinerjaTerbaik_B.Text = "B: " & .KinerjaTerbaik_B
+            txtColorKinerjaTerbaik.BackColor = Color.FromArgb(.KinerjaTerbaik_R, .KinerjaTerbaik_G, .KinerjaTerbaik_B)
+            txtKinerjaBulanTerbaik.Text = .KinerjaTerbaik
+
+            KinerjaTerburuk_R.Text = "R: " & .KinerjaTerburuk_R
+            KinerjaTerburuk_G.Text = "G: " & .KinerjaTerburuk_G
+            KinerjaTerburuk_B.Text = "B: " & .KinerjaTerburuk_B
+            txtColorKinerjaTerburuk.BackColor = Color.FromArgb(.KinerjaTerburuk_R, .KinerjaTerburuk_G, .KinerjaTerburuk_B)
+            txtKinerjaBulanTerburuk.Text = .KinerjaTerburuk
+
             FaktorRisiko_R.Text = "R: " & .FaktorRisiko_R
             FaktorRisiko_G.Text = "G: " & .FaktorRisiko_G
             FaktorRisiko_B.Text = "B: " & .FaktorRisiko_B
             txtColorFaktorRisiko.BackColor = Color.FromArgb(.FaktorRisiko_R, .FaktorRisiko_G, .FaktorRisiko_B)
             txtFaktorRisikoUtama.Text = .FaktorRisiko
 
-            PeriodeInvestasi_R.Text = "R: " & .PeriodeInvestasi_R
-            PeriodeInvestasi_G.Text = "G: " & .PeriodeInvestasi_G
-            PeriodeInvestasi_B.Text = "B: " & .PeriodeInvestasi_B
-            txtColorPeriode.BackColor = Color.FromArgb(.PeriodeInvestasi_R, .PeriodeInvestasi_G, .PeriodeInvestasi_B)
-            txtPerodeInvestasi.Text = .PeriodeInvestasi
+            PeriodeInvestasi_R.Text = "R: " & .TotalReturn_R
+            PeriodeInvestasi_G.Text = "G: " & .TotalReturn_G
+            PeriodeInvestasi_B.Text = "B: " & .TotalReturn_B
+            txtColorPeriode.BackColor = Color.FromArgb(.TotalReturn_R, .TotalReturn_G, .TotalReturn_B)
+            txtPerodeInvestasi.Text = .TotalReturn
 
-            TingkatRisiko_R.Text = "R: " & .TingkatRisiko_R
-            TIngkatRisiko_G.Text = "G: " & .TingkatRisiko_G
-            TingkatRisiko_B.Text = "B: " & .TingkatRisiko_B
-            txtColorTingkatRisiko.BackColor = Color.FromArgb(.TingkatRisiko_R, .TingkatRisiko_G, .TingkatRisiko_B)
-            txtTingkatRisiko.Text = .TingkatRisiko
+            Fund_R.Text = "R: " & .Fund_R
+            Fund_G.Text = "G: " & .Fund_G
+            Fund_B.Text = "B: " & .Fund_B
+            txtColorFund.BackColor = Color.FromArgb(.Fund_R, .Fund_G, .Fund_B)
+            txtFund.Text = .Fund
 
             TujuanInvestasi_R.Text = "R: " & .TujuanInvestasi_R
             TujuanInvestasi_G.Text = "G: " & .TujuanInvestasi_G
@@ -690,15 +738,14 @@ Public Class ReportFundSheetEQSetting
             txtKebijakanInvestasi.Text = .Investasi
             txtInvestasiSaham.Text = .InvestasiSaham
             txtInvestasiObligasi.Text = .investasiObligasi
-            txtInvesatiPasarUang.Text = .InvestasiPasarUang
+            txtInvestasiPasarUang.Text = .InvestasiPasarUang
 
             txtInvestasiSaham.Text = .InvestasiSaham
             txtInvestasiObligasi.Text = .investasiObligasi
-            txtInvesatiPasarUang.Text = .InvestasiPasarUang
             Portofolio_R.Text = "R: " & .Portofolio_R
             Portofolio_G.Text = "G: " & .Portofolio_G
             Portofolio_B.Text = "B: " & .Portofolio_B
-            txtColorPortofolio.BackColor = Color.FromArgb(.Portofolio_R, .Portofolio_G, .Portofolio_B)
+            txtColorKomposisPortofolio.BackColor = Color.FromArgb(.Portofolio_R, .Portofolio_G, .Portofolio_B)
             txtKomposisiPortofolio.Text = .Portofolio
             txtPortofolioSaham.Text = .PortofolioSaham
             txtPortofoliObligasi.Text = .PortifolioObligasi
@@ -842,15 +889,25 @@ Public Class ReportFundSheetEQSetting
                 file.WriteInteger(reportSection, iniType & " Biaya Penjualan B", RGBRead(BiayaJual_B.Text.Trim))
                 file.WriteString(reportSection, iniType & " Biaya Penjualan Kembali", txtBiayaPenjualaKembali.Text.Trim)
 
-                file.WriteInteger(reportSection, iniType & " Biaya Pengalihan R", RGBRead(BiayaPengalihan_R.Text.Trim))
-                file.WriteInteger(reportSection, iniType & " Biaya Pengalihan G", RGBRead(BiayaPengalihan_G.Text.Trim))
-                file.WriteInteger(reportSection, iniType & " Biaya Pengalihan B", RGBRead(BiayaPengalihan_B.Text.Trim))
-                file.WriteString(reportSection, iniType & " Biaya Pengalihan", txtBiayaPengalihan.Text.Trim)
+                file.WriteInteger(reportSection, iniType & " Switching Fee R", RGBRead(SwitchingFee_R.Text.Trim))
+                file.WriteInteger(reportSection, iniType & " Switching Fee G", RGBRead(SwitchingFee_G.Text.Trim))
+                file.WriteInteger(reportSection, iniType & " Switching Fee B", RGBRead(SwitchingFee_B.Text.Trim))
+                file.WriteString(reportSection, iniType & " Switching Fee", txtSwitchingFee.Text.Trim)
 
                 file.WriteInteger(reportSection, iniType & " Kode R", RGBRead(Kode_R.Text.Trim))
                 file.WriteInteger(reportSection, iniType & " Kode G", RGBRead(Kode_G.Text.Trim))
                 file.WriteInteger(reportSection, iniType & " Kode B", RGBRead(Kode_B.Text.Trim))
                 file.WriteString(reportSection, iniType & " Kode ISIN/Bloomberg", txtKodeISINBloomberg.Text.Trim)
+
+                file.WriteInteger(reportSection, iniType & " Kinerja Bulan Terbaik R", RGBRead(KinerjaTerbaik_R.Text.Trim))
+                file.WriteInteger(reportSection, iniType & " Kinerja Bulan Terbaik G", RGBRead(KinerjaTerbaik_G.Text.Trim))
+                file.WriteInteger(reportSection, iniType & " Kinerja Bulan Terbaik B", RGBRead(KinerjaTerbaik_B.Text.Trim))
+                file.WriteString(reportSection, iniType & " Kinerja Bulan Terbaik", txtKinerjaBulanTerbaik.Text.Trim)
+
+                file.WriteInteger(reportSection, iniType & " Kinerja Bulan Terburuk R", RGBRead(KinerjaTerburuk_R.Text.Trim))
+                file.WriteInteger(reportSection, iniType & " Kinerja Bulan Terburuk G", RGBRead(KinerjaTerburuk_G.Text.Trim))
+                file.WriteInteger(reportSection, iniType & " Kinerja Bulan Terburuk B", RGBRead(KinerjaTerburuk_B.Text.Trim))
+                file.WriteString(reportSection, iniType & " Kinerja Bulan Terburuk", txtKinerjaBulanTerburuk.Text.Trim)
 
                 file.WriteInteger(reportSection, iniType & " Faktor Risiko Utama R", RGBRead(FaktorRisiko_R.Text.Trim))
                 file.WriteInteger(reportSection, iniType & " Faktor Risiko Utama G", RGBRead(FaktorRisiko_G.Text.Trim))
@@ -862,10 +919,10 @@ Public Class ReportFundSheetEQSetting
                 file.WriteInteger(reportSection, iniType & " Periode Investasi B", RGBRead(PeriodeInvestasi_B.Text.Trim))
                 file.WriteString(reportSection, iniType & " Periode Investasi", txtPerodeInvestasi.Text.Trim)
 
-                file.WriteInteger(reportSection, iniType & " Tingkat Risiko R", RGBRead(TingkatRisiko_R.Text.Trim))
-                file.WriteInteger(reportSection, iniType & " Tingkat Risiko G", RGBRead(TIngkatRisiko_G.Text.Trim))
-                file.WriteInteger(reportSection, iniType & " Tingkat Risiko B", RGBRead(TingkatRisiko_B.Text.Trim))
-                file.WriteString(reportSection, iniType & " Tingkat Risiko", txtTingkatRisiko.Text.Trim)
+                file.WriteInteger(reportSection, iniType & " Fund R", RGBRead(Fund_R.Text.Trim))
+                file.WriteInteger(reportSection, iniType & " Fund G", RGBRead(Fund_G.Text.Trim))
+                file.WriteInteger(reportSection, iniType & " Fund B", RGBRead(Fund_B.Text.Trim))
+                file.WriteString(reportSection, iniType & " Fund", txtFund.Text.Trim)
 
                 file.WriteInteger(reportSection, iniType & " Tujuan Investasi R", RGBRead(TujuanInvestasi_R.Text.Trim))
                 file.WriteInteger(reportSection, iniType & " Tujuan Investasi G", RGBRead(TujuanInvestasi_G.Text.Trim))
@@ -878,7 +935,7 @@ Public Class ReportFundSheetEQSetting
                 file.WriteString(reportSection, iniType & " Kebijakan Investasi", txtKebijakanInvestasi.Text.Trim)
                 file.WriteString(reportSection, iniType & " Saham", txtInvestasiSaham.Text.Trim)
                 file.WriteString(reportSection, iniType & " Obligasi", txtInvestasiObligasi.Text.Trim)
-                file.WriteString(reportSection, iniType & " Pasar Uang", txtInvesatiPasarUang.Text.Trim)
+                file.WriteString(reportSection, iniType & " Pasar Uang", txtInvestasiPasarUang.Text.Trim)
 
                 file.WriteInteger(reportSection, iniType & " Portofolio R", RGBRead(Portofolio_R.Text.Trim))
                 file.WriteInteger(reportSection, iniType & " Portofolio G", RGBRead(Portofolio_G.Text.Trim))
@@ -952,4 +1009,5 @@ Public Class ReportFundSheetEQSetting
             ExceptionMessage.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+
 End Class

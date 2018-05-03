@@ -48,12 +48,12 @@ Partial Class ReportFundSheetEQSetting
         Me.Bank_R = New System.Windows.Forms.Label()
         Me.Bank_B = New System.Windows.Forms.Label()
         Me.txtColorBank = New System.Windows.Forms.TextBox()
-        Me.rbTanggalPeluncuran = New System.Windows.Forms.RadioButton()
-        Me.txtTanggalPeluncuran = New System.Windows.Forms.TextBox()
-        Me.Tanggal_G = New System.Windows.Forms.Label()
-        Me.Tanggal_R = New System.Windows.Forms.Label()
-        Me.Tanggal_B = New System.Windows.Forms.Label()
-        Me.txtColorTanggal = New System.Windows.Forms.TextBox()
+        Me.rbTglPeluncuran = New System.Windows.Forms.RadioButton()
+        Me.txtTglPeluncuran = New System.Windows.Forms.TextBox()
+        Me.TglPeluncuran_G = New System.Windows.Forms.Label()
+        Me.TglPeluncuran_R = New System.Windows.Forms.Label()
+        Me.TglPeluncuran_B = New System.Windows.Forms.Label()
+        Me.txtColorTglPeluncuran = New System.Windows.Forms.TextBox()
         Me.rbTotal = New System.Windows.Forms.RadioButton()
         Me.txtTotalAUM = New System.Windows.Forms.TextBox()
         Me.Total_G = New System.Windows.Forms.Label()
@@ -90,42 +90,18 @@ Partial Class ReportFundSheetEQSetting
         Me.BiayaJual_R = New System.Windows.Forms.Label()
         Me.BiayaJual_B = New System.Windows.Forms.Label()
         Me.txtColorBiayaJual = New System.Windows.Forms.TextBox()
-        Me.rbInvestAwal = New System.Windows.Forms.RadioButton()
-        Me.txtMinimalInvestasAwal = New System.Windows.Forms.TextBox()
-        Me.InvestAwal_G = New System.Windows.Forms.Label()
-        Me.InvestAwal_R = New System.Windows.Forms.Label()
-        Me.InvestAwal_B = New System.Windows.Forms.Label()
-        Me.txtColorMinInvest = New System.Windows.Forms.TextBox()
-        Me.rbInvestSelanjutnya = New System.Windows.Forms.RadioButton()
-        Me.txtMinimalInvestasiSelanjutnya = New System.Windows.Forms.TextBox()
-        Me.InvestSelanjutnya_G = New System.Windows.Forms.Label()
-        Me.InvestSelanjutnya_R = New System.Windows.Forms.Label()
-        Me.InvestSelanjutnya_B = New System.Windows.Forms.Label()
-        Me.txtColorMinInvestSelanjutnya = New System.Windows.Forms.TextBox()
+        Me.rbBiayaPengalihan = New System.Windows.Forms.RadioButton()
+        Me.txtBiayaPengalihan = New System.Windows.Forms.TextBox()
+        Me.BiayaPengalihan_G = New System.Windows.Forms.Label()
+        Me.BiayaPengalihan_R = New System.Windows.Forms.Label()
+        Me.BiayaPengalihan_B = New System.Windows.Forms.Label()
+        Me.txtColorBiayaPengalihan = New System.Windows.Forms.TextBox()
         Me.rbKode = New System.Windows.Forms.RadioButton()
         Me.txtKodeISINBloomberg = New System.Windows.Forms.TextBox()
         Me.Kode_G = New System.Windows.Forms.Label()
         Me.Kode_R = New System.Windows.Forms.Label()
         Me.Kode_B = New System.Windows.Forms.Label()
         Me.txtColorKode = New System.Windows.Forms.TextBox()
-        Me.rbKinerjaSejakDiluncurkan = New System.Windows.Forms.RadioButton()
-        Me.txtKinerjaSejakDiluncurkan = New System.Windows.Forms.TextBox()
-        Me.KinerjaAwal_G = New System.Windows.Forms.Label()
-        Me.KinerjaAwal_R = New System.Windows.Forms.Label()
-        Me.KinerjaAwal_B = New System.Windows.Forms.Label()
-        Me.txtColorKinerja = New System.Windows.Forms.TextBox()
-        Me.rbKinerjaTerbaik = New System.Windows.Forms.RadioButton()
-        Me.txtKinerjaBulanTerbaik = New System.Windows.Forms.TextBox()
-        Me.KinerjaTerbaik_G = New System.Windows.Forms.Label()
-        Me.KinerjaTerbaik_R = New System.Windows.Forms.Label()
-        Me.KinerjaTerbaik_B = New System.Windows.Forms.Label()
-        Me.txtColorKinerjaTerbaik = New System.Windows.Forms.TextBox()
-        Me.rbKinerjaTerburuk = New System.Windows.Forms.RadioButton()
-        Me.txtKinerjaBulanTerburuk = New System.Windows.Forms.TextBox()
-        Me.KinerjaTerburuk_G = New System.Windows.Forms.Label()
-        Me.KinerjaTerburuk_R = New System.Windows.Forms.Label()
-        Me.KinerjaTerburuk_B = New System.Windows.Forms.Label()
-        Me.txtColorKinerjaTerburuk = New System.Windows.Forms.TextBox()
         Me.rbFaktorRisikUtama = New System.Windows.Forms.RadioButton()
         Me.txtFaktorRisikoUtama = New System.Windows.Forms.TextBox()
         Me.FaktorRisiko_G = New System.Windows.Forms.Label()
@@ -161,7 +137,7 @@ Partial Class ReportFundSheetEQSetting
         Me.Portofolio_G = New System.Windows.Forms.Label()
         Me.Portofolio_R = New System.Windows.Forms.Label()
         Me.Portofolio_B = New System.Windows.Forms.Label()
-        Me.txtColorKomposisPortofolio = New System.Windows.Forms.TextBox()
+        Me.txtColorPortofolio = New System.Windows.Forms.TextBox()
         Me.txtInvestasiSaham = New System.Windows.Forms.TextBox()
         Me.txtInvestasiObligasi = New System.Windows.Forms.TextBox()
         Me.txtInvesatiPasarUang = New System.Windows.Forms.TextBox()
@@ -235,6 +211,14 @@ Partial Class ReportFundSheetEQSetting
         Me.TentangHolding_R = New System.Windows.Forms.Label()
         Me.TentangHolding_B = New System.Windows.Forms.Label()
         Me.txtColorTentang = New System.Windows.Forms.TextBox()
+        Me.rbTglLaporan = New System.Windows.Forms.RadioButton()
+        Me.txtTglLaporan = New System.Windows.Forms.TextBox()
+        Me.TglLaporan_G = New System.Windows.Forms.Label()
+        Me.TglLaporan_R = New System.Windows.Forms.Label()
+        Me.TglLaporan_B = New System.Windows.Forms.Label()
+        Me.txtColorTglLaporan = New System.Windows.Forms.TextBox()
+        Me.txtTableItem3Tahun = New System.Windows.Forms.TextBox()
+        Me.txtTableItem5Tahun = New System.Windows.Forms.TextBox()
         CType(Me.cd, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -249,7 +233,7 @@ Partial Class ReportFundSheetEQSetting
         Me.cd.Items.Add(Me.rbOption2)
         Me.cd.Items.Add(Me.btnSave)
         Me.cd.Items.Add(Me.btnCancel)
-        Me.cd.Location = New System.Drawing.Point(0, 505)
+        Me.cd.Location = New System.Drawing.Point(0, 430)
         Me.cd.Name = "cd"
         Me.cd.Size = New System.Drawing.Size(1118, 42)
         Me.cd.TabIndex = 7
@@ -403,7 +387,7 @@ Partial Class ReportFundSheetEQSetting
         'rbBankKustodian
         '
         Me.rbBankKustodian.AutoSize = True
-        Me.rbBankKustodian.Location = New System.Drawing.Point(12, 93)
+        Me.rbBankKustodian.Location = New System.Drawing.Point(12, 134)
         Me.rbBankKustodian.Name = "rbBankKustodian"
         Me.rbBankKustodian.Size = New System.Drawing.Size(50, 17)
         Me.rbBankKustodian.TabIndex = 155
@@ -412,7 +396,7 @@ Partial Class ReportFundSheetEQSetting
         '
         'txtBankKustodian
         '
-        Me.txtBankKustodian.Location = New System.Drawing.Point(30, 111)
+        Me.txtBankKustodian.Location = New System.Drawing.Point(30, 152)
         Me.txtBankKustodian.Name = "txtBankKustodian"
         Me.txtBankKustodian.Size = New System.Drawing.Size(179, 20)
         Me.txtBankKustodian.TabIndex = 156
@@ -421,7 +405,7 @@ Partial Class ReportFundSheetEQSetting
         'Bank_G
         '
         Me.Bank_G.AutoSize = True
-        Me.Bank_G.Location = New System.Drawing.Point(133, 95)
+        Me.Bank_G.Location = New System.Drawing.Point(133, 136)
         Me.Bank_G.Name = "Bank_G"
         Me.Bank_G.Size = New System.Drawing.Size(39, 13)
         Me.Bank_G.TabIndex = 157
@@ -430,7 +414,7 @@ Partial Class ReportFundSheetEQSetting
         'Bank_R
         '
         Me.Bank_R.AutoSize = True
-        Me.Bank_R.Location = New System.Drawing.Point(89, 95)
+        Me.Bank_R.Location = New System.Drawing.Point(89, 136)
         Me.Bank_R.Name = "Bank_R"
         Me.Bank_R.Size = New System.Drawing.Size(39, 13)
         Me.Bank_R.TabIndex = 158
@@ -439,7 +423,7 @@ Partial Class ReportFundSheetEQSetting
         'Bank_B
         '
         Me.Bank_B.AutoSize = True
-        Me.Bank_B.Location = New System.Drawing.Point(173, 95)
+        Me.Bank_B.Location = New System.Drawing.Point(173, 136)
         Me.Bank_B.Name = "Bank_B"
         Me.Bank_B.Size = New System.Drawing.Size(38, 13)
         Me.Bank_B.TabIndex = 159
@@ -449,71 +433,71 @@ Partial Class ReportFundSheetEQSetting
         '
         Me.txtColorBank.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtColorBank.Enabled = False
-        Me.txtColorBank.Location = New System.Drawing.Point(211, 97)
+        Me.txtColorBank.Location = New System.Drawing.Point(211, 138)
         Me.txtColorBank.Multiline = True
         Me.txtColorBank.Name = "txtColorBank"
         Me.txtColorBank.Size = New System.Drawing.Size(55, 35)
         Me.txtColorBank.TabIndex = 160
         '
-        'rbTanggalPeluncuran
+        'rbTglPeluncuran
         '
-        Me.rbTanggalPeluncuran.AutoSize = True
-        Me.rbTanggalPeluncuran.Location = New System.Drawing.Point(12, 134)
-        Me.rbTanggalPeluncuran.Name = "rbTanggalPeluncuran"
-        Me.rbTanggalPeluncuran.Size = New System.Drawing.Size(67, 17)
-        Me.rbTanggalPeluncuran.TabIndex = 161
-        Me.rbTanggalPeluncuran.Text = "Tanggal "
-        Me.rbTanggalPeluncuran.UseVisualStyleBackColor = True
+        Me.rbTglPeluncuran.AutoSize = True
+        Me.rbTglPeluncuran.Location = New System.Drawing.Point(12, 175)
+        Me.rbTglPeluncuran.Name = "rbTglPeluncuran"
+        Me.rbTglPeluncuran.Size = New System.Drawing.Size(92, 17)
+        Me.rbTglPeluncuran.TabIndex = 161
+        Me.rbTglPeluncuran.Text = "T. Peluncuran"
+        Me.rbTglPeluncuran.UseVisualStyleBackColor = True
         '
-        'txtTanggalPeluncuran
+        'txtTglPeluncuran
         '
-        Me.txtTanggalPeluncuran.Location = New System.Drawing.Point(30, 152)
-        Me.txtTanggalPeluncuran.Name = "txtTanggalPeluncuran"
-        Me.txtTanggalPeluncuran.Size = New System.Drawing.Size(179, 20)
-        Me.txtTanggalPeluncuran.TabIndex = 162
-        Me.txtTanggalPeluncuran.Text = "Tanggal Peluncuran"
+        Me.txtTglPeluncuran.Location = New System.Drawing.Point(30, 193)
+        Me.txtTglPeluncuran.Name = "txtTglPeluncuran"
+        Me.txtTglPeluncuran.Size = New System.Drawing.Size(179, 20)
+        Me.txtTglPeluncuran.TabIndex = 162
+        Me.txtTglPeluncuran.Text = "Tanggal Peluncuran"
         '
-        'Tanggal_G
+        'TglPeluncuran_G
         '
-        Me.Tanggal_G.AutoSize = True
-        Me.Tanggal_G.Location = New System.Drawing.Point(133, 136)
-        Me.Tanggal_G.Name = "Tanggal_G"
-        Me.Tanggal_G.Size = New System.Drawing.Size(39, 13)
-        Me.Tanggal_G.TabIndex = 163
-        Me.Tanggal_G.Text = "G: 255"
+        Me.TglPeluncuran_G.AutoSize = True
+        Me.TglPeluncuran_G.Location = New System.Drawing.Point(133, 177)
+        Me.TglPeluncuran_G.Name = "TglPeluncuran_G"
+        Me.TglPeluncuran_G.Size = New System.Drawing.Size(39, 13)
+        Me.TglPeluncuran_G.TabIndex = 163
+        Me.TglPeluncuran_G.Text = "G: 255"
         '
-        'Tanggal_R
+        'TglPeluncuran_R
         '
-        Me.Tanggal_R.AutoSize = True
-        Me.Tanggal_R.Location = New System.Drawing.Point(89, 136)
-        Me.Tanggal_R.Name = "Tanggal_R"
-        Me.Tanggal_R.Size = New System.Drawing.Size(39, 13)
-        Me.Tanggal_R.TabIndex = 164
-        Me.Tanggal_R.Text = "R: 255"
+        Me.TglPeluncuran_R.AutoSize = True
+        Me.TglPeluncuran_R.Location = New System.Drawing.Point(89, 177)
+        Me.TglPeluncuran_R.Name = "TglPeluncuran_R"
+        Me.TglPeluncuran_R.Size = New System.Drawing.Size(39, 13)
+        Me.TglPeluncuran_R.TabIndex = 164
+        Me.TglPeluncuran_R.Text = "R: 255"
         '
-        'Tanggal_B
+        'TglPeluncuran_B
         '
-        Me.Tanggal_B.AutoSize = True
-        Me.Tanggal_B.Location = New System.Drawing.Point(173, 136)
-        Me.Tanggal_B.Name = "Tanggal_B"
-        Me.Tanggal_B.Size = New System.Drawing.Size(38, 13)
-        Me.Tanggal_B.TabIndex = 165
-        Me.Tanggal_B.Text = "B: 255"
+        Me.TglPeluncuran_B.AutoSize = True
+        Me.TglPeluncuran_B.Location = New System.Drawing.Point(173, 177)
+        Me.TglPeluncuran_B.Name = "TglPeluncuran_B"
+        Me.TglPeluncuran_B.Size = New System.Drawing.Size(38, 13)
+        Me.TglPeluncuran_B.TabIndex = 165
+        Me.TglPeluncuran_B.Text = "B: 255"
         '
-        'txtColorTanggal
+        'txtColorTglPeluncuran
         '
-        Me.txtColorTanggal.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtColorTanggal.Enabled = False
-        Me.txtColorTanggal.Location = New System.Drawing.Point(211, 138)
-        Me.txtColorTanggal.Multiline = True
-        Me.txtColorTanggal.Name = "txtColorTanggal"
-        Me.txtColorTanggal.Size = New System.Drawing.Size(55, 35)
-        Me.txtColorTanggal.TabIndex = 166
+        Me.txtColorTglPeluncuran.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.txtColorTglPeluncuran.Enabled = False
+        Me.txtColorTglPeluncuran.Location = New System.Drawing.Point(211, 179)
+        Me.txtColorTglPeluncuran.Multiline = True
+        Me.txtColorTglPeluncuran.Name = "txtColorTglPeluncuran"
+        Me.txtColorTglPeluncuran.Size = New System.Drawing.Size(55, 35)
+        Me.txtColorTglPeluncuran.TabIndex = 166
         '
         'rbTotal
         '
         Me.rbTotal.AutoSize = True
-        Me.rbTotal.Location = New System.Drawing.Point(12, 175)
+        Me.rbTotal.Location = New System.Drawing.Point(12, 216)
         Me.rbTotal.Name = "rbTotal"
         Me.rbTotal.Size = New System.Drawing.Size(76, 17)
         Me.rbTotal.TabIndex = 167
@@ -522,7 +506,7 @@ Partial Class ReportFundSheetEQSetting
         '
         'txtTotalAUM
         '
-        Me.txtTotalAUM.Location = New System.Drawing.Point(30, 193)
+        Me.txtTotalAUM.Location = New System.Drawing.Point(30, 234)
         Me.txtTotalAUM.Name = "txtTotalAUM"
         Me.txtTotalAUM.Size = New System.Drawing.Size(179, 20)
         Me.txtTotalAUM.TabIndex = 168
@@ -531,7 +515,7 @@ Partial Class ReportFundSheetEQSetting
         'Total_G
         '
         Me.Total_G.AutoSize = True
-        Me.Total_G.Location = New System.Drawing.Point(133, 177)
+        Me.Total_G.Location = New System.Drawing.Point(133, 218)
         Me.Total_G.Name = "Total_G"
         Me.Total_G.Size = New System.Drawing.Size(39, 13)
         Me.Total_G.TabIndex = 169
@@ -540,7 +524,7 @@ Partial Class ReportFundSheetEQSetting
         'Total_R
         '
         Me.Total_R.AutoSize = True
-        Me.Total_R.Location = New System.Drawing.Point(89, 177)
+        Me.Total_R.Location = New System.Drawing.Point(89, 218)
         Me.Total_R.Name = "Total_R"
         Me.Total_R.Size = New System.Drawing.Size(39, 13)
         Me.Total_R.TabIndex = 170
@@ -549,7 +533,7 @@ Partial Class ReportFundSheetEQSetting
         'Total_B
         '
         Me.Total_B.AutoSize = True
-        Me.Total_B.Location = New System.Drawing.Point(173, 177)
+        Me.Total_B.Location = New System.Drawing.Point(173, 218)
         Me.Total_B.Name = "Total_B"
         Me.Total_B.Size = New System.Drawing.Size(38, 13)
         Me.Total_B.TabIndex = 171
@@ -559,7 +543,7 @@ Partial Class ReportFundSheetEQSetting
         '
         Me.txtColorTotal.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.txtColorTotal.Enabled = False
-        Me.txtColorTotal.Location = New System.Drawing.Point(211, 179)
+        Me.txtColorTotal.Location = New System.Drawing.Point(211, 220)
         Me.txtColorTotal.Multiline = True
         Me.txtColorTotal.Name = "txtColorTotal"
         Me.txtColorTotal.Size = New System.Drawing.Size(55, 35)
@@ -568,7 +552,7 @@ Partial Class ReportFundSheetEQSetting
         'rbMataUang
         '
         Me.rbMataUang.AutoSize = True
-        Me.rbMataUang.Location = New System.Drawing.Point(12, 216)
+        Me.rbMataUang.Location = New System.Drawing.Point(12, 257)
         Me.rbMataUang.Name = "rbMataUang"
         Me.rbMataUang.Size = New System.Drawing.Size(78, 17)
         Me.rbMataUang.TabIndex = 173
@@ -577,7 +561,7 @@ Partial Class ReportFundSheetEQSetting
         '
         'txtMataUang
         '
-        Me.txtMataUang.Location = New System.Drawing.Point(30, 234)
+        Me.txtMataUang.Location = New System.Drawing.Point(30, 275)
         Me.txtMataUang.Name = "txtMataUang"
         Me.txtMataUang.Size = New System.Drawing.Size(179, 20)
         Me.txtMataUang.TabIndex = 174
@@ -586,7 +570,7 @@ Partial Class ReportFundSheetEQSetting
         'MataUang_G
         '
         Me.MataUang_G.AutoSize = True
-        Me.MataUang_G.Location = New System.Drawing.Point(133, 218)
+        Me.MataUang_G.Location = New System.Drawing.Point(133, 259)
         Me.MataUang_G.Name = "MataUang_G"
         Me.MataUang_G.Size = New System.Drawing.Size(39, 13)
         Me.MataUang_G.TabIndex = 175
@@ -595,7 +579,7 @@ Partial Class ReportFundSheetEQSetting
         'MataUang_R
         '
         Me.MataUang_R.AutoSize = True
-        Me.MataUang_R.Location = New System.Drawing.Point(89, 218)
+        Me.MataUang_R.Location = New System.Drawing.Point(89, 259)
         Me.MataUang_R.Name = "MataUang_R"
         Me.MataUang_R.Size = New System.Drawing.Size(39, 13)
         Me.MataUang_R.TabIndex = 176
@@ -604,7 +588,7 @@ Partial Class ReportFundSheetEQSetting
         'MataUang_B
         '
         Me.MataUang_B.AutoSize = True
-        Me.MataUang_B.Location = New System.Drawing.Point(173, 218)
+        Me.MataUang_B.Location = New System.Drawing.Point(173, 259)
         Me.MataUang_B.Name = "MataUang_B"
         Me.MataUang_B.Size = New System.Drawing.Size(38, 13)
         Me.MataUang_B.TabIndex = 177
@@ -614,7 +598,7 @@ Partial Class ReportFundSheetEQSetting
         '
         Me.txtColorMatUang.BackColor = System.Drawing.Color.Blue
         Me.txtColorMatUang.Enabled = False
-        Me.txtColorMatUang.Location = New System.Drawing.Point(211, 220)
+        Me.txtColorMatUang.Location = New System.Drawing.Point(211, 261)
         Me.txtColorMatUang.Multiline = True
         Me.txtColorMatUang.Name = "txtColorMatUang"
         Me.txtColorMatUang.Size = New System.Drawing.Size(55, 35)
@@ -623,7 +607,7 @@ Partial Class ReportFundSheetEQSetting
         'rbImbalManajer
         '
         Me.rbImbalManajer.AutoSize = True
-        Me.rbImbalManajer.Location = New System.Drawing.Point(12, 257)
+        Me.rbImbalManajer.Location = New System.Drawing.Point(12, 298)
         Me.rbImbalManajer.Name = "rbImbalManajer"
         Me.rbImbalManajer.Size = New System.Drawing.Size(73, 17)
         Me.rbImbalManajer.TabIndex = 179
@@ -632,7 +616,7 @@ Partial Class ReportFundSheetEQSetting
         '
         'txtImbalJasaManajer
         '
-        Me.txtImbalJasaManajer.Location = New System.Drawing.Point(30, 275)
+        Me.txtImbalJasaManajer.Location = New System.Drawing.Point(30, 316)
         Me.txtImbalJasaManajer.Name = "txtImbalJasaManajer"
         Me.txtImbalJasaManajer.Size = New System.Drawing.Size(179, 20)
         Me.txtImbalJasaManajer.TabIndex = 180
@@ -641,7 +625,7 @@ Partial Class ReportFundSheetEQSetting
         'ImbalManajer_G
         '
         Me.ImbalManajer_G.AutoSize = True
-        Me.ImbalManajer_G.Location = New System.Drawing.Point(133, 259)
+        Me.ImbalManajer_G.Location = New System.Drawing.Point(133, 300)
         Me.ImbalManajer_G.Name = "ImbalManajer_G"
         Me.ImbalManajer_G.Size = New System.Drawing.Size(39, 13)
         Me.ImbalManajer_G.TabIndex = 181
@@ -650,7 +634,7 @@ Partial Class ReportFundSheetEQSetting
         'ImbalManajer_R
         '
         Me.ImbalManajer_R.AutoSize = True
-        Me.ImbalManajer_R.Location = New System.Drawing.Point(89, 259)
+        Me.ImbalManajer_R.Location = New System.Drawing.Point(89, 300)
         Me.ImbalManajer_R.Name = "ImbalManajer_R"
         Me.ImbalManajer_R.Size = New System.Drawing.Size(39, 13)
         Me.ImbalManajer_R.TabIndex = 182
@@ -659,7 +643,7 @@ Partial Class ReportFundSheetEQSetting
         'ImbalManajer_B
         '
         Me.ImbalManajer_B.AutoSize = True
-        Me.ImbalManajer_B.Location = New System.Drawing.Point(173, 259)
+        Me.ImbalManajer_B.Location = New System.Drawing.Point(173, 300)
         Me.ImbalManajer_B.Name = "ImbalManajer_B"
         Me.ImbalManajer_B.Size = New System.Drawing.Size(38, 13)
         Me.ImbalManajer_B.TabIndex = 183
@@ -669,7 +653,7 @@ Partial Class ReportFundSheetEQSetting
         '
         Me.txtColorImbalManajer.BackColor = System.Drawing.Color.Fuchsia
         Me.txtColorImbalManajer.Enabled = False
-        Me.txtColorImbalManajer.Location = New System.Drawing.Point(211, 261)
+        Me.txtColorImbalManajer.Location = New System.Drawing.Point(211, 302)
         Me.txtColorImbalManajer.Multiline = True
         Me.txtColorImbalManajer.Name = "txtColorImbalManajer"
         Me.txtColorImbalManajer.Size = New System.Drawing.Size(55, 35)
@@ -678,7 +662,7 @@ Partial Class ReportFundSheetEQSetting
         'rbImbalBank
         '
         Me.rbImbalBank.AutoSize = True
-        Me.rbImbalBank.Location = New System.Drawing.Point(12, 297)
+        Me.rbImbalBank.Location = New System.Drawing.Point(12, 338)
         Me.rbImbalBank.Name = "rbImbalBank"
         Me.rbImbalBank.Size = New System.Drawing.Size(78, 17)
         Me.rbImbalBank.TabIndex = 185
@@ -687,7 +671,7 @@ Partial Class ReportFundSheetEQSetting
         '
         'txtImbalJasaBank
         '
-        Me.txtImbalJasaBank.Location = New System.Drawing.Point(30, 315)
+        Me.txtImbalJasaBank.Location = New System.Drawing.Point(30, 356)
         Me.txtImbalJasaBank.Name = "txtImbalJasaBank"
         Me.txtImbalJasaBank.Size = New System.Drawing.Size(179, 20)
         Me.txtImbalJasaBank.TabIndex = 186
@@ -696,7 +680,7 @@ Partial Class ReportFundSheetEQSetting
         'ImbalBank_G
         '
         Me.ImbalBank_G.AutoSize = True
-        Me.ImbalBank_G.Location = New System.Drawing.Point(133, 299)
+        Me.ImbalBank_G.Location = New System.Drawing.Point(133, 340)
         Me.ImbalBank_G.Name = "ImbalBank_G"
         Me.ImbalBank_G.Size = New System.Drawing.Size(39, 13)
         Me.ImbalBank_G.TabIndex = 187
@@ -705,7 +689,7 @@ Partial Class ReportFundSheetEQSetting
         'ImbalBank_R
         '
         Me.ImbalBank_R.AutoSize = True
-        Me.ImbalBank_R.Location = New System.Drawing.Point(89, 299)
+        Me.ImbalBank_R.Location = New System.Drawing.Point(89, 340)
         Me.ImbalBank_R.Name = "ImbalBank_R"
         Me.ImbalBank_R.Size = New System.Drawing.Size(39, 13)
         Me.ImbalBank_R.TabIndex = 188
@@ -714,7 +698,7 @@ Partial Class ReportFundSheetEQSetting
         'ImbalBank_B
         '
         Me.ImbalBank_B.AutoSize = True
-        Me.ImbalBank_B.Location = New System.Drawing.Point(173, 299)
+        Me.ImbalBank_B.Location = New System.Drawing.Point(173, 340)
         Me.ImbalBank_B.Name = "ImbalBank_B"
         Me.ImbalBank_B.Size = New System.Drawing.Size(38, 13)
         Me.ImbalBank_B.TabIndex = 189
@@ -724,7 +708,7 @@ Partial Class ReportFundSheetEQSetting
         '
         Me.txtColorImbalBank.BackColor = System.Drawing.Color.Black
         Me.txtColorImbalBank.Enabled = False
-        Me.txtColorImbalBank.Location = New System.Drawing.Point(211, 301)
+        Me.txtColorImbalBank.Location = New System.Drawing.Point(211, 342)
         Me.txtColorImbalBank.Multiline = True
         Me.txtColorImbalBank.Name = "txtColorImbalBank"
         Me.txtColorImbalBank.Size = New System.Drawing.Size(55, 35)
@@ -733,16 +717,16 @@ Partial Class ReportFundSheetEQSetting
         'rbBiayaBeli
         '
         Me.rbBiayaBeli.AutoSize = True
-        Me.rbBiayaBeli.Location = New System.Drawing.Point(12, 338)
+        Me.rbBiayaBeli.Location = New System.Drawing.Point(12, 379)
         Me.rbBiayaBeli.Name = "rbBiayaBeli"
-        Me.rbBiayaBeli.Size = New System.Drawing.Size(71, 17)
+        Me.rbBiayaBeli.Size = New System.Drawing.Size(55, 17)
         Me.rbBiayaBeli.TabIndex = 191
-        Me.rbBiayaBeli.Text = "Biaya Beli"
+        Me.rbBiayaBeli.Text = "B. Beli"
         Me.rbBiayaBeli.UseVisualStyleBackColor = True
         '
         'txtBiayaPembelian
         '
-        Me.txtBiayaPembelian.Location = New System.Drawing.Point(30, 356)
+        Me.txtBiayaPembelian.Location = New System.Drawing.Point(30, 397)
         Me.txtBiayaPembelian.Name = "txtBiayaPembelian"
         Me.txtBiayaPembelian.Size = New System.Drawing.Size(179, 20)
         Me.txtBiayaPembelian.TabIndex = 192
@@ -751,7 +735,7 @@ Partial Class ReportFundSheetEQSetting
         'BiayaBeli_G
         '
         Me.BiayaBeli_G.AutoSize = True
-        Me.BiayaBeli_G.Location = New System.Drawing.Point(133, 340)
+        Me.BiayaBeli_G.Location = New System.Drawing.Point(133, 381)
         Me.BiayaBeli_G.Name = "BiayaBeli_G"
         Me.BiayaBeli_G.Size = New System.Drawing.Size(39, 13)
         Me.BiayaBeli_G.TabIndex = 193
@@ -760,7 +744,7 @@ Partial Class ReportFundSheetEQSetting
         'BiayaBeli_R
         '
         Me.BiayaBeli_R.AutoSize = True
-        Me.BiayaBeli_R.Location = New System.Drawing.Point(89, 340)
+        Me.BiayaBeli_R.Location = New System.Drawing.Point(89, 381)
         Me.BiayaBeli_R.Name = "BiayaBeli_R"
         Me.BiayaBeli_R.Size = New System.Drawing.Size(39, 13)
         Me.BiayaBeli_R.TabIndex = 194
@@ -769,7 +753,7 @@ Partial Class ReportFundSheetEQSetting
         'BiayaBeli_B
         '
         Me.BiayaBeli_B.AutoSize = True
-        Me.BiayaBeli_B.Location = New System.Drawing.Point(173, 340)
+        Me.BiayaBeli_B.Location = New System.Drawing.Point(173, 381)
         Me.BiayaBeli_B.Name = "BiayaBeli_B"
         Me.BiayaBeli_B.Size = New System.Drawing.Size(38, 13)
         Me.BiayaBeli_B.TabIndex = 195
@@ -779,7 +763,7 @@ Partial Class ReportFundSheetEQSetting
         '
         Me.txtColorBiayaBeli.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.txtColorBiayaBeli.Enabled = False
-        Me.txtColorBiayaBeli.Location = New System.Drawing.Point(211, 342)
+        Me.txtColorBiayaBeli.Location = New System.Drawing.Point(211, 383)
         Me.txtColorBiayaBeli.Multiline = True
         Me.txtColorBiayaBeli.Name = "txtColorBiayaBeli"
         Me.txtColorBiayaBeli.Size = New System.Drawing.Size(55, 35)
@@ -788,16 +772,16 @@ Partial Class ReportFundSheetEQSetting
         'rbBiayaJual
         '
         Me.rbBiayaJual.AutoSize = True
-        Me.rbBiayaJual.Location = New System.Drawing.Point(12, 378)
+        Me.rbBiayaJual.Location = New System.Drawing.Point(295, 8)
         Me.rbBiayaJual.Name = "rbBiayaJual"
-        Me.rbBiayaJual.Size = New System.Drawing.Size(73, 17)
+        Me.rbBiayaJual.Size = New System.Drawing.Size(57, 17)
         Me.rbBiayaJual.TabIndex = 197
-        Me.rbBiayaJual.Text = "Biaya Jual"
+        Me.rbBiayaJual.Text = "B. Jual"
         Me.rbBiayaJual.UseVisualStyleBackColor = True
         '
         'txtBiayaPenjualaKembali
         '
-        Me.txtBiayaPenjualaKembali.Location = New System.Drawing.Point(30, 396)
+        Me.txtBiayaPenjualaKembali.Location = New System.Drawing.Point(313, 26)
         Me.txtBiayaPenjualaKembali.Name = "txtBiayaPenjualaKembali"
         Me.txtBiayaPenjualaKembali.Size = New System.Drawing.Size(179, 20)
         Me.txtBiayaPenjualaKembali.TabIndex = 198
@@ -806,7 +790,7 @@ Partial Class ReportFundSheetEQSetting
         'BiayaJual_G
         '
         Me.BiayaJual_G.AutoSize = True
-        Me.BiayaJual_G.Location = New System.Drawing.Point(133, 380)
+        Me.BiayaJual_G.Location = New System.Drawing.Point(416, 10)
         Me.BiayaJual_G.Name = "BiayaJual_G"
         Me.BiayaJual_G.Size = New System.Drawing.Size(39, 13)
         Me.BiayaJual_G.TabIndex = 199
@@ -815,7 +799,7 @@ Partial Class ReportFundSheetEQSetting
         'BiayaJual_R
         '
         Me.BiayaJual_R.AutoSize = True
-        Me.BiayaJual_R.Location = New System.Drawing.Point(89, 380)
+        Me.BiayaJual_R.Location = New System.Drawing.Point(372, 10)
         Me.BiayaJual_R.Name = "BiayaJual_R"
         Me.BiayaJual_R.Size = New System.Drawing.Size(39, 13)
         Me.BiayaJual_R.TabIndex = 200
@@ -824,7 +808,7 @@ Partial Class ReportFundSheetEQSetting
         'BiayaJual_B
         '
         Me.BiayaJual_B.AutoSize = True
-        Me.BiayaJual_B.Location = New System.Drawing.Point(173, 380)
+        Me.BiayaJual_B.Location = New System.Drawing.Point(456, 10)
         Me.BiayaJual_B.Name = "BiayaJual_B"
         Me.BiayaJual_B.Size = New System.Drawing.Size(38, 13)
         Me.BiayaJual_B.TabIndex = 201
@@ -834,126 +818,71 @@ Partial Class ReportFundSheetEQSetting
         '
         Me.txtColorBiayaJual.BackColor = System.Drawing.Color.Silver
         Me.txtColorBiayaJual.Enabled = False
-        Me.txtColorBiayaJual.Location = New System.Drawing.Point(211, 382)
+        Me.txtColorBiayaJual.Location = New System.Drawing.Point(494, 12)
         Me.txtColorBiayaJual.Multiline = True
         Me.txtColorBiayaJual.Name = "txtColorBiayaJual"
         Me.txtColorBiayaJual.Size = New System.Drawing.Size(55, 35)
         Me.txtColorBiayaJual.TabIndex = 202
         '
-        'rbInvestAwal
+        'rbBiayaPengalihan
         '
-        Me.rbInvestAwal.AutoSize = True
-        Me.rbInvestAwal.Location = New System.Drawing.Point(12, 419)
-        Me.rbInvestAwal.Name = "rbInvestAwal"
-        Me.rbInvestAwal.Size = New System.Drawing.Size(80, 17)
-        Me.rbInvestAwal.TabIndex = 203
-        Me.rbInvestAwal.Text = "Invest Awal"
-        Me.rbInvestAwal.UseVisualStyleBackColor = True
+        Me.rbBiayaPengalihan.AutoSize = True
+        Me.rbBiayaPengalihan.Location = New System.Drawing.Point(295, 49)
+        Me.rbBiayaPengalihan.Name = "rbBiayaPengalihan"
+        Me.rbBiayaPengalihan.Size = New System.Drawing.Size(91, 17)
+        Me.rbBiayaPengalihan.TabIndex = 203
+        Me.rbBiayaPengalihan.Text = "B. Pengalihan"
+        Me.rbBiayaPengalihan.UseVisualStyleBackColor = True
         '
-        'txtMinimalInvestasAwal
+        'txtBiayaPengalihan
         '
-        Me.txtMinimalInvestasAwal.Location = New System.Drawing.Point(30, 437)
-        Me.txtMinimalInvestasAwal.Name = "txtMinimalInvestasAwal"
-        Me.txtMinimalInvestasAwal.Size = New System.Drawing.Size(179, 20)
-        Me.txtMinimalInvestasAwal.TabIndex = 204
-        Me.txtMinimalInvestasAwal.Text = "Minimal Investasi Awal"
+        Me.txtBiayaPengalihan.Location = New System.Drawing.Point(313, 67)
+        Me.txtBiayaPengalihan.Name = "txtBiayaPengalihan"
+        Me.txtBiayaPengalihan.Size = New System.Drawing.Size(179, 20)
+        Me.txtBiayaPengalihan.TabIndex = 204
+        Me.txtBiayaPengalihan.Text = "Biaya Pengalihan"
         '
-        'InvestAwal_G
+        'BiayaPengalihan_G
         '
-        Me.InvestAwal_G.AutoSize = True
-        Me.InvestAwal_G.Location = New System.Drawing.Point(133, 421)
-        Me.InvestAwal_G.Name = "InvestAwal_G"
-        Me.InvestAwal_G.Size = New System.Drawing.Size(39, 13)
-        Me.InvestAwal_G.TabIndex = 205
-        Me.InvestAwal_G.Text = "G: 255"
+        Me.BiayaPengalihan_G.AutoSize = True
+        Me.BiayaPengalihan_G.Location = New System.Drawing.Point(416, 51)
+        Me.BiayaPengalihan_G.Name = "BiayaPengalihan_G"
+        Me.BiayaPengalihan_G.Size = New System.Drawing.Size(39, 13)
+        Me.BiayaPengalihan_G.TabIndex = 205
+        Me.BiayaPengalihan_G.Text = "G: 255"
         '
-        'InvestAwal_R
+        'BiayaPengalihan_R
         '
-        Me.InvestAwal_R.AutoSize = True
-        Me.InvestAwal_R.Location = New System.Drawing.Point(89, 421)
-        Me.InvestAwal_R.Name = "InvestAwal_R"
-        Me.InvestAwal_R.Size = New System.Drawing.Size(39, 13)
-        Me.InvestAwal_R.TabIndex = 206
-        Me.InvestAwal_R.Text = "R: 255"
+        Me.BiayaPengalihan_R.AutoSize = True
+        Me.BiayaPengalihan_R.Location = New System.Drawing.Point(372, 51)
+        Me.BiayaPengalihan_R.Name = "BiayaPengalihan_R"
+        Me.BiayaPengalihan_R.Size = New System.Drawing.Size(39, 13)
+        Me.BiayaPengalihan_R.TabIndex = 206
+        Me.BiayaPengalihan_R.Text = "R: 255"
         '
-        'InvestAwal_B
+        'BiayaPengalihan_B
         '
-        Me.InvestAwal_B.AutoSize = True
-        Me.InvestAwal_B.Location = New System.Drawing.Point(173, 421)
-        Me.InvestAwal_B.Name = "InvestAwal_B"
-        Me.InvestAwal_B.Size = New System.Drawing.Size(38, 13)
-        Me.InvestAwal_B.TabIndex = 207
-        Me.InvestAwal_B.Text = "B: 255"
+        Me.BiayaPengalihan_B.AutoSize = True
+        Me.BiayaPengalihan_B.Location = New System.Drawing.Point(456, 51)
+        Me.BiayaPengalihan_B.Name = "BiayaPengalihan_B"
+        Me.BiayaPengalihan_B.Size = New System.Drawing.Size(38, 13)
+        Me.BiayaPengalihan_B.TabIndex = 207
+        Me.BiayaPengalihan_B.Text = "B: 255"
         '
-        'txtColorMinInvest
+        'txtColorBiayaPengalihan
         '
-        Me.txtColorMinInvest.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtColorMinInvest.Enabled = False
-        Me.txtColorMinInvest.Location = New System.Drawing.Point(211, 423)
-        Me.txtColorMinInvest.Multiline = True
-        Me.txtColorMinInvest.Name = "txtColorMinInvest"
-        Me.txtColorMinInvest.Size = New System.Drawing.Size(55, 35)
-        Me.txtColorMinInvest.TabIndex = 208
-        '
-        'rbInvestSelanjutnya
-        '
-        Me.rbInvestSelanjutnya.AutoSize = True
-        Me.rbInvestSelanjutnya.Location = New System.Drawing.Point(12, 458)
-        Me.rbInvestSelanjutnya.Name = "rbInvestSelanjutnya"
-        Me.rbInvestSelanjutnya.Size = New System.Drawing.Size(79, 17)
-        Me.rbInvestSelanjutnya.TabIndex = 209
-        Me.rbInvestSelanjutnya.Text = "Next Invest"
-        Me.rbInvestSelanjutnya.UseVisualStyleBackColor = True
-        '
-        'txtMinimalInvestasiSelanjutnya
-        '
-        Me.txtMinimalInvestasiSelanjutnya.Location = New System.Drawing.Point(30, 476)
-        Me.txtMinimalInvestasiSelanjutnya.Name = "txtMinimalInvestasiSelanjutnya"
-        Me.txtMinimalInvestasiSelanjutnya.Size = New System.Drawing.Size(179, 20)
-        Me.txtMinimalInvestasiSelanjutnya.TabIndex = 210
-        Me.txtMinimalInvestasiSelanjutnya.Text = "Minimal Investasi Selanjutnya"
-        '
-        'InvestSelanjutnya_G
-        '
-        Me.InvestSelanjutnya_G.AutoSize = True
-        Me.InvestSelanjutnya_G.Location = New System.Drawing.Point(133, 460)
-        Me.InvestSelanjutnya_G.Name = "InvestSelanjutnya_G"
-        Me.InvestSelanjutnya_G.Size = New System.Drawing.Size(39, 13)
-        Me.InvestSelanjutnya_G.TabIndex = 211
-        Me.InvestSelanjutnya_G.Text = "G: 255"
-        '
-        'InvestSelanjutnya_R
-        '
-        Me.InvestSelanjutnya_R.AutoSize = True
-        Me.InvestSelanjutnya_R.Location = New System.Drawing.Point(89, 460)
-        Me.InvestSelanjutnya_R.Name = "InvestSelanjutnya_R"
-        Me.InvestSelanjutnya_R.Size = New System.Drawing.Size(39, 13)
-        Me.InvestSelanjutnya_R.TabIndex = 212
-        Me.InvestSelanjutnya_R.Text = "R: 255"
-        '
-        'InvestSelanjutnya_B
-        '
-        Me.InvestSelanjutnya_B.AutoSize = True
-        Me.InvestSelanjutnya_B.Location = New System.Drawing.Point(173, 460)
-        Me.InvestSelanjutnya_B.Name = "InvestSelanjutnya_B"
-        Me.InvestSelanjutnya_B.Size = New System.Drawing.Size(38, 13)
-        Me.InvestSelanjutnya_B.TabIndex = 213
-        Me.InvestSelanjutnya_B.Text = "B: 255"
-        '
-        'txtColorMinInvestSelanjutnya
-        '
-        Me.txtColorMinInvestSelanjutnya.BackColor = System.Drawing.Color.Lime
-        Me.txtColorMinInvestSelanjutnya.Enabled = False
-        Me.txtColorMinInvestSelanjutnya.Location = New System.Drawing.Point(211, 462)
-        Me.txtColorMinInvestSelanjutnya.Multiline = True
-        Me.txtColorMinInvestSelanjutnya.Name = "txtColorMinInvestSelanjutnya"
-        Me.txtColorMinInvestSelanjutnya.Size = New System.Drawing.Size(55, 35)
-        Me.txtColorMinInvestSelanjutnya.TabIndex = 214
+        Me.txtColorBiayaPengalihan.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.txtColorBiayaPengalihan.Enabled = False
+        Me.txtColorBiayaPengalihan.Location = New System.Drawing.Point(494, 53)
+        Me.txtColorBiayaPengalihan.Multiline = True
+        Me.txtColorBiayaPengalihan.Name = "txtColorBiayaPengalihan"
+        Me.txtColorBiayaPengalihan.Size = New System.Drawing.Size(55, 35)
+        Me.txtColorBiayaPengalihan.TabIndex = 208
         '
         'rbKode
         '
         Me.rbKode.AutoSize = True
-        Me.rbKode.Location = New System.Drawing.Point(293, 12)
+        Me.rbKode.Location = New System.Drawing.Point(295, 88)
         Me.rbKode.Name = "rbKode"
         Me.rbKode.Size = New System.Drawing.Size(50, 17)
         Me.rbKode.TabIndex = 215
@@ -962,7 +891,7 @@ Partial Class ReportFundSheetEQSetting
         '
         'txtKodeISINBloomberg
         '
-        Me.txtKodeISINBloomberg.Location = New System.Drawing.Point(311, 30)
+        Me.txtKodeISINBloomberg.Location = New System.Drawing.Point(313, 106)
         Me.txtKodeISINBloomberg.Name = "txtKodeISINBloomberg"
         Me.txtKodeISINBloomberg.Size = New System.Drawing.Size(179, 20)
         Me.txtKodeISINBloomberg.TabIndex = 216
@@ -971,7 +900,7 @@ Partial Class ReportFundSheetEQSetting
         'Kode_G
         '
         Me.Kode_G.AutoSize = True
-        Me.Kode_G.Location = New System.Drawing.Point(414, 14)
+        Me.Kode_G.Location = New System.Drawing.Point(416, 90)
         Me.Kode_G.Name = "Kode_G"
         Me.Kode_G.Size = New System.Drawing.Size(39, 13)
         Me.Kode_G.TabIndex = 217
@@ -980,7 +909,7 @@ Partial Class ReportFundSheetEQSetting
         'Kode_R
         '
         Me.Kode_R.AutoSize = True
-        Me.Kode_R.Location = New System.Drawing.Point(370, 14)
+        Me.Kode_R.Location = New System.Drawing.Point(372, 90)
         Me.Kode_R.Name = "Kode_R"
         Me.Kode_R.Size = New System.Drawing.Size(39, 13)
         Me.Kode_R.TabIndex = 218
@@ -989,7 +918,7 @@ Partial Class ReportFundSheetEQSetting
         'Kode_B
         '
         Me.Kode_B.AutoSize = True
-        Me.Kode_B.Location = New System.Drawing.Point(454, 14)
+        Me.Kode_B.Location = New System.Drawing.Point(456, 90)
         Me.Kode_B.Name = "Kode_B"
         Me.Kode_B.Size = New System.Drawing.Size(38, 13)
         Me.Kode_B.TabIndex = 219
@@ -999,181 +928,16 @@ Partial Class ReportFundSheetEQSetting
         '
         Me.txtColorKode.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtColorKode.Enabled = False
-        Me.txtColorKode.Location = New System.Drawing.Point(492, 16)
+        Me.txtColorKode.Location = New System.Drawing.Point(494, 92)
         Me.txtColorKode.Multiline = True
         Me.txtColorKode.Name = "txtColorKode"
         Me.txtColorKode.Size = New System.Drawing.Size(55, 35)
         Me.txtColorKode.TabIndex = 220
         '
-        'rbKinerjaSejakDiluncurkan
-        '
-        Me.rbKinerjaSejakDiluncurkan.AutoSize = True
-        Me.rbKinerjaSejakDiluncurkan.Location = New System.Drawing.Point(293, 54)
-        Me.rbKinerjaSejakDiluncurkan.Name = "rbKinerjaSejakDiluncurkan"
-        Me.rbKinerjaSejakDiluncurkan.Size = New System.Drawing.Size(83, 17)
-        Me.rbKinerjaSejakDiluncurkan.TabIndex = 221
-        Me.rbKinerjaSejakDiluncurkan.Text = "Kinerja Awal"
-        Me.rbKinerjaSejakDiluncurkan.UseVisualStyleBackColor = True
-        '
-        'txtKinerjaSejakDiluncurkan
-        '
-        Me.txtKinerjaSejakDiluncurkan.Location = New System.Drawing.Point(311, 72)
-        Me.txtKinerjaSejakDiluncurkan.Name = "txtKinerjaSejakDiluncurkan"
-        Me.txtKinerjaSejakDiluncurkan.Size = New System.Drawing.Size(179, 20)
-        Me.txtKinerjaSejakDiluncurkan.TabIndex = 222
-        Me.txtKinerjaSejakDiluncurkan.Text = "Kinerja Sejak Diluncurkan"
-        '
-        'KinerjaAwal_G
-        '
-        Me.KinerjaAwal_G.AutoSize = True
-        Me.KinerjaAwal_G.Location = New System.Drawing.Point(414, 56)
-        Me.KinerjaAwal_G.Name = "KinerjaAwal_G"
-        Me.KinerjaAwal_G.Size = New System.Drawing.Size(39, 13)
-        Me.KinerjaAwal_G.TabIndex = 223
-        Me.KinerjaAwal_G.Text = "G: 255"
-        '
-        'KinerjaAwal_R
-        '
-        Me.KinerjaAwal_R.AutoSize = True
-        Me.KinerjaAwal_R.Location = New System.Drawing.Point(370, 56)
-        Me.KinerjaAwal_R.Name = "KinerjaAwal_R"
-        Me.KinerjaAwal_R.Size = New System.Drawing.Size(39, 13)
-        Me.KinerjaAwal_R.TabIndex = 224
-        Me.KinerjaAwal_R.Text = "R: 255"
-        '
-        'KinerjaAwal_B
-        '
-        Me.KinerjaAwal_B.AutoSize = True
-        Me.KinerjaAwal_B.Location = New System.Drawing.Point(454, 56)
-        Me.KinerjaAwal_B.Name = "KinerjaAwal_B"
-        Me.KinerjaAwal_B.Size = New System.Drawing.Size(38, 13)
-        Me.KinerjaAwal_B.TabIndex = 225
-        Me.KinerjaAwal_B.Text = "B: 255"
-        '
-        'txtColorKinerja
-        '
-        Me.txtColorKinerja.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txtColorKinerja.Enabled = False
-        Me.txtColorKinerja.Location = New System.Drawing.Point(492, 58)
-        Me.txtColorKinerja.Multiline = True
-        Me.txtColorKinerja.Name = "txtColorKinerja"
-        Me.txtColorKinerja.Size = New System.Drawing.Size(55, 35)
-        Me.txtColorKinerja.TabIndex = 226
-        '
-        'rbKinerjaTerbaik
-        '
-        Me.rbKinerjaTerbaik.AutoSize = True
-        Me.rbKinerjaTerbaik.Location = New System.Drawing.Point(293, 93)
-        Me.rbKinerjaTerbaik.Name = "rbKinerjaTerbaik"
-        Me.rbKinerjaTerbaik.Size = New System.Drawing.Size(88, 17)
-        Me.rbKinerjaTerbaik.TabIndex = 227
-        Me.rbKinerjaTerbaik.Text = "Kinerja Buruk"
-        Me.rbKinerjaTerbaik.UseVisualStyleBackColor = True
-        '
-        'txtKinerjaBulanTerbaik
-        '
-        Me.txtKinerjaBulanTerbaik.Location = New System.Drawing.Point(311, 111)
-        Me.txtKinerjaBulanTerbaik.Name = "txtKinerjaBulanTerbaik"
-        Me.txtKinerjaBulanTerbaik.Size = New System.Drawing.Size(179, 20)
-        Me.txtKinerjaBulanTerbaik.TabIndex = 228
-        Me.txtKinerjaBulanTerbaik.Text = "Kinerja Bulan Terbaik"
-        '
-        'KinerjaTerbaik_G
-        '
-        Me.KinerjaTerbaik_G.AutoSize = True
-        Me.KinerjaTerbaik_G.Location = New System.Drawing.Point(414, 95)
-        Me.KinerjaTerbaik_G.Name = "KinerjaTerbaik_G"
-        Me.KinerjaTerbaik_G.Size = New System.Drawing.Size(39, 13)
-        Me.KinerjaTerbaik_G.TabIndex = 229
-        Me.KinerjaTerbaik_G.Text = "G: 255"
-        '
-        'KinerjaTerbaik_R
-        '
-        Me.KinerjaTerbaik_R.AutoSize = True
-        Me.KinerjaTerbaik_R.Location = New System.Drawing.Point(370, 95)
-        Me.KinerjaTerbaik_R.Name = "KinerjaTerbaik_R"
-        Me.KinerjaTerbaik_R.Size = New System.Drawing.Size(39, 13)
-        Me.KinerjaTerbaik_R.TabIndex = 230
-        Me.KinerjaTerbaik_R.Text = "R: 255"
-        '
-        'KinerjaTerbaik_B
-        '
-        Me.KinerjaTerbaik_B.AutoSize = True
-        Me.KinerjaTerbaik_B.Location = New System.Drawing.Point(454, 95)
-        Me.KinerjaTerbaik_B.Name = "KinerjaTerbaik_B"
-        Me.KinerjaTerbaik_B.Size = New System.Drawing.Size(38, 13)
-        Me.KinerjaTerbaik_B.TabIndex = 231
-        Me.KinerjaTerbaik_B.Text = "B: 255"
-        '
-        'txtColorKinerjaTerbaik
-        '
-        Me.txtColorKinerjaTerbaik.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.txtColorKinerjaTerbaik.Enabled = False
-        Me.txtColorKinerjaTerbaik.Location = New System.Drawing.Point(492, 97)
-        Me.txtColorKinerjaTerbaik.Multiline = True
-        Me.txtColorKinerjaTerbaik.Name = "txtColorKinerjaTerbaik"
-        Me.txtColorKinerjaTerbaik.Size = New System.Drawing.Size(55, 35)
-        Me.txtColorKinerjaTerbaik.TabIndex = 232
-        '
-        'rbKinerjaTerburuk
-        '
-        Me.rbKinerjaTerburuk.AutoSize = True
-        Me.rbKinerjaTerburuk.Location = New System.Drawing.Point(293, 134)
-        Me.rbKinerjaTerburuk.Name = "rbKinerjaTerburuk"
-        Me.rbKinerjaTerburuk.Size = New System.Drawing.Size(81, 17)
-        Me.rbKinerjaTerburuk.TabIndex = 233
-        Me.rbKinerjaTerburuk.Text = "Kinerja Baik"
-        Me.rbKinerjaTerburuk.UseVisualStyleBackColor = True
-        '
-        'txtKinerjaBulanTerburuk
-        '
-        Me.txtKinerjaBulanTerburuk.Location = New System.Drawing.Point(311, 152)
-        Me.txtKinerjaBulanTerburuk.Name = "txtKinerjaBulanTerburuk"
-        Me.txtKinerjaBulanTerburuk.Size = New System.Drawing.Size(179, 20)
-        Me.txtKinerjaBulanTerburuk.TabIndex = 234
-        Me.txtKinerjaBulanTerburuk.Text = "Kinerja Bulan Terburuk"
-        '
-        'KinerjaTerburuk_G
-        '
-        Me.KinerjaTerburuk_G.AutoSize = True
-        Me.KinerjaTerburuk_G.Location = New System.Drawing.Point(414, 136)
-        Me.KinerjaTerburuk_G.Name = "KinerjaTerburuk_G"
-        Me.KinerjaTerburuk_G.Size = New System.Drawing.Size(39, 13)
-        Me.KinerjaTerburuk_G.TabIndex = 235
-        Me.KinerjaTerburuk_G.Text = "G: 255"
-        '
-        'KinerjaTerburuk_R
-        '
-        Me.KinerjaTerburuk_R.AutoSize = True
-        Me.KinerjaTerburuk_R.Location = New System.Drawing.Point(370, 136)
-        Me.KinerjaTerburuk_R.Name = "KinerjaTerburuk_R"
-        Me.KinerjaTerburuk_R.Size = New System.Drawing.Size(39, 13)
-        Me.KinerjaTerburuk_R.TabIndex = 236
-        Me.KinerjaTerburuk_R.Text = "R: 255"
-        '
-        'KinerjaTerburuk_B
-        '
-        Me.KinerjaTerburuk_B.AutoSize = True
-        Me.KinerjaTerburuk_B.Location = New System.Drawing.Point(454, 136)
-        Me.KinerjaTerburuk_B.Name = "KinerjaTerburuk_B"
-        Me.KinerjaTerburuk_B.Size = New System.Drawing.Size(38, 13)
-        Me.KinerjaTerburuk_B.TabIndex = 237
-        Me.KinerjaTerburuk_B.Text = "B: 255"
-        '
-        'txtColorKinerjaTerburuk
-        '
-        Me.txtColorKinerjaTerburuk.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.txtColorKinerjaTerburuk.Enabled = False
-        Me.txtColorKinerjaTerburuk.Location = New System.Drawing.Point(492, 138)
-        Me.txtColorKinerjaTerburuk.Multiline = True
-        Me.txtColorKinerjaTerburuk.Name = "txtColorKinerjaTerburuk"
-        Me.txtColorKinerjaTerburuk.Size = New System.Drawing.Size(55, 35)
-        Me.txtColorKinerjaTerburuk.TabIndex = 238
-        '
         'rbFaktorRisikUtama
         '
         Me.rbFaktorRisikUtama.AutoSize = True
-        Me.rbFaktorRisikUtama.Location = New System.Drawing.Point(293, 175)
+        Me.rbFaktorRisikUtama.Location = New System.Drawing.Point(295, 129)
         Me.rbFaktorRisikUtama.Name = "rbFaktorRisikUtama"
         Me.rbFaktorRisikUtama.Size = New System.Drawing.Size(55, 17)
         Me.rbFaktorRisikUtama.TabIndex = 239
@@ -1182,7 +946,7 @@ Partial Class ReportFundSheetEQSetting
         '
         'txtFaktorRisikoUtama
         '
-        Me.txtFaktorRisikoUtama.Location = New System.Drawing.Point(311, 193)
+        Me.txtFaktorRisikoUtama.Location = New System.Drawing.Point(313, 147)
         Me.txtFaktorRisikoUtama.Name = "txtFaktorRisikoUtama"
         Me.txtFaktorRisikoUtama.Size = New System.Drawing.Size(179, 20)
         Me.txtFaktorRisikoUtama.TabIndex = 240
@@ -1191,7 +955,7 @@ Partial Class ReportFundSheetEQSetting
         'FaktorRisiko_G
         '
         Me.FaktorRisiko_G.AutoSize = True
-        Me.FaktorRisiko_G.Location = New System.Drawing.Point(414, 177)
+        Me.FaktorRisiko_G.Location = New System.Drawing.Point(416, 131)
         Me.FaktorRisiko_G.Name = "FaktorRisiko_G"
         Me.FaktorRisiko_G.Size = New System.Drawing.Size(39, 13)
         Me.FaktorRisiko_G.TabIndex = 241
@@ -1200,7 +964,7 @@ Partial Class ReportFundSheetEQSetting
         'FaktorRisiko_R
         '
         Me.FaktorRisiko_R.AutoSize = True
-        Me.FaktorRisiko_R.Location = New System.Drawing.Point(370, 177)
+        Me.FaktorRisiko_R.Location = New System.Drawing.Point(372, 131)
         Me.FaktorRisiko_R.Name = "FaktorRisiko_R"
         Me.FaktorRisiko_R.Size = New System.Drawing.Size(39, 13)
         Me.FaktorRisiko_R.TabIndex = 242
@@ -1209,7 +973,7 @@ Partial Class ReportFundSheetEQSetting
         'FaktorRisiko_B
         '
         Me.FaktorRisiko_B.AutoSize = True
-        Me.FaktorRisiko_B.Location = New System.Drawing.Point(454, 177)
+        Me.FaktorRisiko_B.Location = New System.Drawing.Point(456, 131)
         Me.FaktorRisiko_B.Name = "FaktorRisiko_B"
         Me.FaktorRisiko_B.Size = New System.Drawing.Size(38, 13)
         Me.FaktorRisiko_B.TabIndex = 243
@@ -1219,7 +983,7 @@ Partial Class ReportFundSheetEQSetting
         '
         Me.txtColorFaktorRisiko.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.txtColorFaktorRisiko.Enabled = False
-        Me.txtColorFaktorRisiko.Location = New System.Drawing.Point(492, 179)
+        Me.txtColorFaktorRisiko.Location = New System.Drawing.Point(494, 133)
         Me.txtColorFaktorRisiko.Multiline = True
         Me.txtColorFaktorRisiko.Name = "txtColorFaktorRisiko"
         Me.txtColorFaktorRisiko.Size = New System.Drawing.Size(55, 35)
@@ -1228,7 +992,7 @@ Partial Class ReportFundSheetEQSetting
         'rbPeriodeInvestasi
         '
         Me.rbPeriodeInvestasi.AutoSize = True
-        Me.rbPeriodeInvestasi.Location = New System.Drawing.Point(293, 227)
+        Me.rbPeriodeInvestasi.Location = New System.Drawing.Point(295, 170)
         Me.rbPeriodeInvestasi.Name = "rbPeriodeInvestasi"
         Me.rbPeriodeInvestasi.Size = New System.Drawing.Size(61, 17)
         Me.rbPeriodeInvestasi.TabIndex = 245
@@ -1237,7 +1001,7 @@ Partial Class ReportFundSheetEQSetting
         '
         'txtPerodeInvestasi
         '
-        Me.txtPerodeInvestasi.Location = New System.Drawing.Point(311, 245)
+        Me.txtPerodeInvestasi.Location = New System.Drawing.Point(313, 188)
         Me.txtPerodeInvestasi.Name = "txtPerodeInvestasi"
         Me.txtPerodeInvestasi.Size = New System.Drawing.Size(179, 20)
         Me.txtPerodeInvestasi.TabIndex = 246
@@ -1246,7 +1010,7 @@ Partial Class ReportFundSheetEQSetting
         'PeriodeInvestasi_G
         '
         Me.PeriodeInvestasi_G.AutoSize = True
-        Me.PeriodeInvestasi_G.Location = New System.Drawing.Point(414, 229)
+        Me.PeriodeInvestasi_G.Location = New System.Drawing.Point(416, 172)
         Me.PeriodeInvestasi_G.Name = "PeriodeInvestasi_G"
         Me.PeriodeInvestasi_G.Size = New System.Drawing.Size(39, 13)
         Me.PeriodeInvestasi_G.TabIndex = 247
@@ -1255,7 +1019,7 @@ Partial Class ReportFundSheetEQSetting
         'PeriodeInvestasi_R
         '
         Me.PeriodeInvestasi_R.AutoSize = True
-        Me.PeriodeInvestasi_R.Location = New System.Drawing.Point(370, 229)
+        Me.PeriodeInvestasi_R.Location = New System.Drawing.Point(372, 172)
         Me.PeriodeInvestasi_R.Name = "PeriodeInvestasi_R"
         Me.PeriodeInvestasi_R.Size = New System.Drawing.Size(39, 13)
         Me.PeriodeInvestasi_R.TabIndex = 248
@@ -1264,7 +1028,7 @@ Partial Class ReportFundSheetEQSetting
         'PeriodeInvestasi_B
         '
         Me.PeriodeInvestasi_B.AutoSize = True
-        Me.PeriodeInvestasi_B.Location = New System.Drawing.Point(454, 229)
+        Me.PeriodeInvestasi_B.Location = New System.Drawing.Point(456, 172)
         Me.PeriodeInvestasi_B.Name = "PeriodeInvestasi_B"
         Me.PeriodeInvestasi_B.Size = New System.Drawing.Size(38, 13)
         Me.PeriodeInvestasi_B.TabIndex = 249
@@ -1274,7 +1038,7 @@ Partial Class ReportFundSheetEQSetting
         '
         Me.txtColorPeriode.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.txtColorPeriode.Enabled = False
-        Me.txtColorPeriode.Location = New System.Drawing.Point(492, 231)
+        Me.txtColorPeriode.Location = New System.Drawing.Point(494, 174)
         Me.txtColorPeriode.Multiline = True
         Me.txtColorPeriode.Name = "txtColorPeriode"
         Me.txtColorPeriode.Size = New System.Drawing.Size(55, 35)
@@ -1283,7 +1047,7 @@ Partial Class ReportFundSheetEQSetting
         'rbTingkatRisiko
         '
         Me.rbTingkatRisiko.AutoSize = True
-        Me.rbTingkatRisiko.Location = New System.Drawing.Point(293, 268)
+        Me.rbTingkatRisiko.Location = New System.Drawing.Point(295, 211)
         Me.rbTingkatRisiko.Name = "rbTingkatRisiko"
         Me.rbTingkatRisiko.Size = New System.Drawing.Size(67, 17)
         Me.rbTingkatRisiko.TabIndex = 251
@@ -1292,7 +1056,7 @@ Partial Class ReportFundSheetEQSetting
         '
         'txtTingkatRisiko
         '
-        Me.txtTingkatRisiko.Location = New System.Drawing.Point(311, 286)
+        Me.txtTingkatRisiko.Location = New System.Drawing.Point(313, 229)
         Me.txtTingkatRisiko.Name = "txtTingkatRisiko"
         Me.txtTingkatRisiko.Size = New System.Drawing.Size(179, 20)
         Me.txtTingkatRisiko.TabIndex = 252
@@ -1301,7 +1065,7 @@ Partial Class ReportFundSheetEQSetting
         'TIngkatRisiko_G
         '
         Me.TIngkatRisiko_G.AutoSize = True
-        Me.TIngkatRisiko_G.Location = New System.Drawing.Point(414, 270)
+        Me.TIngkatRisiko_G.Location = New System.Drawing.Point(416, 213)
         Me.TIngkatRisiko_G.Name = "TIngkatRisiko_G"
         Me.TIngkatRisiko_G.Size = New System.Drawing.Size(39, 13)
         Me.TIngkatRisiko_G.TabIndex = 253
@@ -1310,7 +1074,7 @@ Partial Class ReportFundSheetEQSetting
         'TingkatRisiko_R
         '
         Me.TingkatRisiko_R.AutoSize = True
-        Me.TingkatRisiko_R.Location = New System.Drawing.Point(370, 270)
+        Me.TingkatRisiko_R.Location = New System.Drawing.Point(372, 213)
         Me.TingkatRisiko_R.Name = "TingkatRisiko_R"
         Me.TingkatRisiko_R.Size = New System.Drawing.Size(39, 13)
         Me.TingkatRisiko_R.TabIndex = 254
@@ -1319,7 +1083,7 @@ Partial Class ReportFundSheetEQSetting
         'TingkatRisiko_B
         '
         Me.TingkatRisiko_B.AutoSize = True
-        Me.TingkatRisiko_B.Location = New System.Drawing.Point(454, 270)
+        Me.TingkatRisiko_B.Location = New System.Drawing.Point(456, 213)
         Me.TingkatRisiko_B.Name = "TingkatRisiko_B"
         Me.TingkatRisiko_B.Size = New System.Drawing.Size(38, 13)
         Me.TingkatRisiko_B.TabIndex = 255
@@ -1329,7 +1093,7 @@ Partial Class ReportFundSheetEQSetting
         '
         Me.txtColorTingkatRisiko.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.txtColorTingkatRisiko.Enabled = False
-        Me.txtColorTingkatRisiko.Location = New System.Drawing.Point(492, 272)
+        Me.txtColorTingkatRisiko.Location = New System.Drawing.Point(494, 215)
         Me.txtColorTingkatRisiko.Multiline = True
         Me.txtColorTingkatRisiko.Name = "txtColorTingkatRisiko"
         Me.txtColorTingkatRisiko.Size = New System.Drawing.Size(55, 35)
@@ -1338,7 +1102,7 @@ Partial Class ReportFundSheetEQSetting
         'rbTujuanInvestasi
         '
         Me.rbTujuanInvestasi.AutoSize = True
-        Me.rbTujuanInvestasi.Location = New System.Drawing.Point(293, 309)
+        Me.rbTujuanInvestasi.Location = New System.Drawing.Point(295, 252)
         Me.rbTujuanInvestasi.Name = "rbTujuanInvestasi"
         Me.rbTujuanInvestasi.Size = New System.Drawing.Size(80, 17)
         Me.rbTujuanInvestasi.TabIndex = 257
@@ -1347,7 +1111,7 @@ Partial Class ReportFundSheetEQSetting
         '
         'txtTujuanInvestasi
         '
-        Me.txtTujuanInvestasi.Location = New System.Drawing.Point(311, 327)
+        Me.txtTujuanInvestasi.Location = New System.Drawing.Point(313, 270)
         Me.txtTujuanInvestasi.Name = "txtTujuanInvestasi"
         Me.txtTujuanInvestasi.Size = New System.Drawing.Size(179, 20)
         Me.txtTujuanInvestasi.TabIndex = 258
@@ -1356,7 +1120,7 @@ Partial Class ReportFundSheetEQSetting
         'TujuanInvestasi_G
         '
         Me.TujuanInvestasi_G.AutoSize = True
-        Me.TujuanInvestasi_G.Location = New System.Drawing.Point(414, 311)
+        Me.TujuanInvestasi_G.Location = New System.Drawing.Point(416, 254)
         Me.TujuanInvestasi_G.Name = "TujuanInvestasi_G"
         Me.TujuanInvestasi_G.Size = New System.Drawing.Size(39, 13)
         Me.TujuanInvestasi_G.TabIndex = 259
@@ -1365,7 +1129,7 @@ Partial Class ReportFundSheetEQSetting
         'TujuanInvestasi_R
         '
         Me.TujuanInvestasi_R.AutoSize = True
-        Me.TujuanInvestasi_R.Location = New System.Drawing.Point(370, 311)
+        Me.TujuanInvestasi_R.Location = New System.Drawing.Point(372, 254)
         Me.TujuanInvestasi_R.Name = "TujuanInvestasi_R"
         Me.TujuanInvestasi_R.Size = New System.Drawing.Size(39, 13)
         Me.TujuanInvestasi_R.TabIndex = 260
@@ -1374,7 +1138,7 @@ Partial Class ReportFundSheetEQSetting
         'TujuanInvestasi_B
         '
         Me.TujuanInvestasi_B.AutoSize = True
-        Me.TujuanInvestasi_B.Location = New System.Drawing.Point(454, 311)
+        Me.TujuanInvestasi_B.Location = New System.Drawing.Point(456, 254)
         Me.TujuanInvestasi_B.Name = "TujuanInvestasi_B"
         Me.TujuanInvestasi_B.Size = New System.Drawing.Size(38, 13)
         Me.TujuanInvestasi_B.TabIndex = 261
@@ -1384,7 +1148,7 @@ Partial Class ReportFundSheetEQSetting
         '
         Me.txtColorTujuanInvestasi.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.txtColorTujuanInvestasi.Enabled = False
-        Me.txtColorTujuanInvestasi.Location = New System.Drawing.Point(492, 313)
+        Me.txtColorTujuanInvestasi.Location = New System.Drawing.Point(494, 256)
         Me.txtColorTujuanInvestasi.Multiline = True
         Me.txtColorTujuanInvestasi.Name = "txtColorTujuanInvestasi"
         Me.txtColorTujuanInvestasi.Size = New System.Drawing.Size(55, 35)
@@ -1393,7 +1157,7 @@ Partial Class ReportFundSheetEQSetting
         'rbInvestasi
         '
         Me.rbInvestasi.AutoSize = True
-        Me.rbInvestasi.Location = New System.Drawing.Point(293, 353)
+        Me.rbInvestasi.Location = New System.Drawing.Point(295, 296)
         Me.rbInvestasi.Name = "rbInvestasi"
         Me.rbInvestasi.Size = New System.Drawing.Size(67, 17)
         Me.rbInvestasi.TabIndex = 263
@@ -1402,7 +1166,7 @@ Partial Class ReportFundSheetEQSetting
         '
         'txtKebijakanInvestasi
         '
-        Me.txtKebijakanInvestasi.Location = New System.Drawing.Point(311, 371)
+        Me.txtKebijakanInvestasi.Location = New System.Drawing.Point(313, 314)
         Me.txtKebijakanInvestasi.Name = "txtKebijakanInvestasi"
         Me.txtKebijakanInvestasi.Size = New System.Drawing.Size(179, 20)
         Me.txtKebijakanInvestasi.TabIndex = 264
@@ -1411,7 +1175,7 @@ Partial Class ReportFundSheetEQSetting
         'Investasi_G
         '
         Me.Investasi_G.AutoSize = True
-        Me.Investasi_G.Location = New System.Drawing.Point(414, 355)
+        Me.Investasi_G.Location = New System.Drawing.Point(416, 298)
         Me.Investasi_G.Name = "Investasi_G"
         Me.Investasi_G.Size = New System.Drawing.Size(39, 13)
         Me.Investasi_G.TabIndex = 265
@@ -1420,7 +1184,7 @@ Partial Class ReportFundSheetEQSetting
         'Investasi_R
         '
         Me.Investasi_R.AutoSize = True
-        Me.Investasi_R.Location = New System.Drawing.Point(370, 355)
+        Me.Investasi_R.Location = New System.Drawing.Point(372, 298)
         Me.Investasi_R.Name = "Investasi_R"
         Me.Investasi_R.Size = New System.Drawing.Size(39, 13)
         Me.Investasi_R.TabIndex = 266
@@ -1429,7 +1193,7 @@ Partial Class ReportFundSheetEQSetting
         'Investasi_B
         '
         Me.Investasi_B.AutoSize = True
-        Me.Investasi_B.Location = New System.Drawing.Point(454, 355)
+        Me.Investasi_B.Location = New System.Drawing.Point(456, 298)
         Me.Investasi_B.Name = "Investasi_B"
         Me.Investasi_B.Size = New System.Drawing.Size(38, 13)
         Me.Investasi_B.TabIndex = 267
@@ -1439,7 +1203,7 @@ Partial Class ReportFundSheetEQSetting
         '
         Me.txtColorInvestasi.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.txtColorInvestasi.Enabled = False
-        Me.txtColorInvestasi.Location = New System.Drawing.Point(492, 357)
+        Me.txtColorInvestasi.Location = New System.Drawing.Point(494, 300)
         Me.txtColorInvestasi.Multiline = True
         Me.txtColorInvestasi.Name = "txtColorInvestasi"
         Me.txtColorInvestasi.Size = New System.Drawing.Size(55, 112)
@@ -1448,7 +1212,7 @@ Partial Class ReportFundSheetEQSetting
         'rbPortofolio
         '
         Me.rbPortofolio.AutoSize = True
-        Me.rbPortofolio.Location = New System.Drawing.Point(570, 12)
+        Me.rbPortofolio.Location = New System.Drawing.Point(571, 8)
         Me.rbPortofolio.Name = "rbPortofolio"
         Me.rbPortofolio.Size = New System.Drawing.Size(69, 17)
         Me.rbPortofolio.TabIndex = 269
@@ -1457,7 +1221,7 @@ Partial Class ReportFundSheetEQSetting
         '
         'txtKomposisiPortofolio
         '
-        Me.txtKomposisiPortofolio.Location = New System.Drawing.Point(588, 30)
+        Me.txtKomposisiPortofolio.Location = New System.Drawing.Point(589, 26)
         Me.txtKomposisiPortofolio.Name = "txtKomposisiPortofolio"
         Me.txtKomposisiPortofolio.Size = New System.Drawing.Size(179, 20)
         Me.txtKomposisiPortofolio.TabIndex = 270
@@ -1466,7 +1230,7 @@ Partial Class ReportFundSheetEQSetting
         'Portofolio_G
         '
         Me.Portofolio_G.AutoSize = True
-        Me.Portofolio_G.Location = New System.Drawing.Point(691, 14)
+        Me.Portofolio_G.Location = New System.Drawing.Point(692, 10)
         Me.Portofolio_G.Name = "Portofolio_G"
         Me.Portofolio_G.Size = New System.Drawing.Size(39, 13)
         Me.Portofolio_G.TabIndex = 271
@@ -1475,7 +1239,7 @@ Partial Class ReportFundSheetEQSetting
         'Portofolio_R
         '
         Me.Portofolio_R.AutoSize = True
-        Me.Portofolio_R.Location = New System.Drawing.Point(647, 14)
+        Me.Portofolio_R.Location = New System.Drawing.Point(648, 10)
         Me.Portofolio_R.Name = "Portofolio_R"
         Me.Portofolio_R.Size = New System.Drawing.Size(39, 13)
         Me.Portofolio_R.TabIndex = 272
@@ -1484,25 +1248,25 @@ Partial Class ReportFundSheetEQSetting
         'Portofolio_B
         '
         Me.Portofolio_B.AutoSize = True
-        Me.Portofolio_B.Location = New System.Drawing.Point(731, 14)
+        Me.Portofolio_B.Location = New System.Drawing.Point(732, 10)
         Me.Portofolio_B.Name = "Portofolio_B"
         Me.Portofolio_B.Size = New System.Drawing.Size(38, 13)
         Me.Portofolio_B.TabIndex = 273
         Me.Portofolio_B.Text = "B: 255"
         '
-        'txtColorKomposisPortofolio
+        'txtColorPortofolio
         '
-        Me.txtColorKomposisPortofolio.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtColorKomposisPortofolio.Enabled = False
-        Me.txtColorKomposisPortofolio.Location = New System.Drawing.Point(769, 16)
-        Me.txtColorKomposisPortofolio.Multiline = True
-        Me.txtColorKomposisPortofolio.Name = "txtColorKomposisPortofolio"
-        Me.txtColorKomposisPortofolio.Size = New System.Drawing.Size(55, 113)
-        Me.txtColorKomposisPortofolio.TabIndex = 274
+        Me.txtColorPortofolio.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.txtColorPortofolio.Enabled = False
+        Me.txtColorPortofolio.Location = New System.Drawing.Point(770, 12)
+        Me.txtColorPortofolio.Multiline = True
+        Me.txtColorPortofolio.Name = "txtColorPortofolio"
+        Me.txtColorPortofolio.Size = New System.Drawing.Size(55, 113)
+        Me.txtColorPortofolio.TabIndex = 274
         '
         'txtInvestasiSaham
         '
-        Me.txtInvestasiSaham.Location = New System.Drawing.Point(311, 398)
+        Me.txtInvestasiSaham.Location = New System.Drawing.Point(313, 341)
         Me.txtInvestasiSaham.Name = "txtInvestasiSaham"
         Me.txtInvestasiSaham.Size = New System.Drawing.Size(179, 20)
         Me.txtInvestasiSaham.TabIndex = 275
@@ -1510,7 +1274,7 @@ Partial Class ReportFundSheetEQSetting
         '
         'txtInvestasiObligasi
         '
-        Me.txtInvestasiObligasi.Location = New System.Drawing.Point(311, 423)
+        Me.txtInvestasiObligasi.Location = New System.Drawing.Point(313, 366)
         Me.txtInvestasiObligasi.Name = "txtInvestasiObligasi"
         Me.txtInvestasiObligasi.Size = New System.Drawing.Size(179, 20)
         Me.txtInvestasiObligasi.TabIndex = 276
@@ -1518,7 +1282,7 @@ Partial Class ReportFundSheetEQSetting
         '
         'txtInvesatiPasarUang
         '
-        Me.txtInvesatiPasarUang.Location = New System.Drawing.Point(311, 449)
+        Me.txtInvesatiPasarUang.Location = New System.Drawing.Point(313, 392)
         Me.txtInvesatiPasarUang.Name = "txtInvesatiPasarUang"
         Me.txtInvesatiPasarUang.Size = New System.Drawing.Size(179, 20)
         Me.txtInvesatiPasarUang.TabIndex = 277
@@ -1526,7 +1290,7 @@ Partial Class ReportFundSheetEQSetting
         '
         'txtPortofolioPasarUang
         '
-        Me.txtPortofolioPasarUang.Location = New System.Drawing.Point(588, 109)
+        Me.txtPortofolioPasarUang.Location = New System.Drawing.Point(589, 105)
         Me.txtPortofolioPasarUang.Name = "txtPortofolioPasarUang"
         Me.txtPortofolioPasarUang.Size = New System.Drawing.Size(179, 20)
         Me.txtPortofolioPasarUang.TabIndex = 280
@@ -1534,7 +1298,7 @@ Partial Class ReportFundSheetEQSetting
         '
         'txtPortofoliObligasi
         '
-        Me.txtPortofoliObligasi.Location = New System.Drawing.Point(588, 83)
+        Me.txtPortofoliObligasi.Location = New System.Drawing.Point(589, 79)
         Me.txtPortofoliObligasi.Name = "txtPortofoliObligasi"
         Me.txtPortofoliObligasi.Size = New System.Drawing.Size(179, 20)
         Me.txtPortofoliObligasi.TabIndex = 279
@@ -1542,7 +1306,7 @@ Partial Class ReportFundSheetEQSetting
         '
         'txtPortofolioSaham
         '
-        Me.txtPortofolioSaham.Location = New System.Drawing.Point(588, 57)
+        Me.txtPortofolioSaham.Location = New System.Drawing.Point(589, 53)
         Me.txtPortofolioSaham.Name = "txtPortofolioSaham"
         Me.txtPortofolioSaham.Size = New System.Drawing.Size(179, 20)
         Me.txtPortofolioSaham.TabIndex = 278
@@ -1551,7 +1315,7 @@ Partial Class ReportFundSheetEQSetting
         'rbChartTitle
         '
         Me.rbChartTitle.AutoSize = True
-        Me.rbChartTitle.Location = New System.Drawing.Point(570, 148)
+        Me.rbChartTitle.Location = New System.Drawing.Point(571, 127)
         Me.rbChartTitle.Name = "rbChartTitle"
         Me.rbChartTitle.Size = New System.Drawing.Size(75, 17)
         Me.rbChartTitle.TabIndex = 281
@@ -1560,7 +1324,7 @@ Partial Class ReportFundSheetEQSetting
         '
         'txtKinerjaReksaDanaChart
         '
-        Me.txtKinerjaReksaDanaChart.Location = New System.Drawing.Point(588, 166)
+        Me.txtKinerjaReksaDanaChart.Location = New System.Drawing.Point(589, 145)
         Me.txtKinerjaReksaDanaChart.Name = "txtKinerjaReksaDanaChart"
         Me.txtKinerjaReksaDanaChart.Size = New System.Drawing.Size(179, 20)
         Me.txtKinerjaReksaDanaChart.TabIndex = 282
@@ -1569,7 +1333,7 @@ Partial Class ReportFundSheetEQSetting
         'KinerjaReksaDana_G
         '
         Me.KinerjaReksaDana_G.AutoSize = True
-        Me.KinerjaReksaDana_G.Location = New System.Drawing.Point(691, 150)
+        Me.KinerjaReksaDana_G.Location = New System.Drawing.Point(692, 129)
         Me.KinerjaReksaDana_G.Name = "KinerjaReksaDana_G"
         Me.KinerjaReksaDana_G.Size = New System.Drawing.Size(39, 13)
         Me.KinerjaReksaDana_G.TabIndex = 283
@@ -1578,7 +1342,7 @@ Partial Class ReportFundSheetEQSetting
         'KinerjaReksaDana_R
         '
         Me.KinerjaReksaDana_R.AutoSize = True
-        Me.KinerjaReksaDana_R.Location = New System.Drawing.Point(647, 150)
+        Me.KinerjaReksaDana_R.Location = New System.Drawing.Point(648, 129)
         Me.KinerjaReksaDana_R.Name = "KinerjaReksaDana_R"
         Me.KinerjaReksaDana_R.Size = New System.Drawing.Size(39, 13)
         Me.KinerjaReksaDana_R.TabIndex = 284
@@ -1587,7 +1351,7 @@ Partial Class ReportFundSheetEQSetting
         'KinerjaReksaDana_B
         '
         Me.KinerjaReksaDana_B.AutoSize = True
-        Me.KinerjaReksaDana_B.Location = New System.Drawing.Point(731, 150)
+        Me.KinerjaReksaDana_B.Location = New System.Drawing.Point(732, 129)
         Me.KinerjaReksaDana_B.Name = "KinerjaReksaDana_B"
         Me.KinerjaReksaDana_B.Size = New System.Drawing.Size(38, 13)
         Me.KinerjaReksaDana_B.TabIndex = 285
@@ -1597,7 +1361,7 @@ Partial Class ReportFundSheetEQSetting
         '
         Me.txtColorChartTitle.BackColor = System.Drawing.Color.Fuchsia
         Me.txtColorChartTitle.Enabled = False
-        Me.txtColorChartTitle.Location = New System.Drawing.Point(769, 152)
+        Me.txtColorChartTitle.Location = New System.Drawing.Point(770, 131)
         Me.txtColorChartTitle.Multiline = True
         Me.txtColorChartTitle.Name = "txtColorChartTitle"
         Me.txtColorChartTitle.Size = New System.Drawing.Size(55, 35)
@@ -1607,7 +1371,7 @@ Partial Class ReportFundSheetEQSetting
         '
         Me.txtColorChartBorder.BackColor = System.Drawing.Color.DarkOrange
         Me.txtColorChartBorder.Enabled = False
-        Me.txtColorChartBorder.Location = New System.Drawing.Point(769, 193)
+        Me.txtColorChartBorder.Location = New System.Drawing.Point(770, 172)
         Me.txtColorChartBorder.Multiline = True
         Me.txtColorChartBorder.Name = "txtColorChartBorder"
         Me.txtColorChartBorder.Size = New System.Drawing.Size(55, 35)
@@ -1616,7 +1380,7 @@ Partial Class ReportFundSheetEQSetting
         'Label64
         '
         Me.Label64.AutoSize = True
-        Me.Label64.Location = New System.Drawing.Point(585, 209)
+        Me.Label64.Location = New System.Drawing.Point(586, 188)
         Me.Label64.Name = "Label64"
         Me.Label64.Size = New System.Drawing.Size(68, 13)
         Me.Label64.TabIndex = 292
@@ -1625,7 +1389,7 @@ Partial Class ReportFundSheetEQSetting
         'chkChartBorder
         '
         Me.chkChartBorder.AutoSize = True
-        Me.chkChartBorder.Location = New System.Drawing.Point(659, 209)
+        Me.chkChartBorder.Location = New System.Drawing.Point(660, 188)
         Me.chkChartBorder.Name = "chkChartBorder"
         Me.chkChartBorder.Size = New System.Drawing.Size(34, 17)
         Me.chkChartBorder.TabIndex = 291
@@ -1635,7 +1399,7 @@ Partial Class ReportFundSheetEQSetting
         'ChartBorder_B
         '
         Me.ChartBorder_B.AutoSize = True
-        Me.ChartBorder_B.Location = New System.Drawing.Point(731, 191)
+        Me.ChartBorder_B.Location = New System.Drawing.Point(732, 170)
         Me.ChartBorder_B.Name = "ChartBorder_B"
         Me.ChartBorder_B.Size = New System.Drawing.Size(38, 13)
         Me.ChartBorder_B.TabIndex = 290
@@ -1644,7 +1408,7 @@ Partial Class ReportFundSheetEQSetting
         'ChartBorder_R
         '
         Me.ChartBorder_R.AutoSize = True
-        Me.ChartBorder_R.Location = New System.Drawing.Point(647, 191)
+        Me.ChartBorder_R.Location = New System.Drawing.Point(648, 170)
         Me.ChartBorder_R.Name = "ChartBorder_R"
         Me.ChartBorder_R.Size = New System.Drawing.Size(39, 13)
         Me.ChartBorder_R.TabIndex = 289
@@ -1653,7 +1417,7 @@ Partial Class ReportFundSheetEQSetting
         'ChartBorder_G
         '
         Me.ChartBorder_G.AutoSize = True
-        Me.ChartBorder_G.Location = New System.Drawing.Point(691, 191)
+        Me.ChartBorder_G.Location = New System.Drawing.Point(692, 170)
         Me.ChartBorder_G.Name = "ChartBorder_G"
         Me.ChartBorder_G.Size = New System.Drawing.Size(39, 13)
         Me.ChartBorder_G.TabIndex = 288
@@ -1662,7 +1426,7 @@ Partial Class ReportFundSheetEQSetting
         'rbChartBorder
         '
         Me.rbChartBorder.AutoSize = True
-        Me.rbChartBorder.Location = New System.Drawing.Point(570, 189)
+        Me.rbChartBorder.Location = New System.Drawing.Point(571, 168)
         Me.rbChartBorder.Name = "rbChartBorder"
         Me.rbChartBorder.Size = New System.Drawing.Size(83, 17)
         Me.rbChartBorder.TabIndex = 287
@@ -1672,7 +1436,7 @@ Partial Class ReportFundSheetEQSetting
         'rbTitleKepemilikan
         '
         Me.rbTitleKepemilikan.AutoSize = True
-        Me.rbTitleKepemilikan.Location = New System.Drawing.Point(570, 235)
+        Me.rbTitleKepemilikan.Location = New System.Drawing.Point(571, 214)
         Me.rbTitleKepemilikan.Name = "rbTitleKepemilikan"
         Me.rbTitleKepemilikan.Size = New System.Drawing.Size(45, 17)
         Me.rbTitleKepemilikan.TabIndex = 294
@@ -1681,7 +1445,7 @@ Partial Class ReportFundSheetEQSetting
         '
         'txtTitleKepemilikan
         '
-        Me.txtTitleKepemilikan.Location = New System.Drawing.Point(588, 253)
+        Me.txtTitleKepemilikan.Location = New System.Drawing.Point(589, 232)
         Me.txtTitleKepemilikan.Name = "txtTitleKepemilikan"
         Me.txtTitleKepemilikan.Size = New System.Drawing.Size(179, 20)
         Me.txtTitleKepemilikan.TabIndex = 295
@@ -1690,7 +1454,7 @@ Partial Class ReportFundSheetEQSetting
         'TitleKepemilikan_G
         '
         Me.TitleKepemilikan_G.AutoSize = True
-        Me.TitleKepemilikan_G.Location = New System.Drawing.Point(691, 237)
+        Me.TitleKepemilikan_G.Location = New System.Drawing.Point(692, 216)
         Me.TitleKepemilikan_G.Name = "TitleKepemilikan_G"
         Me.TitleKepemilikan_G.Size = New System.Drawing.Size(39, 13)
         Me.TitleKepemilikan_G.TabIndex = 296
@@ -1699,7 +1463,7 @@ Partial Class ReportFundSheetEQSetting
         'TitleKepemilikan_R
         '
         Me.TitleKepemilikan_R.AutoSize = True
-        Me.TitleKepemilikan_R.Location = New System.Drawing.Point(647, 237)
+        Me.TitleKepemilikan_R.Location = New System.Drawing.Point(648, 216)
         Me.TitleKepemilikan_R.Name = "TitleKepemilikan_R"
         Me.TitleKepemilikan_R.Size = New System.Drawing.Size(39, 13)
         Me.TitleKepemilikan_R.TabIndex = 297
@@ -1708,7 +1472,7 @@ Partial Class ReportFundSheetEQSetting
         'TitleKepemilikan_B
         '
         Me.TitleKepemilikan_B.AutoSize = True
-        Me.TitleKepemilikan_B.Location = New System.Drawing.Point(731, 237)
+        Me.TitleKepemilikan_B.Location = New System.Drawing.Point(732, 216)
         Me.TitleKepemilikan_B.Name = "TitleKepemilikan_B"
         Me.TitleKepemilikan_B.Size = New System.Drawing.Size(38, 13)
         Me.TitleKepemilikan_B.TabIndex = 298
@@ -1718,7 +1482,7 @@ Partial Class ReportFundSheetEQSetting
         '
         Me.txtColorTitleKepemilikan.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtColorTitleKepemilikan.Enabled = False
-        Me.txtColorTitleKepemilikan.Location = New System.Drawing.Point(769, 239)
+        Me.txtColorTitleKepemilikan.Location = New System.Drawing.Point(770, 218)
         Me.txtColorTitleKepemilikan.Multiline = True
         Me.txtColorTitleKepemilikan.Name = "txtColorTitleKepemilikan"
         Me.txtColorTitleKepemilikan.Size = New System.Drawing.Size(55, 35)
@@ -1727,7 +1491,7 @@ Partial Class ReportFundSheetEQSetting
         'rbFilter
         '
         Me.rbFilter.AutoSize = True
-        Me.rbFilter.Location = New System.Drawing.Point(570, 275)
+        Me.rbFilter.Location = New System.Drawing.Point(571, 254)
         Me.rbFilter.Name = "rbFilter"
         Me.rbFilter.Size = New System.Drawing.Size(47, 17)
         Me.rbFilter.TabIndex = 300
@@ -1736,7 +1500,7 @@ Partial Class ReportFundSheetEQSetting
         '
         'txtFilter
         '
-        Me.txtFilter.Location = New System.Drawing.Point(588, 293)
+        Me.txtFilter.Location = New System.Drawing.Point(589, 272)
         Me.txtFilter.Name = "txtFilter"
         Me.txtFilter.Size = New System.Drawing.Size(179, 20)
         Me.txtFilter.TabIndex = 301
@@ -1745,7 +1509,7 @@ Partial Class ReportFundSheetEQSetting
         'Filter_G
         '
         Me.Filter_G.AutoSize = True
-        Me.Filter_G.Location = New System.Drawing.Point(691, 277)
+        Me.Filter_G.Location = New System.Drawing.Point(692, 256)
         Me.Filter_G.Name = "Filter_G"
         Me.Filter_G.Size = New System.Drawing.Size(39, 13)
         Me.Filter_G.TabIndex = 302
@@ -1754,7 +1518,7 @@ Partial Class ReportFundSheetEQSetting
         'Filter_R
         '
         Me.Filter_R.AutoSize = True
-        Me.Filter_R.Location = New System.Drawing.Point(647, 277)
+        Me.Filter_R.Location = New System.Drawing.Point(648, 256)
         Me.Filter_R.Name = "Filter_R"
         Me.Filter_R.Size = New System.Drawing.Size(39, 13)
         Me.Filter_R.TabIndex = 303
@@ -1763,7 +1527,7 @@ Partial Class ReportFundSheetEQSetting
         'Filter_B
         '
         Me.Filter_B.AutoSize = True
-        Me.Filter_B.Location = New System.Drawing.Point(731, 277)
+        Me.Filter_B.Location = New System.Drawing.Point(732, 256)
         Me.Filter_B.Name = "Filter_B"
         Me.Filter_B.Size = New System.Drawing.Size(38, 13)
         Me.Filter_B.TabIndex = 304
@@ -1773,7 +1537,7 @@ Partial Class ReportFundSheetEQSetting
         '
         Me.txtColorFilter.BackColor = System.Drawing.Color.Black
         Me.txtColorFilter.Enabled = False
-        Me.txtColorFilter.Location = New System.Drawing.Point(769, 279)
+        Me.txtColorFilter.Location = New System.Drawing.Point(770, 258)
         Me.txtColorFilter.Multiline = True
         Me.txtColorFilter.Name = "txtColorFilter"
         Me.txtColorFilter.Size = New System.Drawing.Size(55, 35)
@@ -1782,7 +1546,7 @@ Partial Class ReportFundSheetEQSetting
         'rbChartTitlePie
         '
         Me.rbChartTitlePie.AutoSize = True
-        Me.rbChartTitlePie.Location = New System.Drawing.Point(570, 322)
+        Me.rbChartTitlePie.Location = New System.Drawing.Point(571, 301)
         Me.rbChartTitlePie.Name = "rbChartTitlePie"
         Me.rbChartTitlePie.Size = New System.Drawing.Size(73, 17)
         Me.rbChartTitlePie.TabIndex = 306
@@ -1791,7 +1555,7 @@ Partial Class ReportFundSheetEQSetting
         '
         'txtAlokasiSektor
         '
-        Me.txtAlokasiSektor.Location = New System.Drawing.Point(588, 340)
+        Me.txtAlokasiSektor.Location = New System.Drawing.Point(589, 319)
         Me.txtAlokasiSektor.Name = "txtAlokasiSektor"
         Me.txtAlokasiSektor.Size = New System.Drawing.Size(179, 20)
         Me.txtAlokasiSektor.TabIndex = 307
@@ -1800,7 +1564,7 @@ Partial Class ReportFundSheetEQSetting
         'ChartTitle_G
         '
         Me.ChartTitle_G.AutoSize = True
-        Me.ChartTitle_G.Location = New System.Drawing.Point(691, 324)
+        Me.ChartTitle_G.Location = New System.Drawing.Point(692, 303)
         Me.ChartTitle_G.Name = "ChartTitle_G"
         Me.ChartTitle_G.Size = New System.Drawing.Size(39, 13)
         Me.ChartTitle_G.TabIndex = 308
@@ -1809,7 +1573,7 @@ Partial Class ReportFundSheetEQSetting
         'ChartTitle_R
         '
         Me.ChartTitle_R.AutoSize = True
-        Me.ChartTitle_R.Location = New System.Drawing.Point(647, 324)
+        Me.ChartTitle_R.Location = New System.Drawing.Point(648, 303)
         Me.ChartTitle_R.Name = "ChartTitle_R"
         Me.ChartTitle_R.Size = New System.Drawing.Size(39, 13)
         Me.ChartTitle_R.TabIndex = 309
@@ -1818,7 +1582,7 @@ Partial Class ReportFundSheetEQSetting
         'ChartTitle_B
         '
         Me.ChartTitle_B.AutoSize = True
-        Me.ChartTitle_B.Location = New System.Drawing.Point(731, 324)
+        Me.ChartTitle_B.Location = New System.Drawing.Point(732, 303)
         Me.ChartTitle_B.Name = "ChartTitle_B"
         Me.ChartTitle_B.Size = New System.Drawing.Size(38, 13)
         Me.ChartTitle_B.TabIndex = 310
@@ -1828,7 +1592,7 @@ Partial Class ReportFundSheetEQSetting
         '
         Me.txtColorChartTitlePie.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtColorChartTitlePie.Enabled = False
-        Me.txtColorChartTitlePie.Location = New System.Drawing.Point(769, 326)
+        Me.txtColorChartTitlePie.Location = New System.Drawing.Point(770, 305)
         Me.txtColorChartTitlePie.Multiline = True
         Me.txtColorChartTitlePie.Name = "txtColorChartTitlePie"
         Me.txtColorChartTitlePie.Size = New System.Drawing.Size(55, 35)
@@ -1838,7 +1602,7 @@ Partial Class ReportFundSheetEQSetting
         '
         Me.txtColorChartBorderPie.BackColor = System.Drawing.Color.DarkOrange
         Me.txtColorChartBorderPie.Enabled = False
-        Me.txtColorChartBorderPie.Location = New System.Drawing.Point(769, 367)
+        Me.txtColorChartBorderPie.Location = New System.Drawing.Point(770, 346)
         Me.txtColorChartBorderPie.Multiline = True
         Me.txtColorChartBorderPie.Name = "txtColorChartBorderPie"
         Me.txtColorChartBorderPie.Size = New System.Drawing.Size(55, 35)
@@ -1847,7 +1611,7 @@ Partial Class ReportFundSheetEQSetting
         'Label74
         '
         Me.Label74.AutoSize = True
-        Me.Label74.Location = New System.Drawing.Point(585, 385)
+        Me.Label74.Location = New System.Drawing.Point(586, 364)
         Me.Label74.Name = "Label74"
         Me.Label74.Size = New System.Drawing.Size(68, 13)
         Me.Label74.TabIndex = 317
@@ -1856,7 +1620,7 @@ Partial Class ReportFundSheetEQSetting
         'chkChartBorderPie
         '
         Me.chkChartBorderPie.AutoSize = True
-        Me.chkChartBorderPie.Location = New System.Drawing.Point(653, 384)
+        Me.chkChartBorderPie.Location = New System.Drawing.Point(654, 363)
         Me.chkChartBorderPie.Name = "chkChartBorderPie"
         Me.chkChartBorderPie.Size = New System.Drawing.Size(34, 17)
         Me.chkChartBorderPie.TabIndex = 316
@@ -1866,7 +1630,7 @@ Partial Class ReportFundSheetEQSetting
         'ChartBorderPie_B
         '
         Me.ChartBorderPie_B.AutoSize = True
-        Me.ChartBorderPie_B.Location = New System.Drawing.Point(731, 367)
+        Me.ChartBorderPie_B.Location = New System.Drawing.Point(732, 346)
         Me.ChartBorderPie_B.Name = "ChartBorderPie_B"
         Me.ChartBorderPie_B.Size = New System.Drawing.Size(38, 13)
         Me.ChartBorderPie_B.TabIndex = 315
@@ -1875,7 +1639,7 @@ Partial Class ReportFundSheetEQSetting
         'ChartBorderPie_R
         '
         Me.ChartBorderPie_R.AutoSize = True
-        Me.ChartBorderPie_R.Location = New System.Drawing.Point(647, 367)
+        Me.ChartBorderPie_R.Location = New System.Drawing.Point(648, 346)
         Me.ChartBorderPie_R.Name = "ChartBorderPie_R"
         Me.ChartBorderPie_R.Size = New System.Drawing.Size(39, 13)
         Me.ChartBorderPie_R.TabIndex = 314
@@ -1884,7 +1648,7 @@ Partial Class ReportFundSheetEQSetting
         'ChartBorderPie_G
         '
         Me.ChartBorderPie_G.AutoSize = True
-        Me.ChartBorderPie_G.Location = New System.Drawing.Point(691, 367)
+        Me.ChartBorderPie_G.Location = New System.Drawing.Point(692, 346)
         Me.ChartBorderPie_G.Name = "ChartBorderPie_G"
         Me.ChartBorderPie_G.Size = New System.Drawing.Size(39, 13)
         Me.ChartBorderPie_G.TabIndex = 313
@@ -1893,7 +1657,7 @@ Partial Class ReportFundSheetEQSetting
         'rbChartBorderPie
         '
         Me.rbChartBorderPie.AutoSize = True
-        Me.rbChartBorderPie.Location = New System.Drawing.Point(570, 365)
+        Me.rbChartBorderPie.Location = New System.Drawing.Point(571, 344)
         Me.rbChartBorderPie.Name = "rbChartBorderPie"
         Me.rbChartBorderPie.Size = New System.Drawing.Size(84, 17)
         Me.rbChartBorderPie.TabIndex = 312
@@ -2031,7 +1795,7 @@ Partial Class ReportFundSheetEQSetting
         Me.txtColorTableItem.Location = New System.Drawing.Point(1048, 60)
         Me.txtColorTableItem.Multiline = True
         Me.txtColorTableItem.Name = "txtColorTableItem"
-        Me.txtColorTableItem.Size = New System.Drawing.Size(55, 215)
+        Me.txtColorTableItem.Size = New System.Drawing.Size(55, 270)
         Me.txtColorTableItem.TabIndex = 330
         '
         'txtTableItem1Tahun
@@ -2052,7 +1816,7 @@ Partial Class ReportFundSheetEQSetting
         '
         'txtTableItemSejakPembentukan
         '
-        Me.txtTableItemSejakPembentukan.Location = New System.Drawing.Point(867, 257)
+        Me.txtTableItemSejakPembentukan.Location = New System.Drawing.Point(867, 310)
         Me.txtTableItemSejakPembentukan.Name = "txtTableItemSejakPembentukan"
         Me.txtTableItemSejakPembentukan.Size = New System.Drawing.Size(179, 20)
         Me.txtTableItemSejakPembentukan.TabIndex = 337
@@ -2060,7 +1824,7 @@ Partial Class ReportFundSheetEQSetting
         '
         'txtTableItemDariAwalTahun
         '
-        Me.txtTableItemDariAwalTahun.Location = New System.Drawing.Point(867, 231)
+        Me.txtTableItemDariAwalTahun.Location = New System.Drawing.Point(867, 284)
         Me.txtTableItemDariAwalTahun.Name = "txtTableItemDariAwalTahun"
         Me.txtTableItemDariAwalTahun.Size = New System.Drawing.Size(179, 20)
         Me.txtTableItemDariAwalTahun.TabIndex = 336
@@ -2069,7 +1833,7 @@ Partial Class ReportFundSheetEQSetting
         'rbOutlook
         '
         Me.rbOutlook.AutoSize = True
-        Me.rbOutlook.Location = New System.Drawing.Point(849, 292)
+        Me.rbOutlook.Location = New System.Drawing.Point(849, 346)
         Me.rbOutlook.Name = "rbOutlook"
         Me.rbOutlook.Size = New System.Drawing.Size(58, 17)
         Me.rbOutlook.TabIndex = 338
@@ -2079,7 +1843,7 @@ Partial Class ReportFundSheetEQSetting
         'OutlookHolding_G
         '
         Me.OutlookHolding_G.AutoSize = True
-        Me.OutlookHolding_G.Location = New System.Drawing.Point(970, 294)
+        Me.OutlookHolding_G.Location = New System.Drawing.Point(970, 348)
         Me.OutlookHolding_G.Name = "OutlookHolding_G"
         Me.OutlookHolding_G.Size = New System.Drawing.Size(39, 13)
         Me.OutlookHolding_G.TabIndex = 340
@@ -2088,7 +1852,7 @@ Partial Class ReportFundSheetEQSetting
         'OutlookHolding_R
         '
         Me.OutlookHolding_R.AutoSize = True
-        Me.OutlookHolding_R.Location = New System.Drawing.Point(926, 294)
+        Me.OutlookHolding_R.Location = New System.Drawing.Point(926, 348)
         Me.OutlookHolding_R.Name = "OutlookHolding_R"
         Me.OutlookHolding_R.Size = New System.Drawing.Size(39, 13)
         Me.OutlookHolding_R.TabIndex = 341
@@ -2097,7 +1861,7 @@ Partial Class ReportFundSheetEQSetting
         'OutlookHolding_B
         '
         Me.OutlookHolding_B.AutoSize = True
-        Me.OutlookHolding_B.Location = New System.Drawing.Point(1010, 294)
+        Me.OutlookHolding_B.Location = New System.Drawing.Point(1010, 348)
         Me.OutlookHolding_B.Name = "OutlookHolding_B"
         Me.OutlookHolding_B.Size = New System.Drawing.Size(38, 13)
         Me.OutlookHolding_B.TabIndex = 342
@@ -2107,7 +1871,7 @@ Partial Class ReportFundSheetEQSetting
         '
         Me.txtColorOutlook.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtColorOutlook.Enabled = False
-        Me.txtColorOutlook.Location = New System.Drawing.Point(1048, 286)
+        Me.txtColorOutlook.Location = New System.Drawing.Point(1048, 340)
         Me.txtColorOutlook.Multiline = True
         Me.txtColorOutlook.Name = "txtColorOutlook"
         Me.txtColorOutlook.Size = New System.Drawing.Size(55, 26)
@@ -2116,7 +1880,7 @@ Partial Class ReportFundSheetEQSetting
         'rbTentang
         '
         Me.rbTentang.AutoSize = True
-        Me.rbTentang.Location = New System.Drawing.Point(849, 324)
+        Me.rbTentang.Location = New System.Drawing.Point(849, 378)
         Me.rbTentang.Name = "rbTentang"
         Me.rbTentang.Size = New System.Drawing.Size(80, 17)
         Me.rbTentang.TabIndex = 344
@@ -2126,7 +1890,7 @@ Partial Class ReportFundSheetEQSetting
         'TentangHolding_G
         '
         Me.TentangHolding_G.AutoSize = True
-        Me.TentangHolding_G.Location = New System.Drawing.Point(970, 326)
+        Me.TentangHolding_G.Location = New System.Drawing.Point(970, 380)
         Me.TentangHolding_G.Name = "TentangHolding_G"
         Me.TentangHolding_G.Size = New System.Drawing.Size(39, 13)
         Me.TentangHolding_G.TabIndex = 346
@@ -2135,7 +1899,7 @@ Partial Class ReportFundSheetEQSetting
         'TentangHolding_R
         '
         Me.TentangHolding_R.AutoSize = True
-        Me.TentangHolding_R.Location = New System.Drawing.Point(926, 326)
+        Me.TentangHolding_R.Location = New System.Drawing.Point(926, 380)
         Me.TentangHolding_R.Name = "TentangHolding_R"
         Me.TentangHolding_R.Size = New System.Drawing.Size(39, 13)
         Me.TentangHolding_R.TabIndex = 347
@@ -2144,7 +1908,7 @@ Partial Class ReportFundSheetEQSetting
         'TentangHolding_B
         '
         Me.TentangHolding_B.AutoSize = True
-        Me.TentangHolding_B.Location = New System.Drawing.Point(1010, 326)
+        Me.TentangHolding_B.Location = New System.Drawing.Point(1010, 380)
         Me.TentangHolding_B.Name = "TentangHolding_B"
         Me.TentangHolding_B.Size = New System.Drawing.Size(38, 13)
         Me.TentangHolding_B.TabIndex = 348
@@ -2154,18 +1918,97 @@ Partial Class ReportFundSheetEQSetting
         '
         Me.txtColorTentang.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.txtColorTentang.Enabled = False
-        Me.txtColorTentang.Location = New System.Drawing.Point(1048, 318)
+        Me.txtColorTentang.Location = New System.Drawing.Point(1048, 372)
         Me.txtColorTentang.Multiline = True
         Me.txtColorTentang.Name = "txtColorTentang"
         Me.txtColorTentang.Size = New System.Drawing.Size(55, 26)
         Me.txtColorTentang.TabIndex = 349
+        '
+        'rbTglLaporan
+        '
+        Me.rbTglLaporan.AutoSize = True
+        Me.rbTglLaporan.Location = New System.Drawing.Point(12, 93)
+        Me.rbTglLaporan.Name = "rbTglLaporan"
+        Me.rbTglLaporan.Size = New System.Drawing.Size(76, 17)
+        Me.rbTglLaporan.TabIndex = 350
+        Me.rbTglLaporan.Text = "Tgl Laporn"
+        Me.rbTglLaporan.UseVisualStyleBackColor = True
+        '
+        'txtTglLaporan
+        '
+        Me.txtTglLaporan.Location = New System.Drawing.Point(30, 111)
+        Me.txtTglLaporan.Name = "txtTglLaporan"
+        Me.txtTglLaporan.Size = New System.Drawing.Size(179, 20)
+        Me.txtTglLaporan.TabIndex = 351
+        Me.txtTglLaporan.Text = "Tanggal Laporan"
+        '
+        'TglLaporan_G
+        '
+        Me.TglLaporan_G.AutoSize = True
+        Me.TglLaporan_G.Location = New System.Drawing.Point(133, 95)
+        Me.TglLaporan_G.Name = "TglLaporan_G"
+        Me.TglLaporan_G.Size = New System.Drawing.Size(39, 13)
+        Me.TglLaporan_G.TabIndex = 352
+        Me.TglLaporan_G.Text = "G: 255"
+        '
+        'TglLaporan_R
+        '
+        Me.TglLaporan_R.AutoSize = True
+        Me.TglLaporan_R.Location = New System.Drawing.Point(89, 95)
+        Me.TglLaporan_R.Name = "TglLaporan_R"
+        Me.TglLaporan_R.Size = New System.Drawing.Size(39, 13)
+        Me.TglLaporan_R.TabIndex = 353
+        Me.TglLaporan_R.Text = "R: 255"
+        '
+        'TglLaporan_B
+        '
+        Me.TglLaporan_B.AutoSize = True
+        Me.TglLaporan_B.Location = New System.Drawing.Point(173, 95)
+        Me.TglLaporan_B.Name = "TglLaporan_B"
+        Me.TglLaporan_B.Size = New System.Drawing.Size(38, 13)
+        Me.TglLaporan_B.TabIndex = 354
+        Me.TglLaporan_B.Text = "B: 255"
+        '
+        'txtColorTglLaporan
+        '
+        Me.txtColorTglLaporan.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtColorTglLaporan.Enabled = False
+        Me.txtColorTglLaporan.Location = New System.Drawing.Point(211, 97)
+        Me.txtColorTglLaporan.Multiline = True
+        Me.txtColorTglLaporan.Name = "txtColorTglLaporan"
+        Me.txtColorTglLaporan.Size = New System.Drawing.Size(55, 35)
+        Me.txtColorTglLaporan.TabIndex = 355
+        '
+        'txtTableItem3Tahun
+        '
+        Me.txtTableItem3Tahun.Location = New System.Drawing.Point(867, 231)
+        Me.txtTableItem3Tahun.Name = "txtTableItem3Tahun"
+        Me.txtTableItem3Tahun.Size = New System.Drawing.Size(179, 20)
+        Me.txtTableItem3Tahun.TabIndex = 356
+        Me.txtTableItem3Tahun.Text = "3 Tahun"
+        '
+        'txtTableItem5Tahun
+        '
+        Me.txtTableItem5Tahun.Location = New System.Drawing.Point(867, 257)
+        Me.txtTableItem5Tahun.Name = "txtTableItem5Tahun"
+        Me.txtTableItem5Tahun.Size = New System.Drawing.Size(179, 20)
+        Me.txtTableItem5Tahun.TabIndex = 357
+        Me.txtTableItem5Tahun.Text = "5 Tahun"
         '
         'ReportFundSheetEQSetting
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1118, 547)
+        Me.ClientSize = New System.Drawing.Size(1118, 472)
+        Me.Controls.Add(Me.txtTableItem5Tahun)
+        Me.Controls.Add(Me.txtTableItem3Tahun)
+        Me.Controls.Add(Me.rbTglLaporan)
+        Me.Controls.Add(Me.txtTglLaporan)
+        Me.Controls.Add(Me.TglLaporan_G)
+        Me.Controls.Add(Me.TglLaporan_R)
+        Me.Controls.Add(Me.TglLaporan_B)
+        Me.Controls.Add(Me.txtColorTglLaporan)
         Me.Controls.Add(Me.rbTentang)
         Me.Controls.Add(Me.TentangHolding_G)
         Me.Controls.Add(Me.TentangHolding_R)
@@ -2244,7 +2087,7 @@ Partial Class ReportFundSheetEQSetting
         Me.Controls.Add(Me.Portofolio_G)
         Me.Controls.Add(Me.Portofolio_R)
         Me.Controls.Add(Me.Portofolio_B)
-        Me.Controls.Add(Me.txtColorKomposisPortofolio)
+        Me.Controls.Add(Me.txtColorPortofolio)
         Me.Controls.Add(Me.rbInvestasi)
         Me.Controls.Add(Me.txtKebijakanInvestasi)
         Me.Controls.Add(Me.Investasi_G)
@@ -2275,42 +2118,18 @@ Partial Class ReportFundSheetEQSetting
         Me.Controls.Add(Me.FaktorRisiko_R)
         Me.Controls.Add(Me.FaktorRisiko_B)
         Me.Controls.Add(Me.txtColorFaktorRisiko)
-        Me.Controls.Add(Me.rbKinerjaTerburuk)
-        Me.Controls.Add(Me.txtKinerjaBulanTerburuk)
-        Me.Controls.Add(Me.KinerjaTerburuk_G)
-        Me.Controls.Add(Me.KinerjaTerburuk_R)
-        Me.Controls.Add(Me.KinerjaTerburuk_B)
-        Me.Controls.Add(Me.txtColorKinerjaTerburuk)
-        Me.Controls.Add(Me.rbKinerjaTerbaik)
-        Me.Controls.Add(Me.txtKinerjaBulanTerbaik)
-        Me.Controls.Add(Me.KinerjaTerbaik_G)
-        Me.Controls.Add(Me.KinerjaTerbaik_R)
-        Me.Controls.Add(Me.KinerjaTerbaik_B)
-        Me.Controls.Add(Me.txtColorKinerjaTerbaik)
-        Me.Controls.Add(Me.rbKinerjaSejakDiluncurkan)
-        Me.Controls.Add(Me.txtKinerjaSejakDiluncurkan)
-        Me.Controls.Add(Me.KinerjaAwal_G)
-        Me.Controls.Add(Me.KinerjaAwal_R)
-        Me.Controls.Add(Me.KinerjaAwal_B)
-        Me.Controls.Add(Me.txtColorKinerja)
         Me.Controls.Add(Me.rbKode)
         Me.Controls.Add(Me.txtKodeISINBloomberg)
         Me.Controls.Add(Me.Kode_G)
         Me.Controls.Add(Me.Kode_R)
         Me.Controls.Add(Me.Kode_B)
         Me.Controls.Add(Me.txtColorKode)
-        Me.Controls.Add(Me.rbInvestSelanjutnya)
-        Me.Controls.Add(Me.txtMinimalInvestasiSelanjutnya)
-        Me.Controls.Add(Me.InvestSelanjutnya_G)
-        Me.Controls.Add(Me.InvestSelanjutnya_R)
-        Me.Controls.Add(Me.InvestSelanjutnya_B)
-        Me.Controls.Add(Me.txtColorMinInvestSelanjutnya)
-        Me.Controls.Add(Me.rbInvestAwal)
-        Me.Controls.Add(Me.txtMinimalInvestasAwal)
-        Me.Controls.Add(Me.InvestAwal_G)
-        Me.Controls.Add(Me.InvestAwal_R)
-        Me.Controls.Add(Me.InvestAwal_B)
-        Me.Controls.Add(Me.txtColorMinInvest)
+        Me.Controls.Add(Me.rbBiayaPengalihan)
+        Me.Controls.Add(Me.txtBiayaPengalihan)
+        Me.Controls.Add(Me.BiayaPengalihan_G)
+        Me.Controls.Add(Me.BiayaPengalihan_R)
+        Me.Controls.Add(Me.BiayaPengalihan_B)
+        Me.Controls.Add(Me.txtColorBiayaPengalihan)
         Me.Controls.Add(Me.rbBiayaJual)
         Me.Controls.Add(Me.txtBiayaPenjualaKembali)
         Me.Controls.Add(Me.BiayaJual_G)
@@ -2347,12 +2166,12 @@ Partial Class ReportFundSheetEQSetting
         Me.Controls.Add(Me.Total_R)
         Me.Controls.Add(Me.Total_B)
         Me.Controls.Add(Me.txtColorTotal)
-        Me.Controls.Add(Me.rbTanggalPeluncuran)
-        Me.Controls.Add(Me.txtTanggalPeluncuran)
-        Me.Controls.Add(Me.Tanggal_G)
-        Me.Controls.Add(Me.Tanggal_R)
-        Me.Controls.Add(Me.Tanggal_B)
-        Me.Controls.Add(Me.txtColorTanggal)
+        Me.Controls.Add(Me.rbTglPeluncuran)
+        Me.Controls.Add(Me.txtTglPeluncuran)
+        Me.Controls.Add(Me.TglPeluncuran_G)
+        Me.Controls.Add(Me.TglPeluncuran_R)
+        Me.Controls.Add(Me.TglPeluncuran_B)
+        Me.Controls.Add(Me.txtColorTglPeluncuran)
         Me.Controls.Add(Me.rbBankKustodian)
         Me.Controls.Add(Me.txtBankKustodian)
         Me.Controls.Add(Me.Bank_G)
@@ -2406,12 +2225,12 @@ Partial Class ReportFundSheetEQSetting
     Friend WithEvents Bank_R As Label
     Friend WithEvents Bank_B As Label
     Friend WithEvents txtColorBank As TextBox
-    Friend WithEvents rbTanggalPeluncuran As RadioButton
-    Friend WithEvents txtTanggalPeluncuran As TextBox
-    Friend WithEvents Tanggal_G As Label
-    Friend WithEvents Tanggal_R As Label
-    Friend WithEvents Tanggal_B As Label
-    Friend WithEvents txtColorTanggal As TextBox
+    Friend WithEvents rbTglPeluncuran As RadioButton
+    Friend WithEvents txtTglPeluncuran As TextBox
+    Friend WithEvents TglPeluncuran_G As Label
+    Friend WithEvents TglPeluncuran_R As Label
+    Friend WithEvents TglPeluncuran_B As Label
+    Friend WithEvents txtColorTglPeluncuran As TextBox
     Friend WithEvents rbTotal As RadioButton
     Friend WithEvents txtTotalAUM As TextBox
     Friend WithEvents Total_G As Label
@@ -2448,42 +2267,18 @@ Partial Class ReportFundSheetEQSetting
     Friend WithEvents BiayaJual_R As Label
     Friend WithEvents BiayaJual_B As Label
     Friend WithEvents txtColorBiayaJual As TextBox
-    Friend WithEvents rbInvestAwal As RadioButton
-    Friend WithEvents txtMinimalInvestasAwal As TextBox
-    Friend WithEvents InvestAwal_G As Label
-    Friend WithEvents InvestAwal_R As Label
-    Friend WithEvents InvestAwal_B As Label
-    Friend WithEvents txtColorMinInvest As TextBox
-    Friend WithEvents rbInvestSelanjutnya As RadioButton
-    Friend WithEvents txtMinimalInvestasiSelanjutnya As TextBox
-    Friend WithEvents InvestSelanjutnya_G As Label
-    Friend WithEvents InvestSelanjutnya_R As Label
-    Friend WithEvents InvestSelanjutnya_B As Label
-    Friend WithEvents txtColorMinInvestSelanjutnya As TextBox
+    Friend WithEvents rbBiayaPengalihan As RadioButton
+    Friend WithEvents txtBiayaPengalihan As TextBox
+    Friend WithEvents BiayaPengalihan_G As Label
+    Friend WithEvents BiayaPengalihan_R As Label
+    Friend WithEvents BiayaPengalihan_B As Label
+    Friend WithEvents txtColorBiayaPengalihan As TextBox
     Friend WithEvents rbKode As RadioButton
     Friend WithEvents txtKodeISINBloomberg As TextBox
     Friend WithEvents Kode_G As Label
     Friend WithEvents Kode_R As Label
     Friend WithEvents Kode_B As Label
     Friend WithEvents txtColorKode As TextBox
-    Friend WithEvents rbKinerjaSejakDiluncurkan As RadioButton
-    Friend WithEvents txtKinerjaSejakDiluncurkan As TextBox
-    Friend WithEvents KinerjaAwal_G As Label
-    Friend WithEvents KinerjaAwal_R As Label
-    Friend WithEvents KinerjaAwal_B As Label
-    Friend WithEvents txtColorKinerja As TextBox
-    Friend WithEvents rbKinerjaTerbaik As RadioButton
-    Friend WithEvents txtKinerjaBulanTerbaik As TextBox
-    Friend WithEvents KinerjaTerbaik_G As Label
-    Friend WithEvents KinerjaTerbaik_R As Label
-    Friend WithEvents KinerjaTerbaik_B As Label
-    Friend WithEvents txtColorKinerjaTerbaik As TextBox
-    Friend WithEvents rbKinerjaTerburuk As RadioButton
-    Friend WithEvents txtKinerjaBulanTerburuk As TextBox
-    Friend WithEvents KinerjaTerburuk_G As Label
-    Friend WithEvents KinerjaTerburuk_R As Label
-    Friend WithEvents KinerjaTerburuk_B As Label
-    Friend WithEvents txtColorKinerjaTerburuk As TextBox
     Friend WithEvents rbFaktorRisikUtama As RadioButton
     Friend WithEvents txtFaktorRisikoUtama As TextBox
     Friend WithEvents FaktorRisiko_G As Label
@@ -2519,7 +2314,7 @@ Partial Class ReportFundSheetEQSetting
     Friend WithEvents Portofolio_G As Label
     Friend WithEvents Portofolio_R As Label
     Friend WithEvents Portofolio_B As Label
-    Friend WithEvents txtColorKomposisPortofolio As TextBox
+    Friend WithEvents txtColorPortofolio As TextBox
     Friend WithEvents txtInvestasiSaham As TextBox
     Friend WithEvents txtInvestasiObligasi As TextBox
     Friend WithEvents txtInvesatiPasarUang As TextBox
@@ -2593,4 +2388,12 @@ Partial Class ReportFundSheetEQSetting
     Friend WithEvents TentangHolding_R As Label
     Friend WithEvents TentangHolding_B As Label
     Friend WithEvents txtColorTentang As TextBox
+    Friend WithEvents rbTglLaporan As RadioButton
+    Friend WithEvents txtTglLaporan As TextBox
+    Friend WithEvents TglLaporan_G As Label
+    Friend WithEvents TglLaporan_R As Label
+    Friend WithEvents TglLaporan_B As Label
+    Friend WithEvents txtColorTglLaporan As TextBox
+    Friend WithEvents txtTableItem3Tahun As TextBox
+    Friend WithEvents txtTableItem5Tahun As TextBox
 End Class
