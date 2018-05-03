@@ -27,6 +27,8 @@ Partial Class MDIMENU
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MDIMENU))
         Me.msMenu = New System.Windows.Forms.MenuStrip()
         Me.ReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportFundSheetDividendToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CPFToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsUser = New System.Windows.Forms.ToolStrip()
         Me.tsbExit = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator10 = New System.Windows.Forms.ToolStripSeparator()
@@ -55,8 +57,7 @@ Partial Class MDIMENU
         Me.txtPassword = New C1.Win.C1InputPanel.InputTextBox()
         Me.cmdSubmit = New C1.Win.C1InputPanel.InputButton()
         Me.cmdClose = New C1.Win.C1InputPanel.InputButton()
-        Me.ReportFundSheetDividendToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CPFToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportFundSheetSectorEQToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.msMenu.SuspendLayout()
         Me.tsUser.SuspendLayout()
         CType(Me.C1StatusBar1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -75,11 +76,22 @@ Partial Class MDIMENU
         '
         'ReportToolStripMenuItem
         '
-        Me.ReportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportFundSheetDividendToolStripMenuItem})
-        Me.ReportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CPFToolStripMenuItem})
+        Me.ReportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportFundSheetDividendToolStripMenuItem, Me.CPFToolStripMenuItem, Me.ReportFundSheetSectorEQToolStripMenuItem})
         Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
         Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
         Me.ReportToolStripMenuItem.Text = "Report"
+        '
+        'ReportFundSheetDividendToolStripMenuItem
+        '
+        Me.ReportFundSheetDividendToolStripMenuItem.Name = "ReportFundSheetDividendToolStripMenuItem"
+        Me.ReportFundSheetDividendToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
+        Me.ReportFundSheetDividendToolStripMenuItem.Text = "Report Fund Sheet Dividend"
+        '
+        'CPFToolStripMenuItem
+        '
+        Me.CPFToolStripMenuItem.Name = "CPFToolStripMenuItem"
+        Me.CPFToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
+        Me.CPFToolStripMenuItem.Text = "CPF"
         '
         'tsUser
         '
@@ -271,16 +283,11 @@ Partial Class MDIMENU
         Me.cmdClose.Text = "CLOSE"
         Me.cmdClose.Width = 100
         '
-        'ReportFundSheetDividendToolStripMenuItem
+        'ReportFundSheetSectorEQToolStripMenuItem
         '
-        Me.ReportFundSheetDividendToolStripMenuItem.Name = "ReportFundSheetDividendToolStripMenuItem"
-        Me.ReportFundSheetDividendToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
-        Me.ReportFundSheetDividendToolStripMenuItem.Text = "Report Fund Sheet Dividend"
-        'CPFToolStripMenuItem
-        '
-        Me.CPFToolStripMenuItem.Name = "CPFToolStripMenuItem"
-        Me.CPFToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.CPFToolStripMenuItem.Text = "CPF"
+        Me.ReportFundSheetSectorEQToolStripMenuItem.Name = "ReportFundSheetSectorEQToolStripMenuItem"
+        Me.ReportFundSheetSectorEQToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
+        Me.ReportFundSheetSectorEQToolStripMenuItem.Text = "Report Fund Sheet Sector EQ"
         '
         'MDIMENU
         '
@@ -339,4 +346,5 @@ Partial Class MDIMENU
     Friend WithEvents ReportToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportFundSheetDividendToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CPFToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReportFundSheetSectorEQToolStripMenuItem As ToolStripMenuItem
 End Class

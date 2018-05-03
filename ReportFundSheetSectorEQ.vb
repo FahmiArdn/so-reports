@@ -272,7 +272,7 @@ Public Class ReportFundSheetSectorEQ
         Dim cf As New StringFormat
         cf.Alignment = StringAlignment.Center
         cf.LineAlignment = StringAlignment.Near
-        Dim urlImg = Image.FromFile("D:\avrist.jpg")
+        Dim urlImg = Image.FromFile("..\..\Template\Fund Sheet Sector EQ - Portrait.jpg")
         pdf.DrawString("Title", New Font("calibri", 40, FontStyle.Bold), Brushes.Black, New RectangleF(25, 10, 200, 25))
         pdf.DrawImage(urlImg, New RectangleF(pdf_width - 170, 2, 100, 60))
         pdf.DrawString("Tujuan Investasi", New Font("calibri", 8, FontStyle.Bold), Brushes.Purple, New RectangleF(25, 60, 175, 8))
