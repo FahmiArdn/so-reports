@@ -133,10 +133,11 @@ Public Class MDIMENU
         'End If
     End Sub
 
-    Private Sub ReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportToolStripMenuItem.Click
+
+    Private Sub ReportFundSheetSectorEQToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportFundSheetSectorEQToolStripMenuItem.Click
         Try
             'MenuCheck("Account Maintenance")
-            Dim frm As New ReportFundSheetEQ
+            Dim frm As New ReportFundSheetSectorEQ
             frm.Left = 0
             frm.Top = 30
             frm.MdiParent = Me

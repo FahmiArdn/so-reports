@@ -112,6 +112,7 @@ Partial Class FormLogin
         'txtUserLogin
         '
         Me.txtUserLogin.Name = "txtUserLogin"
+        Me.txtUserLogin.Text = "novizarhadisaputra@gmail.com"
         Me.txtUserLogin.ToolTipText = "<i>Username</i>"
         Me.txtUserLogin.Width = 202
         '
@@ -126,6 +127,7 @@ Partial Class FormLogin
         '
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtPassword.Text = "Ranwid94"
         Me.txtPassword.Width = 202
         '
         'cmdSubmit
