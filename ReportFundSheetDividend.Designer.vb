@@ -361,7 +361,6 @@ Partial Class ReportFundSheetDividend
         'txtAssetType
         '
         Me.txtAssetType.Name = "txtAssetType"
-        Me.txtAssetType.Text = "Pendapatan Tetap"
         Me.txtAssetType.Width = 237
         '
         'InputLabel3
@@ -373,7 +372,6 @@ Partial Class ReportFundSheetDividend
         'txtInceptionDate
         '
         Me.txtInceptionDate.Name = "txtInceptionDate"
-        Me.txtInceptionDate.Text = "9-Dec-2014"
         Me.txtInceptionDate.Width = 237
         '
         'InputLabel4
@@ -385,7 +383,6 @@ Partial Class ReportFundSheetDividend
         'txtAUM
         '
         Me.txtAUM.Name = "txtAUM"
-        Me.txtAUM.Text = "448.42"
         Me.txtAUM.Width = 237
         '
         'InputLabel5
@@ -397,7 +394,6 @@ Partial Class ReportFundSheetDividend
         'txtCcy
         '
         Me.txtCcy.Name = "txtCcy"
-        Me.txtCcy.Text = "Rupiah"
         Me.txtCcy.Width = 237
         '
         'InputLabel6
@@ -409,7 +405,6 @@ Partial Class ReportFundSheetDividend
         'txtValuation
         '
         Me.txtValuation.Name = "txtValuation"
-        Me.txtValuation.Text = "Harian"
         Me.txtValuation.Width = 237
         '
         'InputLabel7
@@ -421,7 +416,6 @@ Partial Class ReportFundSheetDividend
         'txtCustodian
         '
         Me.txtCustodian.Name = "txtCustodian"
-        Me.txtCustodian.Text = "Bank Permata"
         Me.txtCustodian.Width = 237
         '
         'InputLabel8
@@ -433,7 +427,6 @@ Partial Class ReportFundSheetDividend
         'txtBenchmark
         '
         Me.txtBenchmark.Name = "txtBenchmark"
-        Me.txtBenchmark.Text = "INDOBeX Corp Clean price"
         Me.txtBenchmark.Width = 237
         '
         'InputLabel9
@@ -445,7 +438,6 @@ Partial Class ReportFundSheetDividend
         'txtNAVUnit
         '
         Me.txtNAVUnit.Name = "txtNAVUnit"
-        Me.txtNAVUnit.Text = "1,097.19"
         Me.txtNAVUnit.Width = 237
         '
         'InputGroupHeader6
@@ -462,7 +454,6 @@ Partial Class ReportFundSheetDividend
         'txtMinimumInitialSubscription
         '
         Me.txtMinimumInitialSubscription.Name = "txtMinimumInitialSubscription"
-        Me.txtMinimumInitialSubscription.Text = "100,000,000"
         Me.txtMinimumInitialSubscription.Width = 186
         '
         'InputLabel11
@@ -474,7 +465,6 @@ Partial Class ReportFundSheetDividend
         'txtMinimumAdditionalSubscription
         '
         Me.txtMinimumAdditionalSubscription.Name = "txtMinimumAdditionalSubscription"
-        Me.txtMinimumAdditionalSubscription.Text = "10,000,000"
         Me.txtMinimumAdditionalSubscription.Width = 186
         '
         'InputLabel12
@@ -486,7 +476,6 @@ Partial Class ReportFundSheetDividend
         'txtSellingFee
         '
         Me.txtSellingFee.Name = "txtSellingFee"
-        Me.txtSellingFee.Text = "Maks 1.00"
         Me.txtSellingFee.Width = 186
         '
         'InputLabel13
@@ -498,7 +487,6 @@ Partial Class ReportFundSheetDividend
         'txtRedemptionFee
         '
         Me.txtRedemptionFee.Name = "txtRedemptionFee"
-        Me.txtRedemptionFee.Text = "Maks 1.00"
         Me.txtRedemptionFee.Width = 186
         '
         'InputLabel14
@@ -510,7 +498,6 @@ Partial Class ReportFundSheetDividend
         'txtManagementFee
         '
         Me.txtManagementFee.Name = "txtManagementFee"
-        Me.txtManagementFee.Text = "Maks 2.00"
         Me.txtManagementFee.Width = 186
         '
         'InputLabel15
@@ -522,7 +509,6 @@ Partial Class ReportFundSheetDividend
         'txtCustodianFee
         '
         Me.txtCustodianFee.Name = "txtCustodianFee"
-        Me.txtCustodianFee.Text = "Maks 0.25"
         Me.txtCustodianFee.Width = 186
         '
         'C1SplitterPanel5

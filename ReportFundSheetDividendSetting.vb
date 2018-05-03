@@ -16,7 +16,6 @@ Public Class ReportFundSheetDividendSetting
 
 #Region "setting"
     Private Sub colorSet()
-
         If cd.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
             If rbReportTitle.Checked Then
                 txtColorReportTitle.BackColor = cd.Color
